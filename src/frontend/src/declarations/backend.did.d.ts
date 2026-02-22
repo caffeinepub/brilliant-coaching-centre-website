@@ -23,6 +23,15 @@ export interface Image {
   'description' : string,
   'galleryId' : string,
 }
+export interface Review {
+  'review' : string,
+  'subjects' : [] | [string],
+  'fullName' : string,
+  'approved' : boolean,
+  'timestamp' : bigint,
+  'rating' : [] | [number],
+  'classYear' : string,
+}
 export interface _CaffeineStorageCreateCertificateResult {
   'method' : string,
   'blob_hash' : string,
@@ -54,13 +63,20 @@ export interface _SERVICE {
     [string, ExternalBlob, string, string, string],
     boolean
   >,
+  'approveReview' : ActorMethod<[string], boolean>,
   'createGallery' : ActorMethod<[string, string, string], boolean>,
   'deleteGallery' : ActorMethod<[string], boolean>,
   'deleteImage' : ActorMethod<[string], boolean>,
   'getAllGalleries' : ActorMethod<[], Array<Gallery>>,
+  'getAllReviews' : ActorMethod<[], Array<Review>>,
+  'getApprovedReviews' : ActorMethod<[], Array<Review>>,
   'getGallery' : ActorMethod<[string], [] | [Gallery]>,
   'getImage' : ActorMethod<[string], [] | [Image]>,
   'getImagesByGallery' : ActorMethod<[string], Array<Image>>,
+  'submitReview' : ActorMethod<
+    [string, string, [] | [string], string, [] | [number]],
+    undefined
+  >,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

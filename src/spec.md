@@ -1,13 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Update Footer social media links with actual URLs for Facebook, YouTube, Instagram, and WhatsApp channel.
+**Goal:** Add a "Submit Your Review" section with a form where students can share their experiences, which are stored in the backend for moderation.
 
 **Planned changes:**
-- Replace placeholder social media URLs in Footer component with actual links
-- Facebook: https://www.facebook.com/share/14pG6fyhTk/
-- YouTube: https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl
-- Instagram: https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==
-- WhatsApp: https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W
+- Create a new SubmitReview component with bilingual header "Share Your Experience!" and subtitle
+- Implement review submission form with fields: Full Name (required), Class/Year (required), Subject(s) Studied (optional), Your Review (required textarea), and Rating (optional 1-5 star selector)
+- Add Submit Review button that validates required fields and displays confirmation toast on success
+- Store submitted reviews in backend using Motoko with stable storage, including moderation flag (approved: Bool)
+- Style component using clean card layout with borders/shadow, matching existing brand theme
+- Integrate SubmitReview component into App.tsx below Gallery section and before AdmissionForm section
 
-**User-visible outcome:** Users can click on social media icons in the Footer to navigate to Brilliant Coaching Centre's actual Facebook page, YouTube channel, Instagram profile, and WhatsApp channel.
+**User-visible outcome:** Students can submit reviews about their experience at Brilliant Coaching Centre through a form on the website. After submission, they see a confirmation message and the review is stored for moderation.

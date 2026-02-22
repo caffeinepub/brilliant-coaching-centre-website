@@ -25,6 +25,15 @@ export const Gallery = IDL.Record({
   'name' : IDL.Text,
   'description' : IDL.Text,
 });
+export const Review = IDL.Record({
+  'review' : IDL.Text,
+  'subjects' : IDL.Opt(IDL.Text),
+  'fullName' : IDL.Text,
+  'approved' : IDL.Bool,
+  'timestamp' : IDL.Int,
+  'rating' : IDL.Opt(IDL.Nat8),
+  'classYear' : IDL.Text,
+});
 export const Image = IDL.Record({
   'id' : IDL.Text,
   'title' : IDL.Text,
@@ -65,13 +74,21 @@ export const idlService = IDL.Service({
       [IDL.Bool],
       [],
     ),
+  'approveReview' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'createGallery' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Bool], []),
   'deleteGallery' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'deleteImage' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'getAllGalleries' : IDL.Func([], [IDL.Vec(Gallery)], ['query']),
+  'getAllReviews' : IDL.Func([], [IDL.Vec(Review)], ['query']),
+  'getApprovedReviews' : IDL.Func([], [IDL.Vec(Review)], ['query']),
   'getGallery' : IDL.Func([IDL.Text], [IDL.Opt(Gallery)], ['query']),
   'getImage' : IDL.Func([IDL.Text], [IDL.Opt(Image)], ['query']),
   'getImagesByGallery' : IDL.Func([IDL.Text], [IDL.Vec(Image)], ['query']),
+  'submitReview' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Opt(IDL.Text), IDL.Text, IDL.Opt(IDL.Nat8)],
+      [],
+      [],
+    ),
 });
 
 export const idlInitArgs = [];
@@ -93,6 +110,15 @@ export const idlFactory = ({ IDL }) => {
     'id' : IDL.Text,
     'name' : IDL.Text,
     'description' : IDL.Text,
+  });
+  const Review = IDL.Record({
+    'review' : IDL.Text,
+    'subjects' : IDL.Opt(IDL.Text),
+    'fullName' : IDL.Text,
+    'approved' : IDL.Bool,
+    'timestamp' : IDL.Int,
+    'rating' : IDL.Opt(IDL.Nat8),
+    'classYear' : IDL.Text,
   });
   const Image = IDL.Record({
     'id' : IDL.Text,
@@ -134,13 +160,21 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Bool],
         [],
       ),
+    'approveReview' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'createGallery' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Bool], []),
     'deleteGallery' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'deleteImage' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'getAllGalleries' : IDL.Func([], [IDL.Vec(Gallery)], ['query']),
+    'getAllReviews' : IDL.Func([], [IDL.Vec(Review)], ['query']),
+    'getApprovedReviews' : IDL.Func([], [IDL.Vec(Review)], ['query']),
     'getGallery' : IDL.Func([IDL.Text], [IDL.Opt(Gallery)], ['query']),
     'getImage' : IDL.Func([IDL.Text], [IDL.Opt(Image)], ['query']),
     'getImagesByGallery' : IDL.Func([IDL.Text], [IDL.Vec(Image)], ['query']),
+    'submitReview' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Opt(IDL.Text), IDL.Text, IDL.Opt(IDL.Nat8)],
+        [],
+        [],
+      ),
   });
 };
 

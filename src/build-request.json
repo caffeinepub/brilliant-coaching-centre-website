@@ -1,43 +1,142 @@
 {
   "kind": "build_request",
-  "title": "Update Footer social media links with actual URLs",
+  "title": "Add Submit Your Review section with form and confirmation",
   "projectName": "Brilliant Coaching Centre",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-48",
-      "text": "Update the Footer component social media links section to use the actual URLs: Facebook link to https://www.facebook.com/share/14pG6fyhTk/, YouTube link to https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl, Instagram link to https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==, and WhatsApp channel link to https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W",
+      "id": "REQ-49",
+      "text": "Create a new SubmitReview component that displays a section with header 'Share Your Experience!' and subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' with bilingual support (English and Bengali)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-latest"
         ],
         "quotes": [
-          "Add \nFacebook:- https://www.facebook.com/share/14pG6fyhTk/\nYouTube channel:- https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl\nInstagram:- https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==\nWhatsApp channel:- https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W"
+          "Share Your Experience!",
+          "We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn."
         ]
       },
       "acceptanceCriteria": [
-        "Footer component displays four social media links with correct URLs",
-        "Facebook link opens https://www.facebook.com/share/14pG6fyhTk/ in a new tab",
-        "YouTube link opens https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl in a new tab",
-        "Instagram link opens https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg== in a new tab",
-        "WhatsApp channel link opens https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W in a new tab",
-        "All links maintain existing icon styling and bilingual label support",
-        "Links are clickable and properly formatted with target='_blank' and rel='noopener noreferrer'"
+        "Component renders section header and subtitle",
+        "Text content switches between English and Bengali using LanguageContext",
+        "Styling matches existing brand theme (gold/yellow text, dark background, maroon accents)"
+      ]
+    },
+    {
+      "id": "REQ-50",
+      "text": "Implement review submission form in SubmitReview component with fields: Full Name (required text input), Class/Year (required text input), Subject(s) Studied (optional text input), Your Review (required textarea), and Rating (optional 1-5 star selector with clickable star icons)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Full Name (required)",
+          "Class / Year (required)",
+          "Subject(s) Studied (optional)",
+          "Your Review (textarea, required)",
+          "Rating (optional, 1–5 stars)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All five form fields render with correct input types",
+        "Required fields (Full Name, Class/Year, Review) display validation on submission",
+        "Star rating uses interactive star icons (1-5) that highlight on hover and click",
+        "Form labels are bilingual",
+        "Mobile-friendly with large touch targets"
+      ]
+    },
+    {
+      "id": "REQ-51",
+      "text": "Add Submit Review button to the form that validates required fields and displays confirmation message 'Thank you for your review! Your feedback helps us improve and inspire other students.' as a toast notification on successful submission",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Submit Review",
+          "Thank you for your review! Your feedback helps us improve and inspire other students."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Submit button validates Full Name, Class/Year, and Review fields before submission",
+        "Success toast displays with confirmation message after submission",
+        "Form clears after successful submission",
+        "Button text is bilingual"
+      ]
+    },
+    {
+      "id": "REQ-52",
+      "text": "Store submitted reviews in backend using Motoko actor with stable storage, including fields: fullName (Text), classYear (Text), subjects (optional Text), review (Text), rating (optional Nat8), timestamp (Int), and approved (Bool for moderation)",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "reviews can be moderated before appearing publicly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes submitReview method accepting all form fields",
+        "Reviews stored with unique ID in stable Map structure",
+        "Approved field defaults to false for moderation support",
+        "Timestamp automatically added on submission"
+      ]
+    },
+    {
+      "id": "REQ-53",
+      "text": "Style SubmitReview component using clean card layout with borders or subtle shadow, consistent spacing, mobile-responsive design, and hover effects matching existing components",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Use a clean card layout with borders or subtle shadow",
+          "Make input fields mobile-friendly and large enough for touch"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Component uses Card component from shadcn/ui or similar styling",
+        "Form fields have adequate spacing and padding",
+        "Design is mobile-first and responsive",
+        "Styling matches existing brand theme (gold/yellow, dark background, maroon accents)"
+      ]
+    },
+    {
+      "id": "REQ-54",
+      "text": "Integrate SubmitReview component into App.tsx below the Gallery section and before the AdmissionForm section, maintaining component flow and design consistency",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Place the form below the testimonials section on the page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "SubmitReview component renders in correct position in page flow",
+        "Component inherits LanguageProvider context",
+        "No layout breaks or styling conflicts with adjacent sections"
       ]
     }
   ],
   "constraints": [
-    "Preserve existing Footer component structure and styling",
-    "Maintain bilingual support for social media link labels using LanguageContext",
-    "Do not modify other Footer functionality (CTA buttons, contact info, copyright)",
-    "Keep existing icon styling and hover effects for social media links"
+    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Backend must use single-actor architecture in backend/main.mo",
+    "All new text content must support bilingual switching using existing LanguageContext"
   ],
   "nonGoals": [
-    "Adding new social media platforms beyond the four specified",
-    "Changing the visual design or layout of the Footer component",
-    "Modifying social media link behavior beyond updating URLs",
-    "Adding analytics or tracking to social media links"
+    "Implementing actual review moderation interface (just store approved flag)",
+    "Implementing photo upload feature",
+    "Implementing social media login (Google/Facebook)",
+    "Implementing captcha or spam prevention",
+    "Implementing review preview before submission",
+    "Displaying submitted reviews publicly on the page"
   ],
   "imageRequirements": {
     "required": [],

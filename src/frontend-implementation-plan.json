@@ -1,25 +1,89 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Footer social media links with actual URLs",
+  "title": "Add Submit Your Review section with form and confirmation",
   "requirements": [
     {
-      "id": "REQ-48",
-      "summary": "Update Footer component social media links to use actual URLs for Facebook, YouTube, Instagram, and WhatsApp channel",
+      "id": "REQ-49",
+      "summary": "Create SubmitReview component with bilingual section header and subtitle",
       "acceptanceCriteria": [
-        "Footer component displays four social media links with correct URLs",
-        "Facebook link opens https://www.facebook.com/share/14pG6fyhTk/ in a new tab",
-        "YouTube link opens https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl in a new tab",
-        "Instagram link opens https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg== in a new tab",
-        "WhatsApp channel link opens https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W in a new tab",
-        "All links maintain existing icon styling and bilingual label support",
-        "Links are clickable and properly formatted with target='_blank' and rel='noopener noreferrer'"
+        "Component renders section header and subtitle",
+        "Text content switches between English and Bengali using LanguageContext",
+        "Styling matches existing brand theme (gold/yellow text, dark background, maroon accents)"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/components/SubmitReview.tsx",
+          "operation": "create",
+          "description": "Create new SubmitReview component with section header 'Share Your Experience!' and subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' Support bilingual content using useLanguage hook from LanguageContext. Apply brand styling with gold/yellow text on dark background with maroon accents matching existing components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-50",
+      "summary": "Implement review submission form with required and optional fields",
+      "acceptanceCriteria": [
+        "All five form fields render with correct input types",
+        "Required fields (Full Name, Class/Year, Review) display validation on submission",
+        "Star rating uses interactive star icons (1-5) that highlight on hover and click",
+        "Form labels are bilingual",
+        "Mobile-friendly with large touch targets"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SubmitReview.tsx",
           "operation": "modify",
-          "description": "Update the social media links section to replace placeholder or existing URLs with the actual URLs: Facebook (https://www.facebook.com/share/14pG6fyhTk/), YouTube (https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl), Instagram (https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==), and WhatsApp channel (https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W). Ensure all links open in new tabs with target='_blank' and rel='noopener noreferrer' attributes. Preserve existing icon styling, hover effects, and bilingual label support using LanguageContext."
+          "description": "Add form with five fields: Full Name (required text input), Class/Year (required text input), Subject(s) Studied (optional text input), Your Review (required textarea), and Rating (optional 1-5 star selector). Implement interactive star rating with hover and click states using star icons. Add validation for required fields. Use bilingual labels via LanguageContext. Ensure mobile-friendly design with large touch targets for accessibility."
+        }
+      ]
+    },
+    {
+      "id": "REQ-51",
+      "summary": "Add Submit Review button with validation and success toast notification",
+      "acceptanceCriteria": [
+        "Submit button validates Full Name, Class/Year, and Review fields before submission",
+        "Success toast displays with confirmation message after submission",
+        "Form clears after successful submission",
+        "Button text is bilingual"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SubmitReview.tsx",
+          "operation": "modify",
+          "description": "Add Submit Review button that validates required fields (Full Name, Class/Year, Review) before submission. Call backend submitReview method with form data. Display success toast with message 'Thank you for your review! Your feedback helps us improve and inspire other students.' using existing Toaster component. Clear form after successful submission. Use bilingual button text via LanguageContext. Handle submission errors with appropriate error messages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-53",
+      "summary": "Style SubmitReview component with clean card layout and mobile-responsive design",
+      "acceptanceCriteria": [
+        "Component uses Card component from shadcn/ui or similar styling",
+        "Form fields have adequate spacing and padding",
+        "Design is mobile-first and responsive",
+        "Styling matches existing brand theme (gold/yellow, dark background, maroon accents)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SubmitReview.tsx",
+          "operation": "modify",
+          "description": "Apply clean card layout using Card component with borders or subtle shadow. Ensure consistent spacing and padding for form fields. Implement mobile-first responsive design that works across all screen sizes. Add hover effects matching existing components like AdmissionForm and Contact. Use brand colors (gold/yellow text, dark background, maroon accents) consistently with the rest of the application."
+        }
+      ]
+    },
+    {
+      "id": "REQ-54",
+      "summary": "Integrate SubmitReview component into App.tsx between Gallery and AdmissionForm sections",
+      "acceptanceCriteria": [
+        "SubmitReview component renders in correct position in page flow",
+        "Component inherits LanguageProvider context",
+        "No layout breaks or styling conflicts with adjacent sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render SubmitReview component after Gallery section and before AdmissionForm section. Component automatically inherits LanguageProvider context from existing wrapper. Verify no layout conflicts with adjacent sections and maintain consistent page flow."
         }
       ]
     }
