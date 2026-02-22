@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 35,
+  "projectStateVersion": 37,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, testimonials section (What Our Students Say) with page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh), review submission form with name/class/subjects/review/rating fields, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -596,6 +596,14 @@
         "REQ-72"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-image-brilliant-coaching-centre-copy-1-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
+      "title": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image (Brilliant Coaching Centre copy (1).jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
+      "reqIds": [
+        "REQ-75"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -742,6 +750,14 @@
       "summary": "Add placeholder CRUD function signatures in main.mo for student dashboard operations: createStudent, getStudent, addTestResult, getStudentTestResults, recordAttendance, and getStudentAttendance, with function bodies commented out and marked as 'Future implementation'",
       "reqIds": [
         "REQ-74"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-38",
+      "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
+      "reqIds": [
+        "REQ-76"
       ],
       "status": "pending"
     }

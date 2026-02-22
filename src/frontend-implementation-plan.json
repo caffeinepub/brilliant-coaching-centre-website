@@ -1,70 +1,39 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Student Dashboard with login, notes/test results, and attendance tracking",
+  "title": "Update Hero section logo with uploaded Brilliant Coaching Centre image",
   "requirements": [
     {
-      "id": "REQ-69",
-      "summary": "Create StudentDashboard component as a future placeholder section with bilingual header and subtitle",
+      "id": "REQ-75",
+      "summary": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image showing lightbulb design with yellow student figure and gold/yellow text on dark background with maroon border",
       "acceptanceCriteria": [
-        "Component displays 'Student Dashboard (Coming Soon!)' header",
-        "Subtitle text is bilingual and uses LanguageContext",
-        "Section follows existing design theme (gold/yellow text, dark background, maroon accents)"
+        "The Hero component displays the uploaded logo image",
+        "The logo maintains proper aspect ratio and quality",
+        "The logo is visually consistent with the existing gold/yellow and maroon branding",
+        "The logo is appropriately sized for both desktop and mobile viewports"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/StudentDashboard.tsx",
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update the Hero component to reference the uploaded Brilliant Coaching Centre logo from frontend/public/assets/generated/brilliant-logo.dim_512x512.jpg instead of the current logo. Ensure the image element uses proper responsive sizing classes and maintains aspect ratio for both desktop and mobile viewports. Add appropriate alt text describing the logo."
+        }
+      ]
+    },
+    {
+      "id": "REQ-76",
+      "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and ensure proper asset path reference",
+      "acceptanceCriteria": [
+        "The logo file is saved as a static asset in frontend/public/assets/generated",
+        "The Hero component references the correct asset path",
+        "The image loads correctly when the application runs",
+        "No broken image links or 404 errors occur"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/brilliant-logo.dim_512x512.jpg",
           "operation": "create",
-          "description": "Create new StudentDashboard component with header 'Student Dashboard (Coming Soon!)' and subtitle 'Access your personalized learning portal'. Use the translation helper function from LanguageContext for bilingual support (English and Bengali). Apply existing design theme using Tailwind classes matching the color scheme from frontend/src/index.css (gold/yellow text on dark background with maroon accents). Include section padding and responsive container layout consistent with other sections in the app."
-        }
-      ]
-    },
-    {
-      "id": "REQ-70",
-      "summary": "Display three feature cards showing Login System, Notes & Test Results, and Attendance Record with icons and descriptions",
-      "acceptanceCriteria": [
-        "Three cards display with appropriate icons (🔐 for Login, 📊 for Notes & Test Results, 📅 for Attendance)",
-        "Each card shows feature title and brief description",
-        "Cards use responsive grid layout (3 columns on desktop, 1 on mobile)",
-        "All text content supports bilingual switching"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/StudentDashboard.tsx",
-          "operation": "modify",
-          "description": "Add three feature cards within the StudentDashboard component: 1) 'Login System' with 🔐 icon and description about secure student authentication with Internet Identity, 2) 'Notes & Test Results' with 📊 icon describing downloadable notes and test performance tracking, 3) 'Attendance Record' with 📅 icon for monitoring class attendance and participation. Implement responsive grid layout using Tailwind (grid-cols-1 md:grid-cols-3) with card styling matching existing components (About.tsx or WhyChooseUs.tsx pattern). Use translation helper for all text content to support bilingual switching. Apply hover effects and consistent spacing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-71",
-      "summary": "Add Coming Soon badge or status indicator to StudentDashboard section header",
-      "acceptanceCriteria": [
-        "Visual badge or tag displays 'Coming Soon' or '🚧 In Development'",
-        "Badge styling matches existing design theme",
-        "Badge is visible and prominent in the section header"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/StudentDashboard.tsx",
-          "operation": "modify",
-          "description": "Add a prominent 'Coming Soon' or '🚧 In Development' badge to the StudentDashboard section header. Position the badge near the main header text using inline or badge component styling. Apply gold/yellow color scheme with dark background or border to match the existing theme from frontend/src/index.css. Use Tailwind utility classes for badge styling (rounded corners, padding, appropriate font size). Ensure the badge is visible and stands out within the header area."
-        }
-      ]
-    },
-    {
-      "id": "REQ-72",
-      "summary": "Integrate StudentDashboard component into App.tsx after Contact section and before Footer",
-      "acceptanceCriteria": [
-        "StudentDashboard renders in correct position in App.tsx",
-        "Component spacing and margins match other sections",
-        "No layout breaks or visual inconsistencies"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Import the StudentDashboard component and render it in the component tree after the Contact section and before the Footer component. Ensure the component placement maintains the existing section flow and applies consistent spacing/margins matching other sections in App.tsx. Verify no layout breaks occur and the section integrates seamlessly with the existing dark theme background and overall page structure."
+          "description": "Save the uploaded Brilliant Coaching Centre logo (Brilliant Coaching Centre copy (1).jpg) as a static asset with standardized naming convention. The file shows a circular logo with maroon border, dark background, lightbulb design containing a yellow student figure with 'BRILLIANT' text bubble, and gold/yellow text reading 'brilliant COACHING CENTRE' below."
         }
       ]
     }

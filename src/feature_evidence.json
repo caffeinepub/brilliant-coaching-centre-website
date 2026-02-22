@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-new-studentdashboard-component-that-serves-as-a-future-placeholder-section-with-header-student-dashboard-coming-soon-and-subtitle-access-your-personalized-learning-portal-with-bilingual-support-english-and-bengali",
-      "featureTitle": "Create a new StudentDashboard component that serves as a future placeholder section with header 'Student Dashboard (Coming Soon!)' and subtitle 'Access your personalized learning portal' with bilingual support (English and Bengali)",
+      "featureId": "feature-replace-the-current-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-image-brilliant-coaching-centre-copy-1-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
+      "featureTitle": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image (Brilliant Coaching Centre copy (1).jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
       "files": [
-        "frontend/src/components/StudentDashboard.tsx"
+        "frontend/src/components/Hero.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,64 +16,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-69"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-display-three-feature-cards-in-the-studentdashboard-component-showing-login-system-secure-student-authentication-with-internet-identity-notes-test-results-view-downloadable-notes-and-track-test-performance-and-attendance-record-monitor-class-attendance-and-participation-with-icons-and-descriptions",
-      "featureTitle": "Display three feature cards in the StudentDashboard component showing 'Login System' (secure student authentication with Internet Identity), 'Notes & Test Results' (view downloadable notes and track test performance), and 'Attendance Record' (monitor class attendance and participation) with icons and descriptions",
-      "files": [
-        "frontend/src/components/StudentDashboard.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-70"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-coming-soon-badge-or-status-indicator-to-the-studentdashboard-section-to-clearly-communicate-that-this-feature-is-in-development-and-not-yet-available",
-      "featureTitle": "Add a 'Coming Soon' badge or status indicator to the StudentDashboard section to clearly communicate that this feature is in development and not yet available",
-      "files": [
-        "frontend/src/components/StudentDashboard.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-71"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-integrate-the-studentdashboard-component-into-app-tsx-after-the-contact-section-and-before-the-footer-maintaining-component-flow-and-styling-consistency",
-      "featureTitle": "Integrate the StudentDashboard component into App.tsx after the Contact section and before the Footer, maintaining component flow and styling consistency",
-      "files": [
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-72"
+        "REQ-75"
       ],
       "confidence": "high"
     }

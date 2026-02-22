@@ -1,134 +1,59 @@
 {
   "kind": "build_request",
-  "title": "Add Student Dashboard with login, notes/test results, and attendance tracking",
+  "title": "Update Hero section logo with uploaded Brilliant Coaching Centre image",
   "projectName": "Brilliant Coaching Centre",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-69",
-      "text": "Create a new StudentDashboard component that serves as a future placeholder section with header 'Student Dashboard (Coming Soon!)' and subtitle 'Access your personalized learning portal' with bilingual support (English and Bengali)",
+      "id": "REQ-75",
+      "text": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image (Brilliant Coaching Centre copy (1).jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-latest"
         ],
         "quotes": [
-          "Student Dashboard (Future Option)"
+          "Add logo"
         ]
       },
       "acceptanceCriteria": [
-        "Component displays 'Student Dashboard (Coming Soon!)' header",
-        "Subtitle text is bilingual and uses LanguageContext",
-        "Section follows existing design theme (gold/yellow text, dark background, maroon accents)"
+        "The Hero component displays the uploaded logo image",
+        "The logo maintains proper aspect ratio and quality",
+        "The logo is visually consistent with the existing gold/yellow and maroon branding",
+        "The logo is appropriately sized for both desktop and mobile viewports"
       ]
     },
     {
-      "id": "REQ-70",
-      "text": "Display three feature cards in the StudentDashboard component showing 'Login System' (secure student authentication with Internet Identity), 'Notes & Test Results' (view downloadable notes and track test performance), and 'Attendance Record' (monitor class attendance and participation) with icons and descriptions",
+      "id": "REQ-76",
+      "text": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-latest"
         ],
         "quotes": [
-          "Login system",
-          "Notes & test results",
-          "Attendance record"
+          "Add logo"
         ]
       },
       "acceptanceCriteria": [
-        "Three cards display with appropriate icons (🔐 for Login, 📊 for Notes & Test Results, 📅 for Attendance)",
-        "Each card shows feature title and brief description",
-        "Cards use responsive grid layout (3 columns on desktop, 1 on mobile)",
-        "All text content supports bilingual switching"
-      ]
-    },
-    {
-      "id": "REQ-71",
-      "text": "Add a 'Coming Soon' badge or status indicator to the StudentDashboard section to clearly communicate that this feature is in development and not yet available",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-last"
-        ],
-        "quotes": [
-          "Student Dashboard (Future Option)"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Visual badge or tag displays 'Coming Soon' or '🚧 In Development'",
-        "Badge styling matches existing design theme",
-        "Badge is visible and prominent in the section header"
-      ]
-    },
-    {
-      "id": "REQ-72",
-      "text": "Integrate the StudentDashboard component into App.tsx after the Contact section and before the Footer, maintaining component flow and styling consistency",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-last"
-        ]
-      },
-      "acceptanceCriteria": [
-        "StudentDashboard renders in correct position in App.tsx",
-        "Component spacing and margins match other sections",
-        "No layout breaks or visual inconsistencies"
-      ]
-    },
-    {
-      "id": "REQ-73",
-      "text": "Create backend data models in main.mo for future student dashboard functionality including Student record (id, name, class, enrollmentDate), TestResult record (studentId, subject, testDate, score, maxScore), and AttendanceRecord (studentId, date, present, notes)",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-last"
-        ],
-        "quotes": [
-          "Notes & test results",
-          "Attendance record"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Student type includes id (Text), name (Text), class (Text), enrollmentDate (Int)",
-        "TestResult type includes studentId (Text), subject (Text), testDate (Int), score (Nat), maxScore (Nat)",
-        "AttendanceRecord type includes studentId (Text), date (Int), present (Bool), notes (optional Text)",
-        "Types are defined but CRUD operations are commented out with 'Future implementation' notes"
-      ]
-    },
-    {
-      "id": "REQ-74",
-      "text": "Add placeholder CRUD function signatures in main.mo for student dashboard operations: createStudent, getStudent, addTestResult, getStudentTestResults, recordAttendance, and getStudentAttendance, with function bodies commented out and marked as 'Future implementation'",
-      "target": "backend",
-      "source": {
-        "messageIds": [
-          "msg-last"
-        ],
-        "quotes": [
-          "Login system",
-          "Notes & test results",
-          "Attendance record"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Function signatures are present with appropriate parameter and return types",
-        "Function bodies are commented out with clear 'TODO: Future implementation' comments",
-        "Functions follow existing Motoko patterns in main.mo"
+        "The logo file is saved as a static asset in frontend/public/assets/generated",
+        "The Hero component references the correct asset path",
+        "The image loads correctly when the application runs",
+        "No broken image links or 404 errors occur"
       ]
     }
   ],
   "constraints": [
-    "Do not implement actual authentication logic or backend storage for student dashboard features - this is a placeholder for future development",
-    "Preserve existing review submission and management functionality in backend/main.mo",
-    "Maintain single-actor architecture in backend",
-    "Do not modify immutable frontend paths: useInternetIdentity, useActor, main.tsx, components/ui"
+    "Do not modify the immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Maintain the existing gold/yellow text, dark background, and maroon accent color scheme",
+    "Preserve bilingual support (English and Bengali) for all text content",
+    "Keep the existing Hero component structure and functionality intact"
   ],
   "nonGoals": [
-    "Implementing functional student login system",
-    "Creating actual test result tracking or database",
-    "Building working attendance recording system",
-    "Integrating student dashboard with Internet Identity authentication",
-    "Adding admin panel for managing student records"
+    "Redesigning the Hero section layout or structure",
+    "Modifying other sections of the website",
+    "Changing the color scheme or branding",
+    "Adding new features to the Hero component beyond logo replacement"
   ],
   "imageRequirements": {
     "required": [],
