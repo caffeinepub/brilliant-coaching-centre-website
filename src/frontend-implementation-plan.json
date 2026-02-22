@@ -1,89 +1,167 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Submit Your Review section with form and confirmation",
+  "title": "Create testimonials page with current students, alumni reviews, and review submission form",
   "requirements": [
     {
-      "id": "REQ-49",
-      "summary": "Create SubmitReview component with bilingual section header and subtitle",
+      "id": "REQ-55",
+      "summary": "Create Testimonials component with bilingual page title and subtitle",
       "acceptanceCriteria": [
-        "Component renders section header and subtitle",
-        "Text content switches between English and Bengali using LanguageContext",
-        "Styling matches existing brand theme (gold/yellow text, dark background, maroon accents)"
+        "Page title 'What Our Students Say' is prominently displayed at the top of the section",
+        "Subtitle 'Read real experiences from our students and alumni, and share your own journey' appears below the title",
+        "Both title and subtitle support bilingual switching between English and Bengali using LanguageContext",
+        "Typography and spacing match existing section headers in the application"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/SubmitReview.tsx",
+          "path": "frontend/src/components/Testimonials.tsx",
           "operation": "create",
-          "description": "Create new SubmitReview component with section header 'Share Your Experience!' and subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' Support bilingual content using useLanguage hook from LanguageContext. Apply brand styling with gold/yellow text on dark background with maroon accents matching existing components."
+          "description": "Create new Testimonials component with section wrapper, page title 'What Our Students Say', and subtitle 'Read real experiences from our students and alumni, and share your own journey'. Use the t() translation helper from LanguageContext for bilingual support. Apply consistent styling with existing section components (dark background, gold/maroon theme)."
         }
       ]
     },
     {
-      "id": "REQ-50",
-      "summary": "Implement review submission form with required and optional fields",
+      "id": "REQ-56",
+      "summary": "Add page introduction section to Testimonials component with bilingual support",
       "acceptanceCriteria": [
-        "All five form fields render with correct input types",
-        "Required fields (Full Name, Class/Year, Review) display validation on submission",
-        "Star rating uses interactive star icons (1-5) that highlight on hover and click",
-        "Form labels are bilingual",
-        "Mobile-friendly with large touch targets"
+        "Introduction text is displayed in a prominent, readable format below the page title",
+        "Text supports bilingual switching between English and Bengali",
+        "Styling is consistent with other descriptive text sections in the application"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Add introduction paragraph displaying 'At Brilliant Coaching Centre, we focus on building confidence, clarity, and academic excellence. Don't just take our word for it—hear from current and past students about how our teachers, notes, and guidance have helped them succeed.' Use t() translation helper for bilingual content. Style with appropriate text size and spacing below the subtitle."
+        }
+      ]
+    },
+    {
+      "id": "REQ-57",
+      "summary": "Create Current Students Reviews section with three testimonials and bilingual support",
+      "acceptanceCriteria": [
+        "Section header 'Current Students' is clearly displayed",
+        "All three student testimonials (Riya Sen, Anirban Das, Priya Roy) are rendered with student name, class, and review text",
+        "Each testimonial card includes student photo placeholder or avatar",
+        "All text content supports bilingual switching between English and Bengali",
+        "Cards are displayed in a responsive grid layout or carousel slider"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Add Current Students section with header 'Current Students'. Create three testimonial cards for Riya Sen (Class 10), Anirban Das (Class 12), and Priya Roy (Class 3) with their review text. Use generated avatar images at frontend/public/assets/generated/riya-sen-avatar.dim_200x200.png, frontend/public/assets/generated/anirban-das-avatar.dim_200x200.png, and frontend/public/assets/generated/priya-roy-avatar.dim_200x200.png. Apply t() translation helper for all text content. Display in responsive grid layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-58",
+      "summary": "Style Current Students Reviews section with grid layout, hover effects, and mobile responsiveness",
+      "acceptanceCriteria": [
+        "Cards display in grid layout (2-3 columns on desktop) or carousel slider",
+        "Each card includes student photo placeholder or avatar, name, and class information",
+        "Hover effects are applied to cards (e.g., lift, shadow, scale)",
+        "On mobile devices, cards stack vertically or become swipeable carousel",
+        "Design matches existing component styling with gold/yellow text, dark background, and maroon accents"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Apply grid layout (grid-cols-1 md:grid-cols-2 lg:grid-cols-3) to Current Students testimonial cards. Add hover effects using transform, shadow, and scale transitions. Include circular avatar images with appropriate sizing. Ensure mobile-responsive design with vertical stacking on small screens. Use consistent dark background with gold/maroon theme matching existing components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-59",
+      "summary": "Create Alumni Feedback section with three testimonials and bilingual support",
+      "acceptanceCriteria": [
+        "Section header 'Alumni Feedback' is clearly displayed",
+        "All three alumni testimonials (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) are rendered with name and review text",
+        "Each testimonial card includes photo placeholder or avatar",
+        "All text content supports bilingual switching between English and Bengali",
+        "Cards are displayed in carousel or grid layout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Add Alumni Feedback section with header 'Alumni Feedback'. Create three testimonial cards for Arjun Mukherjee, Sneha Chakraborty, and Rohan Ghosh with their review text. Use generated avatar images at frontend/public/assets/generated/arjun-mukherjee-avatar.dim_200x200.png, frontend/public/assets/generated/sneha-chakraborty-avatar.dim_200x200.png, and frontend/public/assets/generated/rohan-ghosh-avatar.dim_200x200.png. Apply t() translation helper for all text content. Display in responsive grid or carousel layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-60",
+      "summary": "Style Alumni Feedback section with visual differentiation from Current Students section",
+      "acceptanceCriteria": [
+        "Alumni cards display in carousel or grid layout",
+        "Section uses optional light background color or subtle styling variation to differentiate from Current Students section",
+        "Hover effects and responsive behavior match Current Students section",
+        "Overall design maintains consistency with application theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Apply grid or carousel layout to Alumni Feedback cards matching Current Students layout. Add optional light background color or subtle background variation (e.g., slightly lighter dark tone or maroon tint) to differentiate Alumni section from Current Students. Maintain consistent hover effects, responsive design, and theme alignment with gold/maroon color scheme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-61",
+      "summary": "Update SubmitReview component to match testimonials page specification with bilingual support",
+      "acceptanceCriteria": [
+        "Component header displays 'Share Your Experience!' with bilingual support",
+        "Subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' is shown below header",
+        "Form includes all required fields: Full Name (required), Class/Year (required), Subject(s) Studied (optional), Review (textarea, required), Rating (1-5 stars, optional)",
+        "Submit Review button validates required fields before submission",
+        "Success message 'Thank you for your review! Your feedback helps us improve and inspire other students.' displays as toast notification on successful submission",
+        "All text content supports bilingual switching between English and Bengali"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/SubmitReview.tsx",
           "operation": "modify",
-          "description": "Add form with five fields: Full Name (required text input), Class/Year (required text input), Subject(s) Studied (optional text input), Your Review (required textarea), and Rating (optional 1-5 star selector). Implement interactive star rating with hover and click states using star icons. Add validation for required fields. Use bilingual labels via LanguageContext. Ensure mobile-friendly design with large touch targets for accessibility."
+          "description": "Update SubmitReview component header to 'Share Your Experience!' and add subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' Update form field labels to match specification (Full Name, Class/Year, Subject(s) Studied, Review textarea, Rating 1-5 stars). Update success toast message to 'Thank you for your review! Your feedback helps us improve and inspire other students.' Ensure all text uses t() translation helper for bilingual support. Maintain existing form validation and submission logic."
         }
       ]
     },
     {
-      "id": "REQ-51",
-      "summary": "Add Submit Review button with validation and success toast notification",
+      "id": "REQ-62",
+      "summary": "Integrate Testimonials component into App.tsx after TeachersNotes and before SubmitReview",
       "acceptanceCriteria": [
-        "Submit button validates Full Name, Class/Year, and Review fields before submission",
-        "Success toast displays with confirmation message after submission",
-        "Form clears after successful submission",
-        "Button text is bilingual"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/SubmitReview.tsx",
-          "operation": "modify",
-          "description": "Add Submit Review button that validates required fields (Full Name, Class/Year, Review) before submission. Call backend submitReview method with form data. Display success toast with message 'Thank you for your review! Your feedback helps us improve and inspire other students.' using existing Toaster component. Clear form after successful submission. Use bilingual button text via LanguageContext. Handle submission errors with appropriate error messages."
-        }
-      ]
-    },
-    {
-      "id": "REQ-53",
-      "summary": "Style SubmitReview component with clean card layout and mobile-responsive design",
-      "acceptanceCriteria": [
-        "Component uses Card component from shadcn/ui or similar styling",
-        "Form fields have adequate spacing and padding",
-        "Design is mobile-first and responsive",
-        "Styling matches existing brand theme (gold/yellow, dark background, maroon accents)"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/SubmitReview.tsx",
-          "operation": "modify",
-          "description": "Apply clean card layout using Card component with borders or subtle shadow. Ensure consistent spacing and padding for form fields. Implement mobile-first responsive design that works across all screen sizes. Add hover effects matching existing components like AdmissionForm and Contact. Use brand colors (gold/yellow text, dark background, maroon accents) consistently with the rest of the application."
-        }
-      ]
-    },
-    {
-      "id": "REQ-54",
-      "summary": "Integrate SubmitReview component into App.tsx between Gallery and AdmissionForm sections",
-      "acceptanceCriteria": [
-        "SubmitReview component renders in correct position in page flow",
-        "Component inherits LanguageProvider context",
-        "No layout breaks or styling conflicts with adjacent sections"
+        "Testimonials component is imported and rendered in App.tsx",
+        "Component is positioned after TeachersNotes section and before SubmitReview component",
+        "Component flow and spacing maintain consistency with existing sections",
+        "No layout breaks or styling conflicts are introduced"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Import and render SubmitReview component after Gallery section and before AdmissionForm section. Component automatically inherits LanguageProvider context from existing wrapper. Verify no layout conflicts with adjacent sections and maintain consistent page flow."
+          "description": "Import the new Testimonials component and render it in the main component tree after the TeachersNotes component and before the SubmitReview component. Ensure proper spacing and layout flow matching existing section arrangements. Verify no styling conflicts are introduced."
+        }
+      ]
+    },
+    {
+      "id": "REQ-63",
+      "summary": "Ensure all Testimonials component text supports bilingual switching using LanguageContext",
+      "acceptanceCriteria": [
+        "All static text in Testimonials component uses the t() translation helper function",
+        "Bengali translations are provided for all English text content",
+        "Language toggle instantly switches all testimonials section text between English and Bengali",
+        "No hardcoded English-only text remains in the component"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/contexts/LanguageContext.tsx",
+          "operation": "modify",
+          "description": "Add Bengali translations for all Testimonials component text including page title, subtitle, introduction paragraph, section headers ('Current Students', 'Alumni Feedback'), and all six testimonials (Riya Sen, Anirban Das, Priya Roy, Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) with their names, classes, and review text. Ensure translation keys are accessible via t() helper function."
+        },
+        {
+          "path": "frontend/src/components/Testimonials.tsx",
+          "operation": "modify",
+          "description": "Review all text content in Testimonials component and ensure every string uses the t() translation helper function with appropriate translation keys. Verify no hardcoded English text remains and that all content switches correctly when language toggle is activated."
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "frontend/src/App.tsx": "Main application component wrapped with QueryClientProvider and LanguageProvider that renders all sections including the new SubmitReview component positioned between Gallery and AdmissionForm sections.",
+  "frontend/src/App.tsx": "Main application component wrapped with QueryClientProvider and LanguageProvider that renders all sections including the new Testimonials component positioned after TeachersNotes and before Gallery sections.",
   "frontend/src/contexts/LanguageContext.tsx": "Language context provider that manages bilingual state (English/Bengali) with session storage persistence and provides translation helper function for all components.",
   "frontend/src/components/Hero.tsx": "Hero section component featuring the Brilliant Coaching Centre logo (from uploaded asset), institute name, tagline \"Education | Discipline | Success\", and WhatsApp CTA button with animated background gradients and decorative elements.",
   "frontend/src/components/About.tsx": "About Us section showcasing four key features (Concept Clarity, Personal Care, Discipline, Exam Preparation) with icons in a responsive grid layout with bilingual content support.",
@@ -16,5 +16,6 @@
   "frontend/src/components/Teachers.tsx": "Teachers section component displaying three teacher profiles (Sonali Ma'am, Abhijit Da, Santanu Sir) with avatar placeholders showing initials instead of photos, along with their classes taught, subjects, experience, and teaching focus points with bilingual support.",
   "frontend/src/components/TeachersNotes.tsx": "Teachers & Class Notes section with tabbed navigation (LKG-3, 4-10, 4-12) displaying teacher profiles with avatars, class info, subjects, experience, notes features, and download buttons with bilingual support and responsive design with hover effects.",
   "frontend/src/hooks/useQueries.ts": "React Query hooks for managing review submissions and fetching reviews from the backend with proper state invalidation.",
-  "frontend/src/components/SubmitReview.tsx": "Submit Your Review section component with bilingual form featuring Full Name, Class/Year, Subject(s), Review textarea, and interactive 1-5 star rating with validation, backend submission, and success toast notifications matching the brand theme."
+  "frontend/src/components/SubmitReview.tsx": "Submit Your Review section component with bilingual form featuring Full Name, Class/Year, Subject(s), Review textarea, and interactive 1-5 star rating with validation, backend submission, and success toast notifications matching the brand theme.",
+  "frontend/src/components/Testimonials.tsx": "Testimonials section component displaying page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), and alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) with avatar images, responsive grid layout, hover effects, and full bilingual support."
 }

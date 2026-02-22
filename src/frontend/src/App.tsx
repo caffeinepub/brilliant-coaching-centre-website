@@ -6,6 +6,7 @@ import Courses from './components/Courses';
 import WhyChooseUs from './components/WhyChooseUs';
 import Teachers from './components/Teachers';
 import TeachersNotes from './components/TeachersNotes';
+import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import SubmitReview from './components/SubmitReview';
 import AdmissionForm from './components/AdmissionForm';
@@ -28,6 +29,7 @@ function App() {
           <WhyChooseUs />
           <Teachers />
           <TeachersNotes />
+          <Testimonials />
           <Gallery />
           <SubmitReview />
           <AdmissionForm />

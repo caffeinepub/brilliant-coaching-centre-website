@@ -1,14 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Add a "Submit Your Review" section with a form where students can share their experiences, which are stored in the backend for moderation.
+**Goal:** Create a comprehensive testimonials page displaying current student and alumni reviews with a review submission form.
 
 **Planned changes:**
-- Create a new SubmitReview component with bilingual header "Share Your Experience!" and subtitle
-- Implement review submission form with fields: Full Name (required), Class/Year (required), Subject(s) Studied (optional), Your Review (required textarea), and Rating (optional 1-5 star selector)
-- Add Submit Review button that validates required fields and displays confirmation toast on success
-- Store submitted reviews in backend using Motoko with stable storage, including moderation flag (approved: Bool)
-- Style component using clean card layout with borders/shadow, matching existing brand theme
-- Integrate SubmitReview component into App.tsx below Gallery section and before AdmissionForm section
+- Add new Testimonials component with bilingual page title "What Our Students Say" and introduction text
+- Create Current Students Reviews section displaying three student testimonials (Riya Sen, Anirban Das, Priya Roy) with grid/carousel layout
+- Create Alumni Feedback section displaying three alumni testimonials (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) with differentiated styling
+- Update existing SubmitReview component with new header "Share Your Experience!", subtitle, and confirmation message
+- Integrate Testimonials component into App.tsx between TeachersNotes and SubmitReview sections
+- Ensure all testimonials content supports bilingual switching (English/Bengali)
 
-**User-visible outcome:** Students can submit reviews about their experience at Brilliant Coaching Centre through a form on the website. After submission, they see a confirmation message and the review is stored for moderation.
+**User-visible outcome:** Users can view current student and alumni testimonials in a visually appealing layout, and submit their own reviews through an updated form with better guidance text.
