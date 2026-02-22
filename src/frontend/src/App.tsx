@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LanguageToggle from './components/LanguageToggle';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { Toaster } from '@/components/ui/sonner';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Footer />
         <LanguageToggle />
         <FloatingWhatsApp />
+        <Toaster />
       </div>
     </LanguageProvider>
   );

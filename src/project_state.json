@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 19,
-  "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), why choose us highlights, photo gallery with lightbox, admission enquiry form with WhatsApp integration, contact section, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
+  "projectStateVersion": 23,
+  "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
     "Bilingual support system (English + Bengali) with instant language switching",
@@ -348,6 +348,70 @@
         "REQ-39"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-expand-the-whychooseus-component-to-display-12-strength-items-instead-of-5-adding-personalized-attention-small-batch-sizes-for-individual-guidance-structured-curriculum-step-by-step-learning-aligned-with-school-and-exam-requirements-regular-assessments-feedback-weekly-and-monthly-tests-with-detailed-performance-reports-doubt-clearing-sessions-extra-support-sessions-to-clarify-difficult-concepts-exam-focused-preparation-shortcuts-tips-practice-papers-and-model-tests-interactive-engaging-learning-activity-based-and-visual-learning-for-younger-students-with-multimedia-support-motivation-confidence-building-encouraging-students-to-participate-and-develop-positive-learning-attitude-safe-supportive-environment-friendly-classrooms-with-holistic-development-focus-study-material-notes-class-wise-notes-and-worksheets-as-downloadable-pdfs-parent-involvement-regular-updates-and-parent-teacher-interactions-technology-integration-digital-notes-online-resources-and-optional-online-classes-and-achievements-success-stories-showcase-of-toppers-awards-and-previous-students-successes",
+      "title": "Expand the WhyChooseUs component to display 12 strength items instead of 5, adding: Personalized Attention (small batch sizes for individual guidance), Structured Curriculum (step-by-step learning aligned with school and exam requirements), Regular Assessments & Feedback (weekly and monthly tests with detailed performance reports), Doubt-Clearing Sessions (extra support sessions to clarify difficult concepts), Exam-Focused Preparation (shortcuts, tips, practice papers, and model tests), Interactive & Engaging Learning (activity-based and visual learning for younger students with multimedia support), Motivation & Confidence Building (encouraging students to participate and develop positive learning attitude), Safe & Supportive Environment (friendly classrooms with holistic development focus), Study Material & Notes (class-wise notes and worksheets as downloadable PDFs), Parent Involvement (regular updates and parent-teacher interactions), Technology Integration (digital notes, online resources, and optional online classes), and Achievements & Success Stories (showcase of toppers, awards, and previous students' successes)",
+      "reqIds": [
+        "REQ-40"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-icons-to-each-of-the-12-strength-items-in-the-whychooseus-component-for-personalized-attention-for-structured-curriculum-for-regular-assessments-feedback-for-doubt-clearing-sessions-for-exam-focused-preparation-for-interactive-engaging-learning-for-motivation-confidence-building-for-safe-supportive-environment-for-study-material-notes-for-parent-involvement-for-technology-integration-and-for-achievements-success-stories",
+      "title": "Apply icons to each of the 12 strength items in the WhyChooseUs component: 👩‍🏫 for Personalized Attention, 📚 for Structured Curriculum, 📝 for Regular Assessments & Feedback, ❓ for Doubt-Clearing Sessions, ⏱ for Exam-Focused Preparation, 🎨 for Interactive & Engaging Learning, 💪 for Motivation & Confidence Building, 🛡 for Safe & Supportive Environment, 📄 for Study Material & Notes, 👨‍👩‍👧 for Parent Involvement, 💻 for Technology Integration, and 🏆 for Achievements & Success Stories",
+      "reqIds": [
+        "REQ-41"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-style-the-whychooseus-component-strength-cards-with-subtle-hover-animation-that-scales-or-lifts-the-card-slightly-with-shadow-effect-and-highlight-key-points-in-bold-text-to-improve-readability",
+      "title": "Style the WhyChooseUs component strength cards with subtle hover animation that scales or lifts the card slightly with shadow effect, and highlight key points in bold text to improve readability",
+      "reqIds": [
+        "REQ-42"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-component-to-display-two-phone-numbers-9735857573-and-8436529117-separated-by-a-vertical-bar-or-displayed-as-two-clickable-phone-links",
+      "title": "Update the Contact component to display two phone numbers: 9735857573 and 8436529117, separated by a vertical bar or displayed as two clickable phone links",
+      "reqIds": [
+        "REQ-43"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-email-field-to-the-contact-component-displaying-info-brilliantcoaching-in-as-a-clickable-mailto-link",
+      "title": "Add email field to the Contact component displaying 'info@brilliantcoaching.in' as a clickable mailto link",
+      "reqIds": [
+        "REQ-44"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-social-media-links-section-to-the-footer-component-with-four-links-facebook-brilliant-coaching-centre-instagram-c-brilliantcoaching-youtube-brilliant-coaching-channel-and-whatsapp-join-our-channel-each-opening-in-a-new-tab",
+      "title": "Add social media links section to the Footer component with four links: Facebook (Brilliant Coaching Centre), Instagram (@c.brilliantcoaching), YouTube (Brilliant Coaching Channel), and WhatsApp (Join Our Channel), each opening in a new tab",
+      "reqIds": [
+        "REQ-45"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-footer-cta-buttons-to-the-footer-component-enroll-now-button-that-opens-whatsapp-with-pre-filled-admission-enquiry-message-to-91-98834-48350-and-view-notes-button-that-scrolls-to-the-teachersnotes-section-on-the-same-page",
+      "title": "Add footer CTA buttons to the Footer component: 'Enroll Now' button that opens WhatsApp with pre-filled admission enquiry message to +91 98834 48350, and 'View Notes' button that scrolls to the TeachersNotes section on the same page",
+      "reqIds": [
+        "REQ-46"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-new-text-content-in-the-expanded-whychooseus-section-updated-contact-section-and-enhanced-footer-section-supports-bilingual-switching-between-english-and-bengali-using-the-existing-languagecontext",
+      "title": "Ensure all new text content in the expanded WhyChooseUs section, updated Contact section, and enhanced Footer section supports bilingual switching between English and Bengali using the existing LanguageContext",
+      "reqIds": [
+        "REQ-47"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -420,6 +484,18 @@
     {
       "id": "AR-13",
       "summary": "Teachers & Class Notes section with tabbed navigation (LKG-Class 3, Class 4-10, Class 4-12) displaying teacher profiles and downloadable notes with bilingual support",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Expand Why Choose Us section with 12 detailed strengths: personalized attention, structured curriculum, regular assessments & feedback, doubt-clearing sessions, exam-focused preparation, interactive & engaging learning, motivation & confidence building, safe & supportive environment, study material & notes, parent involvement, technology integration, and achievements & success stories with icons, grid layout (2-3 items per row on desktop, 1 on mobile), hover animations, and bilingual support",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Enhance Contact/Footer section with multiple phone numbers (9735857573 | 8436529117), email (info@brilliantcoaching.in), social media links (Facebook: Brilliant Coaching Centre, Instagram: @c.brilliantcoaching, YouTube: Brilliant Coaching Channel, WhatsApp: Join Our Channel), and footer CTA buttons (Enroll Now | View Notes) with bilingual support",
       "reqIds": [],
       "status": "pending"
     }

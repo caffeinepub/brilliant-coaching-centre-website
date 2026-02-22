@@ -1,134 +1,27 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T01:46:21.432Z",
+  "generatedAt": "2026-02-22T02:31:01.962Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 10,
-    "implemented": 10,
-    "items": [
-      {
-        "id": "REQ-30",
-        "summary": "Create a new TeachersNotes component that displays a section titled 'Teachers & Class Notes' with subtitle 'Access class-wise notes prepared by our expert teachers to strengthen learning and excel in exams' with bilingual support (English and Bengali)",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-31",
-        "summary": "Implement tabbed navigation with three tabs: 'LKG – Class 3', 'Class 4 – 10', and 'Class 4 – 12' with 'LKG – Class 3' as the default active tab",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-32",
-        "summary": "Display notes card for 'LKG – Class 3' showing Sonali Ma'am (All Subjects, 15+ Years experience) with features: fun, colorful, and easy-to-understand notes for early learners; focus on basic concepts, confidence, and concept clarity; downloadable PDFs and printable worksheets; and a Download Notes button",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-33",
-        "summary": "Display notes card for 'Class 4 – 10' showing Abhijit (Abhi) Da (Mathematics, 5 Years experience) with features: step-by-step explanations and examples; practice questions with shortcuts and tips; exam-oriented notes to improve problem-solving and accuracy; and a Download Notes button",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-34",
-        "summary": "Display notes card for 'Class 4 – 12' showing Santanu Sir (English, 35+ Years experience) with features: grammar, comprehension, writing, and communication skills; literature and vocabulary notes; tips for exam preparation and effective learning; and a Download Notes button",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-35",
-        "summary": "Style notes cards using grid layout with teacher placeholder avatar, name, class range, subject, experience, notes features list, and download button with hover effects that lift the card slightly with shadow",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-36",
-        "summary": "Add icons to notes cards: 📚 for Subject, 🏫 for Class, and 🎓 for Experience fields",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-37",
-        "summary": "Implement responsive mobile design where grid cards resize and stack on smaller screens, and tabs become horizontally scrollable or stack vertically on mobile devices",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      },
-      {
-        "id": "REQ-38",
-        "summary": "Integrate the TeachersNotes component into App.tsx after the existing Teachers section and before the Gallery section, maintaining component flow and styling consistency with the existing design theme (gold/yellow text, dark background, maroon accents)",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/App.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/App.tsx"
-        ]
-      },
-      {
-        "id": "REQ-39",
-        "summary": "Ensure all text content in the TeachersNotes component supports bilingual switching between English and Bengali using the existing LanguageContext",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/TeachersNotes.tsx"
-        ]
-      }
-    ]
+    "total": 0,
+    "implemented": 0,
+    "items": []
   },
   "changedFiles": [
+    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/App.tsx",
-    "frontend/src/components/TeachersNotes.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
