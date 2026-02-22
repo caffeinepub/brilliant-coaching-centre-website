@@ -1,70 +1,43 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace teacher profile placeholder images with uploaded photos",
+  "title": "Add Brilliant Coaching Centre logo to Hero section",
   "requirements": [
     {
-      "id": "REQ-21",
-      "summary": "Replace Abhijit Da's placeholder image with uploaded photo showing him in white patterned shirt at microphone",
+      "id": "REQ-27",
+      "summary": "Replace the current placeholder logo in the Hero component with the uploaded Brilliant Coaching Centre logo",
       "acceptanceCriteria": [
-        "Abhijit Da's profile card displays the uploaded photo instead of the placeholder",
-        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
-        "The image displays correctly in both English and Bengali language modes"
+        "The Hero component displays the uploaded Brilliant Coaching Centre logo",
+        "Logo maintains proper aspect ratio and visual quality",
+        "Logo is prominently displayed in the hero section",
+        "Logo styling is consistent with the existing gold/yellow and maroon brand colors"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Teachers.tsx",
+          "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Update the image source for Abhijit Da's teacher profile to reference the processed photo at frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
+          "description": "Update the Hero component to replace the current logo image source with the uploaded Brilliant Coaching Centre logo. Change the img element's src attribute to reference the new logo asset at frontend/public/assets/Brilliant Coaching Centre copy.jpg. Ensure the logo maintains proper aspect ratio, visual quality, and styling consistent with the brand's gold/yellow and maroon colors. Verify the alt text accurately describes the new logo."
         }
       ]
     },
     {
-      "id": "REQ-22",
-      "summary": "Replace Santanu Sir's placeholder image with uploaded photo showing him outdoors in white dotted shirt with sunglasses",
+      "id": "REQ-28",
+      "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset and update Hero component to reference it",
       "acceptanceCriteria": [
-        "Santanu Sir's profile card displays the uploaded photo instead of the placeholder",
-        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
-        "The image displays correctly in both English and Bengali language modes"
+        "Logo file is saved in frontend/public/assets/generated directory",
+        "Hero component src attribute points to the correct asset path",
+        "Logo loads correctly on page render"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Teachers.tsx",
-          "operation": "modify",
-          "description": "Update the image source for Santanu Sir's teacher profile to reference the processed photo at frontend/public/assets/generated/santanu-sir-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-23",
-      "summary": "Replace Sonali Ma'am's placeholder image with uploaded photo showing her in traditional pink saree with red bindi",
-      "acceptanceCriteria": [
-        "Sonali Ma'am's profile card displays the uploaded photo instead of the placeholder",
-        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
-        "The image displays correctly in both English and Bengali language modes"
-      ],
-      "file_operations": [
+          "path": "frontend/public/assets/Brilliant Coaching Centre copy.jpg",
+          "operation": "create",
+          "description": "Copy the uploaded Brilliant Coaching Centre logo file (Brilliant Coaching Centre copy.jpg) to the frontend/public/assets directory. This logo features a lightbulb design with a yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on a dark background with maroon border."
+        },
         {
-          "path": "frontend/src/components/Teachers.tsx",
+          "path": "frontend/src/components/Hero.tsx",
           "operation": "modify",
-          "description": "Update the image source for Sonali Ma'am's teacher profile to reference the processed photo at frontend/public/assets/generated/sonali-maam-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-24",
-      "summary": "Wire the three generated teacher photos as static assets and update Teachers component to reference asset paths",
-      "acceptanceCriteria": [
-        "All three teacher photos are stored in frontend/public/assets/generated",
-        "The Teachers component imports and displays images from the assets directory",
-        "Images load correctly without network requests to external sources",
-        "The responsive grid layout for teacher profiles remains intact with the new images"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Teachers.tsx",
-          "operation": "modify",
-          "description": "Update all three teacher profile image sources to use the generated asset paths: frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png, frontend/public/assets/generated/santanu-sir-photo.dim_400x400.png, and frontend/public/assets/generated/sonali-maam-photo.dim_400x400.png. Ensure images are referenced using relative paths from the public directory (/assets/generated/...) and maintain the existing card structure, styling, and bilingual text content."
+          "description": "Update the Hero component's logo img element to reference the correct asset path /assets/Brilliant Coaching Centre copy.jpg. Ensure the src attribute uses the public asset path format that will resolve correctly at runtime. Verify the image loads properly and displays with appropriate dimensions in the hero section."
         }
       ]
     }

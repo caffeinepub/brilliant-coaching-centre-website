@@ -1,12 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the three placeholder teacher profile images with uploaded real photos of Abhijit Da, Santanu Sir, and Sonali Ma'am.
+**Goal:** Replace the placeholder logo in the Hero section with the Brilliant Coaching Centre logo.
 
 **Planned changes:**
-- Process uploaded photo of Abhijit Da in white patterned shirt at microphone to create 400x400px teacher profile image
-- Process uploaded photo of Santanu Sir in white dotted shirt with sunglasses outdoors to create 400x400px teacher profile image
-- Process uploaded photo of Sonali Ma'am in pink saree with red bindi to create 400x400px teacher profile image
-- Update Teachers component to reference the new processed photos from the assets directory
+- Add the uploaded Brilliant Coaching Centre logo (showing lightbulb design with yellow student figure and "brilliant COACHING CENTRE" text) to the frontend/public/assets/generated directory
+- Update the Hero component to display the Brilliant Coaching Centre logo instead of the current placeholder
+- Ensure logo maintains proper aspect ratio and visual quality in the hero section
 
-**User-visible outcome:** The Teachers section displays real photos of Abhijit Da, Santanu Sir, and Sonali Ma'am instead of placeholder images, giving the website an authentic, professional appearance.
+**User-visible outcome:** The Hero section displays the official Brilliant Coaching Centre logo with the lightbulb and student design, consistent with the brand's gold/yellow and maroon color scheme.

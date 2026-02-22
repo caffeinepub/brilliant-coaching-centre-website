@@ -29,7 +29,7 @@ export default function Teachers() {
     },
     {
       name: t('Santanu Sir', 'সন্তনু স্যার'),
-      image: '/assets/generated/santanu-sir-photo.dim_400x400.png',
+      image: '/assets/generated/santanu-sir-updated.dim_400x400.png',
       classes: t('Class 4 – Class 12', 'ক্লাস ৪ – ক্লাস ১২'),
       subjects: t('English', 'ইংরেজি'),
       experience: t('35+ Years', '৩৫+ বছর'),

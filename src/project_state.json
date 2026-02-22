@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
+  "projectStateVersion": 15,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), why choose us highlights, photo gallery with lightbox, admission enquiry form with WhatsApp integration, contact section, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -14,7 +14,6 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Process uploaded photo of male teacher in white patterned shirt at microphone to create professional teacher portrait (abhijit-da.dim_400x400.png > abhijit-da-photo.dim_400x400.png)\n- Process uploaded photo of male teacher in white dotted shirt with sunglasses outdoors to create professional teacher portrait (santanu-sir.dim_400x400.png > santanu-sir-photo.dim_400x400.png)\n- Process uploaded photo of female teacher in pink saree with red bindi to create professional teacher portrait (sonali-maam.dim_400x400.png > sonali-maam-photo.dim_400x400.png)",
   "generatedImages": [
     {
       "filename": "abhijit-da.dim_400x400.png",
@@ -227,6 +226,38 @@
         "REQ-24"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-image-for-santanu-sir-s-teacher-profile-in-the-teachers-component-with-the-uploaded-photo-img-9360-2-jpg-showing-him-outdoors-in-a-white-dotted-shirt-with-sunglasses-and-green-background",
+      "title": "Replace the placeholder image for Santanu Sir's teacher profile in the Teachers component with the uploaded photo IMG_9360-2.JPG showing him outdoors in a white dotted shirt with sunglasses and green background",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-static-asset-path-in-the-teachers-component-to-reference-the-newly-uploaded-image-for-santanu-sir-stored-in-frontend-public-assets-generated-directory",
+      "title": "Update the static asset path in the Teachers component to reference the newly uploaded image for Santanu Sir stored in frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-placeholder-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-brilliant-coaching-centre-copy-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
+      "title": "Replace the current placeholder logo in the Hero component with the uploaded Brilliant Coaching Centre logo (Brilliant Coaching Centre copy.jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-uploaded-brilliant-coaching-centre-logo-as-a-static-asset-in-the-frontend-public-assets-generated-directory-and-update-the-hero-component-to-reference-this-asset-path",
+      "title": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -293,6 +324,12 @@
     {
       "id": "AR-11",
       "summary": "Our Teachers section displaying three teacher profiles: Sonali Ma'am (LKG-Class 3, All Subjects, 15+ years), Abhijit Da (Class 4-10, Mathematics, 5 years), and Santanu Sir (Class 4-12, English, 35+ years) with images, classes taught, subjects, experience, and teaching focus",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add Brilliant Coaching Centre logo to the hero section",
       "reqIds": [],
       "status": "pending"
     }

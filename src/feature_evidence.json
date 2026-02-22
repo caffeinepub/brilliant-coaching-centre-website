@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-placeholder-image-for-abhijit-da-s-teacher-profile-with-the-uploaded-photo-showing-him-in-a-white-patterned-shirt-speaking-at-a-microphone-with-decorative-background",
-      "featureTitle": "Replace the placeholder image for Abhijit Da's teacher profile with the uploaded photo showing him in a white patterned shirt speaking at a microphone with decorative background",
+      "featureId": "feature-replace-the-current-placeholder-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-brilliant-coaching-centre-copy-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
+      "featureTitle": "Replace the current placeholder logo in the Hero component with the uploaded Brilliant Coaching Centre logo (Brilliant Coaching Centre copy.jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
       "files": [
-        "frontend/src/components/Teachers.tsx"
+        "frontend/src/components/Hero.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,15 +16,15 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-21"
+        "REQ-27"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-replace-the-placeholder-image-for-santanu-sir-s-teacher-profile-with-the-uploaded-photo-showing-him-outdoors-in-a-white-dotted-shirt-with-sunglasses-and-green-background",
-      "featureTitle": "Replace the placeholder image for Santanu Sir's teacher profile with the uploaded photo showing him outdoors in a white dotted shirt with sunglasses and green background",
+      "featureId": "feature-store-the-uploaded-brilliant-coaching-centre-logo-as-a-static-asset-in-the-frontend-public-assets-generated-directory-and-update-the-hero-component-to-reference-this-asset-path",
+      "featureTitle": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
       "files": [
-        "frontend/src/components/Teachers.tsx"
+        "frontend/src/components/Hero.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -35,45 +35,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-22"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-replace-the-placeholder-image-for-sonali-ma-am-s-teacher-profile-with-the-uploaded-photo-showing-her-in-traditional-pink-saree-with-red-bindi-against-pink-background",
-      "featureTitle": "Replace the placeholder image for Sonali Ma'am's teacher profile with the uploaded photo showing her in traditional pink saree with red bindi against pink background",
-      "files": [
-        "frontend/src/components/Teachers.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-23"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-render-the-three-generated-teacher-photos-as-static-assets-in-frontend-public-assets-generated-directory-and-update-the-teachers-component-to-reference-these-asset-paths",
-      "featureTitle": "Render the three generated teacher photos as static assets in frontend/public/assets/generated directory and update the Teachers component to reference these asset paths",
-      "files": [
-        "frontend/src/components/Teachers.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-24"
+        "REQ-28"
       ],
       "confidence": "high"
     }
