@@ -1,0 +1,97 @@
+{
+  "kind": "build_request",
+  "title": "Replace teacher profile placeholder images with uploaded photos",
+  "projectName": "Brilliant Coaching Centre",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "text": "Replace the placeholder image for Abhijit Da's teacher profile with the uploaded photo showing him in a white patterned shirt speaking at a microphone with decorative background",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Image 1 Abhijit Da"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Abhijit Da's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "text": "Replace the placeholder image for Santanu Sir's teacher profile with the uploaded photo showing him outdoors in a white dotted shirt with sunglasses and green background",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Image 2 Santanu Sir"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Santanu Sir's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "text": "Replace the placeholder image for Sonali Ma'am's teacher profile with the uploaded photo showing her in traditional pink saree with red bindi against pink background",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ],
+        "quotes": [
+          "Image 3 Sonali Mam"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sonali Ma'am's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "text": "Render the three generated teacher photos as static assets in frontend/public/assets/generated directory and update the Teachers component to reference these asset paths",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-final"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All three teacher photos are stored in frontend/public/assets/generated",
+        "The Teachers component imports and displays images from the assets directory",
+        "Images load correctly without network requests to external sources",
+        "The responsive grid layout for teacher profiles remains intact with the new images"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the existing Teachers component structure or layout beyond image source changes",
+    "Maintain the existing responsive grid layout and card styling",
+    "Preserve bilingual support functionality for all teacher profile text content"
+  ],
+  "nonGoals": [
+    "Modifying teacher profile information (names, experience, classes, subjects)",
+    "Changing the Teachers section position in App.tsx",
+    "Altering the color scheme or typography of teacher profile cards",
+    "Adding new teacher profiles beyond the existing three"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Process uploaded photo of male teacher in white patterned shirt at microphone to create professional teacher portrait (abhijit-da.dim_400x400.png > abhijit-da-photo.dim_400x400.png)",
+      "Process uploaded photo of male teacher in white dotted shirt with sunglasses outdoors to create professional teacher portrait (santanu-sir.dim_400x400.png > santanu-sir-photo.dim_400x400.png)",
+      "Process uploaded photo of female teacher in pink saree with red bindi to create professional teacher portrait (sonali-maam.dim_400x400.png > sonali-maam-photo.dim_400x400.png)"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Replace teacher profile placeholder images with uploaded photos",
+  "requirements": [
+    {
+      "id": "REQ-21",
+      "summary": "Replace Abhijit Da's placeholder image with uploaded photo showing him in white patterned shirt at microphone",
+      "acceptanceCriteria": [
+        "Abhijit Da's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Teachers.tsx",
+          "operation": "modify",
+          "description": "Update the image source for Abhijit Da's teacher profile to reference the processed photo at frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-22",
+      "summary": "Replace Santanu Sir's placeholder image with uploaded photo showing him outdoors in white dotted shirt with sunglasses",
+      "acceptanceCriteria": [
+        "Santanu Sir's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Teachers.tsx",
+          "operation": "modify",
+          "description": "Update the image source for Santanu Sir's teacher profile to reference the processed photo at frontend/public/assets/generated/santanu-sir-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-23",
+      "summary": "Replace Sonali Ma'am's placeholder image with uploaded photo showing her in traditional pink saree with red bindi",
+      "acceptanceCriteria": [
+        "Sonali Ma'am's profile card displays the uploaded photo instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the 400x400px teacher profile card dimensions",
+        "The image displays correctly in both English and Bengali language modes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Teachers.tsx",
+          "operation": "modify",
+          "description": "Update the image source for Sonali Ma'am's teacher profile to reference the processed photo at frontend/public/assets/generated/sonali-maam-photo.dim_400x400.png. Replace the existing placeholder image path with the new asset path while maintaining the existing alt text, styling, and responsive image handling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-24",
+      "summary": "Wire the three generated teacher photos as static assets and update Teachers component to reference asset paths",
+      "acceptanceCriteria": [
+        "All three teacher photos are stored in frontend/public/assets/generated",
+        "The Teachers component imports and displays images from the assets directory",
+        "Images load correctly without network requests to external sources",
+        "The responsive grid layout for teacher profiles remains intact with the new images"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Teachers.tsx",
+          "operation": "modify",
+          "description": "Update all three teacher profile image sources to use the generated asset paths: frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png, frontend/public/assets/generated/santanu-sir-photo.dim_400x400.png, and frontend/public/assets/generated/sonali-maam-photo.dim_400x400.png. Ensure images are referenced using relative paths from the public directory (/assets/generated/...) and maintain the existing card structure, styling, and bilingual text content."
+        }
+      ]
+    }
+  ]
+}

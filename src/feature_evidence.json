@@ -1,0 +1,81 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-replace-the-placeholder-image-for-abhijit-da-s-teacher-profile-with-the-uploaded-photo-showing-him-in-a-white-patterned-shirt-speaking-at-a-microphone-with-decorative-background",
+      "featureTitle": "Replace the placeholder image for Abhijit Da's teacher profile with the uploaded photo showing him in a white patterned shirt speaking at a microphone with decorative background",
+      "files": [
+        "frontend/src/components/Teachers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-21"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-placeholder-image-for-santanu-sir-s-teacher-profile-with-the-uploaded-photo-showing-him-outdoors-in-a-white-dotted-shirt-with-sunglasses-and-green-background",
+      "featureTitle": "Replace the placeholder image for Santanu Sir's teacher profile with the uploaded photo showing him outdoors in a white dotted shirt with sunglasses and green background",
+      "files": [
+        "frontend/src/components/Teachers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-22"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-replace-the-placeholder-image-for-sonali-ma-am-s-teacher-profile-with-the-uploaded-photo-showing-her-in-traditional-pink-saree-with-red-bindi-against-pink-background",
+      "featureTitle": "Replace the placeholder image for Sonali Ma'am's teacher profile with the uploaded photo showing her in traditional pink saree with red bindi against pink background",
+      "files": [
+        "frontend/src/components/Teachers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-23"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-three-generated-teacher-photos-as-static-assets-in-frontend-public-assets-generated-directory-and-update-the-teachers-component-to-reference-these-asset-paths",
+      "featureTitle": "Render the three generated teacher photos as static assets in frontend/public/assets/generated directory and update the Teachers component to reference these asset paths",
+      "files": [
+        "frontend/src/components/Teachers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

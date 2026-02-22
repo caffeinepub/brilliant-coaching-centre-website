@@ -1,0 +1,304 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), why choose us highlights, photo gallery with lightbox, admission enquiry form with WhatsApp integration, contact section, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
+  "architectural_notes": [
+    "Mobile-first responsive design approach",
+    "Bilingual support system (English + Bengali) with instant language switching",
+    "WhatsApp integration for enquiry form submissions and floating button",
+    "Brand color scheme: gold/yellow text, dark background, maroon accents",
+    "Smooth animations and hover effects throughout",
+    "Click-to-zoom lightbox functionality for photo gallery",
+    "Fast-loading optimization required",
+    "Ready for future upgrades: Google Sheet integration, admin dashboard, email alerts, full coaching ERP"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Process uploaded photo of male teacher in white patterned shirt at microphone to create professional teacher portrait (abhijit-da.dim_400x400.png > abhijit-da-photo.dim_400x400.png)\n- Process uploaded photo of male teacher in white dotted shirt with sunglasses outdoors to create professional teacher portrait (santanu-sir.dim_400x400.png > santanu-sir-photo.dim_400x400.png)\n- Process uploaded photo of female teacher in pink saree with red bindi to create professional teacher portrait (sonali-maam.dim_400x400.png > sonali-maam-photo.dim_400x400.png)",
+  "generatedImages": [
+    {
+      "filename": "abhijit-da.dim_400x400.png",
+      "description": "Professional teacher portrait photo for Abhijit (Abhi) Da showing a friendly male mathematics educator",
+      "targetWidth": 400,
+      "targetHeight": 400
+    },
+    {
+      "filename": "santanu-sir.dim_400x400.png",
+      "description": "Professional teacher portrait photo for Santanu Sir showing an experienced male English educator",
+      "targetWidth": 400,
+      "targetHeight": 400
+    },
+    {
+      "filename": "sonali-maam.dim_400x400.png",
+      "description": "Professional teacher portrait photo for Sonali Ma'am showing a friendly female educator",
+      "targetWidth": 400,
+      "targetHeight": 400
+    }
+  ],
+  "existing_features": [
+    {
+      "id": "feature-create-a-hero-section-with-the-brilliant-coaching-centre-logo-institute-name-tagline-education-discipline-success-and-a-prominent-call-to-action-button-labeled-admission-enquiry-that-opens-whatsapp-with-pre-filled-message-to-91-98834-48350",
+      "title": "Create a Hero section with the Brilliant Coaching Centre logo, institute name, tagline 'Education | Discipline | Success', and a prominent call-to-action button labeled 'Admission Enquiry' that opens WhatsApp with pre-filled message to +91 98834 48350",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-bilingual-about-us-section-in-english-and-bengali-that-highlights-concept-clarity-personal-care-discipline-and-exam-preparation-with-smooth-text-switching-based-on-selected-language",
+      "title": "Implement bilingual About Us section in English and Bengali that highlights concept clarity, personal care, discipline, and exam preparation with smooth text switching based on selected language",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-courses-offered-section-with-clean-cards-displaying-three-tiers-lkg-class-iv-all-subjects-class-v-class-x-english-mathematics-and-class-xi-class-xii-english-with-clear-visual-hierarchy-and-bilingual-support",
+      "title": "Build Courses Offered section with clean cards displaying three tiers: 'LKG – Class IV' (All Subjects), 'Class V – Class X' (English & Mathematics), and 'Class XI – Class XII' (English), with clear visual hierarchy and bilingual support",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-why-choose-us-section-highlighting-five-key-benefits-experienced-caring-teachers-small-batch-size-regular-practice-tests-friendly-learning-environment-and-affordable-fees-with-bilingual-support",
+      "title": "Create Why Choose Us section highlighting five key benefits: experienced & caring teachers, small batch size, regular practice & tests, friendly learning environment, and affordable fees, with bilingual support",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-photo-gallery-section-with-animated-grid-layout-displaying-classroom-teaching-photos-student-activities-saraswati-puja-celebration-and-group-photos-with-click-to-zoom-lightbox-functionality",
+      "title": "Build Photo Gallery section with animated grid layout displaying classroom teaching photos, student activities, Saraswati Puja celebration, and group photos, with click-to-zoom lightbox functionality",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admission-enquiry-form-with-fields-for-student-name-class-subject-and-mobile-number-that-sends-a-structured-message-directly-to-whatsapp-number-91-98834-48350-on-submission",
+      "title": "Implement Admission enquiry form with fields for Student Name, Class, Subject, and Mobile Number that sends a structured message directly to WhatsApp number +91 98834 48350 on submission",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-contact-section-displaying-address-puabagan-bankura-west-bengal-phone-number-91-98834-48350-whatsapp-contact-link-and-optional-email-field-with-bilingual-support",
+      "title": "Create Contact section displaying address 'Puabagan, Bankura, West Bengal', phone number +91 98834 48350, WhatsApp contact link, and optional email field, with bilingual support",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-floating-language-switch-button-with-english-toggle-that-instantly-switches-all-major-section-text-content-between-english-and-bengali-across-the-entire-website",
+      "title": "Implement floating language switch button with বাংলা/English toggle that instantly switches all major section text content between English and Bengali across the entire website",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-always-visible-floating-whatsapp-button-that-opens-whatsapp-chat-to-91-98834-48350-with-auto-filled-enquiry-message",
+      "title": "Add always-visible floating WhatsApp button that opens WhatsApp chat to +91 98834 48350 with auto-filled enquiry message",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-design-theme-matching-the-official-brilliant-coaching-centre-branding-with-gold-yellow-text-dark-background-maroon-accent-colors-throughout-the-website-with-smooth-animations-hover-effects-and-mobile-first-responsive-layout",
+      "title": "Apply design theme matching the official Brilliant Coaching Centre branding with gold/yellow text, dark background, maroon accent colors throughout the website with smooth animations, hover effects, and mobile-first responsive layout",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-footer-watermark-logo-with-low-opacity-that-matches-the-brand-colors-gold-yellow-dark-background-maroon-accent",
+      "title": "Add footer watermark logo with low opacity that matches the brand colors (gold/yellow, dark background, maroon accent)",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-fourth-gallery-image-placeholder-with-the-uploaded-classroom-photo-showing-students-studying-at-wooden-desks-in-a-green-walled-classroom-with-fluorescent-lighting-wall-decorations-bookshelves-and-a-teacher-s-desk",
+      "title": "Replace the fourth gallery image placeholder with the uploaded classroom photo showing students studying at wooden desks in a green-walled classroom with fluorescent lighting, wall decorations, bookshelves, and a teacher's desk",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-first-gallery-image-element-3-xpath-html-1-body-1-div-1-div-1-section-5-div-1-div-2-div-1-div-1-with-the-uploaded-photo-img-20250121-200428-753-jpg-showing-a-teacher-standing-behind-a-wooden-desk-in-a-light-green-classroom-with-a-whiteboard-door-and-wooden-chair",
+      "title": "Replace the first gallery image (Element 3, XPath: /html[1]/body[1]/div[1]/div[1]/section[5]/div[1]/div[2]/div[1]/div[1]) with the uploaded photo IMG_20250121_200428_753.jpg showing a teacher standing behind a wooden desk in a light green classroom with a whiteboard, door, and wooden chair",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-second-gallery-image-element-2-xpath-html-1-body-1-div-1-div-1-section-5-div-1-div-2-div-2-div-1-with-the-uploaded-photo-img-20250203-143852-690-jpg-showing-students-in-yellow-traditional-dress-performing-saraswati-puja-ceremony-with-decorated-altar-colorful-decorations-and-offerings",
+      "title": "Replace the second gallery image (Element 2, XPath: /html[1]/body[1]/div[1]/div[1]/section[5]/div[1]/div[2]/div[2]/div[1]) with the uploaded photo IMG_20250203_143852_690.jpg showing students in yellow traditional dress performing Saraswati Puja ceremony with decorated altar, colorful decorations, and offerings",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-third-gallery-image-element-1-xpath-html-1-body-1-div-1-div-1-section-5-div-1-div-2-div-3-div-1-with-the-uploaded-photo-img-20260205-071643-210-webp-showing-students-studying-at-wooden-desks-in-a-green-walled-classroom-with-fluorescent-lighting-wall-decorations-including-framed-photos-bookshelves-and-a-ceiling-fan",
+      "title": "Replace the third gallery image (Element 1, XPath: /html[1]/body[1]/div[1]/div[1]/section[5]/div[1]/div[2]/div[3]/div[1]) with the uploaded photo IMG_20260205_071643_210.webp showing students studying at wooden desks in a green-walled classroom with fluorescent lighting, wall decorations including framed photos, bookshelves, and a ceiling fan",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-our-teachers-section-component-that-displays-three-teacher-profiles-in-a-responsive-grid-layout-with-bilingual-support-english-and-bengali",
+      "title": "Create a new Our Teachers section component that displays three teacher profiles in a responsive grid layout with bilingual support (English and Bengali)",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-sonali-ma-am-s-profile-with-image-placeholder-showing-classes-lkg-class-3-subjects-all-subjects-experience-15-years-teaching-focus-on-early-childhood-and-primary-education-with-strong-foundations-and-confidence-building",
+      "title": "Display Sonali Ma'am's profile with image placeholder, showing Classes: LKG – Class 3, Subjects: All Subjects, Experience: 15+ Years, teaching focus on early childhood and primary education with strong foundations and confidence building",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-abhijit-abhi-da-s-profile-with-image-placeholder-showing-classes-class-4-class-10-subject-mathematics-experience-5-years-teaching-focus-on-clear-explanations-and-problem-solving-techniques-with-focus-on-accuracy-and-exam-performance",
+      "title": "Display Abhijit (Abhi) Da's profile with image placeholder, showing Classes: Class 4 – Class 10, Subject: Mathematics, Experience: 5 Years, teaching focus on clear explanations and problem-solving techniques with focus on accuracy and exam performance",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-santanu-sir-s-profile-with-image-placeholder-showing-classes-class-4-class-12-subject-english-experience-35-years-teaching-focus-on-grammar-writing-and-communication-skills-with-strong-exam-oriented-teaching-approach",
+      "title": "Display Santanu Sir's profile with image placeholder, showing Classes: Class 4 – Class 12, Subject: English, Experience: 35+ Years, teaching focus on grammar, writing, and communication skills with strong exam-oriented teaching approach",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-new-teachers-component-into-app-tsx-between-the-whychooseus-and-gallery-sections-maintaining-the-existing-component-flow-and-styling-consistency",
+      "title": "Integrate the new Teachers component into App.tsx between the WhyChooseUs and Gallery sections, maintaining the existing component flow and styling consistency",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-image-for-abhijit-da-s-teacher-profile-with-the-uploaded-photo-showing-him-in-a-white-patterned-shirt-speaking-at-a-microphone-with-decorative-background",
+      "title": "Replace the placeholder image for Abhijit Da's teacher profile with the uploaded photo showing him in a white patterned shirt speaking at a microphone with decorative background",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-image-for-santanu-sir-s-teacher-profile-with-the-uploaded-photo-showing-him-outdoors-in-a-white-dotted-shirt-with-sunglasses-and-green-background",
+      "title": "Replace the placeholder image for Santanu Sir's teacher profile with the uploaded photo showing him outdoors in a white dotted shirt with sunglasses and green background",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-placeholder-image-for-sonali-ma-am-s-teacher-profile-with-the-uploaded-photo-showing-her-in-traditional-pink-saree-with-red-bindi-against-pink-background",
+      "title": "Replace the placeholder image for Sonali Ma'am's teacher profile with the uploaded photo showing her in traditional pink saree with red bindi against pink background",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-the-three-generated-teacher-photos-as-static-assets-in-frontend-public-assets-generated-directory-and-update-the-teachers-component-to-reference-these-asset-paths",
+      "title": "Render the three generated teacher photos as static assets in frontend/public/assets/generated directory and update the Teachers component to reference these asset paths",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Hero section with logo, institute name, tagline, and WhatsApp CTA button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Bilingual About Us section (English + Bengali) highlighting concept clarity, personal care, discipline, and exam preparation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Courses Offered section displaying LKG-Class IV (All Subjects), Class V-X (English & Mathematics), Class XI-XII (English) in clean cards",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Why Choose Us section with 5 key benefits (experienced teachers, small batches, regular tests, friendly environment, affordable fees)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Photo Gallery with animated grid and click-to-zoom lightbox for classroom, activities, Saraswati Puja, and group photos",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admission enquiry form (Student Name, Class, Subject, Mobile) with WhatsApp integration to +91 98834 48350",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Contact section with address (Puabagan, Bankura, West Bengal), phone, WhatsApp, and optional email",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Floating language switch button (বাংলা / English) with instant text switching for all major sections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Floating WhatsApp button (always visible) with auto-filled enquiry messages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Footer watermark logo with low opacity matching brand colors (gold/yellow, dark background, maroon accent)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Our Teachers section displaying three teacher profiles: Sonali Ma'am (LKG-Class 3, All Subjects, 15+ years), Abhijit Da (Class 4-10, Mathematics, 5 years), and Santanu Sir (Class 4-12, English, 35+ years) with images, classes taught, subjects, experience, and teaching focus",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Brilliant Coaching Centre Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
