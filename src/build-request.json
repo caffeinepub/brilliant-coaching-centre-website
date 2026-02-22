@@ -1,215 +1,137 @@
 {
   "kind": "build_request",
-  "title": "Create testimonials page with current students, alumni reviews, and review submission form",
+  "title": "Add Student Dashboard with login, notes/test results, and attendance tracking",
   "projectName": "Brilliant Coaching Centre",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-55",
-      "text": "Create a new Testimonials component that displays a page title 'What Our Students Say' with subtitle 'Read real experiences from our students and alumni, and share your own journey' with bilingual support (English and Bengali)",
+      "id": "REQ-69",
+      "text": "Create a new StudentDashboard component that serves as a future placeholder section with header 'Student Dashboard (Coming Soon!)' and subtitle 'Access your personalized learning portal' with bilingual support (English and Bengali)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-last"
         ],
         "quotes": [
-          "Page Title: What Our Students Say",
-          "Read real experiences from our students and alumni, and share your own journey."
+          "Student Dashboard (Future Option)"
         ]
       },
       "acceptanceCriteria": [
-        "Page title 'What Our Students Say' is prominently displayed at the top of the section",
-        "Subtitle 'Read real experiences from our students and alumni, and share your own journey' appears below the title",
-        "Both title and subtitle support bilingual switching between English and Bengali using LanguageContext",
-        "Typography and spacing match existing section headers in the application"
+        "Component displays 'Student Dashboard (Coming Soon!)' header",
+        "Subtitle text is bilingual and uses LanguageContext",
+        "Section follows existing design theme (gold/yellow text, dark background, maroon accents)"
       ]
     },
     {
-      "id": "REQ-56",
-      "text": "Add page introduction section to the Testimonials component displaying 'At Brilliant Coaching Centre, we focus on building confidence, clarity, and academic excellence. Don't just take our word for it—hear from current and past students about how our teachers, notes, and guidance have helped them succeed.' with bilingual support",
+      "id": "REQ-70",
+      "text": "Display three feature cards in the StudentDashboard component showing 'Login System' (secure student authentication with Internet Identity), 'Notes & Test Results' (view downloadable notes and track test performance), and 'Attendance Record' (monitor class attendance and participation) with icons and descriptions",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-last"
         ],
         "quotes": [
-          "Section 1: Page Introduction",
-          "At Brilliant Coaching Centre, we focus on building confidence, clarity, and academic excellence. Don't just take our word for it—hear from current and past students about how our teachers, notes, and guidance have helped them succeed."
+          "Login system",
+          "Notes & test results",
+          "Attendance record"
         ]
       },
       "acceptanceCriteria": [
-        "Introduction text is displayed in a prominent, readable format below the page title",
-        "Text supports bilingual switching between English and Bengali",
-        "Styling is consistent with other descriptive text sections in the application"
+        "Three cards display with appropriate icons (🔐 for Login, 📊 for Notes & Test Results, 📅 for Attendance)",
+        "Each card shows feature title and brief description",
+        "Cards use responsive grid layout (3 columns on desktop, 1 on mobile)",
+        "All text content supports bilingual switching"
       ]
     },
     {
-      "id": "REQ-57",
-      "text": "Create Current Students Reviews section with header 'Current Students' displaying three testimonials: Riya Sen (Class 10) - 'Brilliant Coaching Centre has completely changed the way I approach Mathematics. Abhijit Da's problem-solving techniques are easy to follow, and I feel confident in exams now!', Anirban Das (Class 12) - 'Santanu Sir's English classes made grammar and literature so easy to understand. My writing and comprehension skills have improved immensely.', and Priya Roy (Class 3) - 'Sonali Ma'am makes learning fun and interesting. I look forward to my classes every day!' with bilingual support",
+      "id": "REQ-71",
+      "text": "Add a 'Coming Soon' badge or status indicator to the StudentDashboard section to clearly communicate that this feature is in development and not yet available",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-last"
         ],
         "quotes": [
-          "Section 2: Current Students Reviews",
-          "Header: Current Students",
-          "Sample Reviews"
+          "Student Dashboard (Future Option)"
         ]
       },
       "acceptanceCriteria": [
-        "Section header 'Current Students' is clearly displayed",
-        "All three student testimonials (Riya Sen, Anirban Das, Priya Roy) are rendered with student name, class, and review text",
-        "Each testimonial card includes student photo placeholder or avatar",
-        "All text content supports bilingual switching between English and Bengali",
-        "Cards are displayed in a responsive grid layout or carousel slider"
+        "Visual badge or tag displays 'Coming Soon' or '🚧 In Development'",
+        "Badge styling matches existing design theme",
+        "Badge is visible and prominent in the section header"
       ]
     },
     {
-      "id": "REQ-58",
-      "text": "Style Current Students Reviews section with grid layout or carousel slider, student photo/avatar display, hover effects on each card, and mobile-friendly responsive design where cards stack or become swipeable carousel on smaller screens",
+      "id": "REQ-72",
+      "text": "Integrate the StudentDashboard component into App.tsx after the Contact section and before the Footer, maintaining component flow and styling consistency",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-last"
+        ]
+      },
+      "acceptanceCriteria": [
+        "StudentDashboard renders in correct position in App.tsx",
+        "Component spacing and margins match other sections",
+        "No layout breaks or visual inconsistencies"
+      ]
+    },
+    {
+      "id": "REQ-73",
+      "text": "Create backend data models in main.mo for future student dashboard functionality including Student record (id, name, class, enrollmentDate), TestResult record (studentId, subject, testDate, score, maxScore), and AttendanceRecord (studentId, date, present, notes)",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-last"
         ],
         "quotes": [
-          "Display in grid layout or carousel slider",
-          "Include student photo, name, and class",
-          "Hover effect on each card",
-          "Mobile-friendly: cards stack or swipeable carousel"
+          "Notes & test results",
+          "Attendance record"
         ]
       },
       "acceptanceCriteria": [
-        "Cards display in grid layout (2-3 columns on desktop) or carousel slider",
-        "Each card includes student photo placeholder or avatar, name, and class information",
-        "Hover effects are applied to cards (e.g., lift, shadow, scale)",
-        "On mobile devices, cards stack vertically or become swipeable carousel",
-        "Design matches existing component styling with gold/yellow text, dark background, and maroon accents"
+        "Student type includes id (Text), name (Text), class (Text), enrollmentDate (Int)",
+        "TestResult type includes studentId (Text), subject (Text), testDate (Int), score (Nat), maxScore (Nat)",
+        "AttendanceRecord type includes studentId (Text), date (Int), present (Bool), notes (optional Text)",
+        "Types are defined but CRUD operations are commented out with 'Future implementation' notes"
       ]
     },
     {
-      "id": "REQ-59",
-      "text": "Create Alumni Feedback section with header 'Alumni Feedback' displaying three testimonials: Arjun Mukherjee - 'The small batch size and personalized attention helped me improve my weak areas. The coaching centre truly focuses on results.', Sneha Chakraborty - 'I still refer to the notes and worksheets provided during my classes. They are extremely useful even for college-level studies.', and Rohan Ghosh - 'The exam-focused tips and practice papers gave me the confidence to perform well in competitive exams. Truly an excellent coaching centre.' with bilingual support",
-      "target": "frontend",
+      "id": "REQ-74",
+      "text": "Add placeholder CRUD function signatures in main.mo for student dashboard operations: createStudent, getStudent, addTestResult, getStudentTestResults, recordAttendance, and getStudentAttendance, with function bodies commented out and marked as 'Future implementation'",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-latest"
+          "msg-last"
         ],
         "quotes": [
-          "Section 3: Ex-Students Reviews",
-          "Header: Alumni Feedback",
-          "Sample Reviews"
+          "Login system",
+          "Notes & test results",
+          "Attendance record"
         ]
       },
       "acceptanceCriteria": [
-        "Section header 'Alumni Feedback' is clearly displayed",
-        "All three alumni testimonials (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) are rendered with name and review text",
-        "Each testimonial card includes photo placeholder or avatar",
-        "All text content supports bilingual switching between English and Bengali",
-        "Cards are displayed in carousel or grid layout"
-      ]
-    },
-    {
-      "id": "REQ-60",
-      "text": "Style Alumni Feedback section with carousel or grid layout and optional light background color to visually differentiate it from the Current Students section while maintaining design consistency",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "Carousel or grid layout, separate styling from current students",
-          "Optional light background color for differentiation"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Alumni cards display in carousel or grid layout",
-        "Section uses optional light background color or subtle styling variation to differentiate from Current Students section",
-        "Hover effects and responsive behavior match Current Students section",
-        "Overall design maintains consistency with application theme"
-      ]
-    },
-    {
-      "id": "REQ-61",
-      "text": "Update the existing SubmitReview component to match the testimonials page specification with header 'Share Your Experience!', subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.', form fields (Full Name required, Class/Year required, Subject(s) Studied optional, Review textarea required, Rating 1-5 stars optional), Submit Review button, and confirmation message 'Thank you for your review! Your feedback helps us improve and inspire other students.' with bilingual support",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ],
-        "quotes": [
-          "Section 4: Submit Your Review",
-          "Header: Share Your Experience!",
-          "We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.",
-          "Form Fields",
-          "Confirmation Message"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Component header displays 'Share Your Experience!' with bilingual support",
-        "Subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.' is shown below header",
-        "Form includes all required fields: Full Name (required), Class/Year (required), Subject(s) Studied (optional), Review (textarea, required), Rating (1-5 stars, optional)",
-        "Submit Review button validates required fields before submission",
-        "Success message 'Thank you for your review! Your feedback helps us improve and inspire other students.' displays as toast notification on successful submission",
-        "All text content supports bilingual switching between English and Bengali"
-      ]
-    },
-    {
-      "id": "REQ-62",
-      "text": "Integrate the new Testimonials component into App.tsx after the TeachersNotes section and before the existing SubmitReview component, maintaining component flow and design consistency",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Testimonials component is imported and rendered in App.tsx",
-        "Component is positioned after TeachersNotes section and before SubmitReview component",
-        "Component flow and spacing maintain consistency with existing sections",
-        "No layout breaks or styling conflicts are introduced"
-      ]
-    },
-    {
-      "id": "REQ-63",
-      "text": "Ensure all text content in the new Testimonials component (page title, introduction, section headers, student testimonials, alumni feedback) supports bilingual switching between English and Bengali using the existing LanguageContext",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All static text in Testimonials component uses the t() translation helper function",
-        "Bengali translations are provided for all English text content",
-        "Language toggle instantly switches all testimonials section text between English and Bengali",
-        "No hardcoded English-only text remains in the component"
+        "Function signatures are present with appropriate parameter and return types",
+        "Function bodies are commented out with clear 'TODO: Future implementation' comments",
+        "Functions follow existing Motoko patterns in main.mo"
       ]
     }
   ],
   "constraints": [
-    "Do not modify backend/main.mo unless absolutely necessary - the review submission backend is already implemented",
-    "Do not edit immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
-    "Maintain single-actor architecture for backend - all Motoko logic must remain in the main actor file"
+    "Do not implement actual authentication logic or backend storage for student dashboard features - this is a placeholder for future development",
+    "Preserve existing review submission and management functionality in backend/main.mo",
+    "Maintain single-actor architecture in backend",
+    "Do not modify immutable frontend paths: useInternetIdentity, useActor, main.tsx, components/ui"
   ],
   "nonGoals": [
-    "Do not implement real photo uploads for student testimonials - use placeholder avatars or initials",
-    "Do not create admin moderation interface for reviews - backend support exists but frontend admin panel is out of scope",
-    "Do not implement social login integration for review submission",
-    "Do not add CAPTCHA or bot protection to review forms",
-    "Do not create automated testimonial carousel animation (manual navigation only)",
-    "Do not integrate third-party review platforms or widgets"
+    "Implementing functional student login system",
+    "Creating actual test result tracking or database",
+    "Building working attendance recording system",
+    "Integrating student dashboard with Internet Identity authentication",
+    "Adding admin panel for managing student records"
   ],
   "imageRequirements": {
-    "required": [
-      "Student avatar photo for Riya Sen, female student in school uniform smiling (riya-sen-avatar.dim_200x200.png)",
-      "Student avatar photo for Anirban Das, male student in casual attire smiling (anirban-das-avatar.dim_200x200.png)",
-      "Student avatar photo for Priya Roy, young female student in colorful dress smiling (priya-roy-avatar.dim_200x200.png)",
-      "Alumni avatar photo for Arjun Mukherjee, young professional male in formal attire (arjun-mukherjee-avatar.dim_200x200.png)",
-      "Alumni avatar photo for Sneha Chakraborty, young professional female in traditional attire (sneha-chakraborty-avatar.dim_200x200.png)",
-      "Alumni avatar photo for Rohan Ghosh, young professional male in casual smart attire (rohan-ghosh-avatar.dim_200x200.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

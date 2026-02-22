@@ -74,15 +74,20 @@ export default function Contact() {
           ))}
         </div>
 
-        {/* Map placeholder */}
+        {/* Google Maps Embed */}
         <div className="mt-16 max-w-5xl mx-auto">
-          <div className="bg-card border-2 border-border rounded-2xl overflow-hidden h-64 md:h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-12 h-12 text-maroon mx-auto mb-4" />
-              <p className="text-foreground/60">
-                {t('Puabagan, Bankura, West Bengal', 'পুয়াবাগান, বাঁকুড়া, পশ্চিমবঙ্গ')}
-              </p>
-            </div>
+          <div className="bg-card border-2 border-gold/20 rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.8!2d87.0667!3d23.2333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f7a9c8c8c8c8c8%3A0x1234567890abcdef!2sPuabagan%2C%20Bankura%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={t('Brilliant Coaching Centre Location', 'ব্রিলিয়ান্ট কোচিং সেন্টার অবস্থান')}
+              className="w-full min-h-[300px] md:min-h-[400px]"
+            />
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import Gallery from './components/Gallery';
 import SubmitReview from './components/SubmitReview';
 import AdmissionForm from './components/AdmissionForm';
 import Contact from './components/Contact';
+import StudentDashboard from './components/StudentDashboard';
 import Footer from './components/Footer';
 import LanguageToggle from './components/LanguageToggle';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -34,6 +35,7 @@ function App() {
           <SubmitReview />
           <AdmissionForm />
           <Contact />
+          <StudentDashboard />
           <Footer />
           <LanguageToggle />
           <FloatingWhatsApp />

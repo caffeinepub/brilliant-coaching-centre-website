@@ -1,14 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Create a comprehensive testimonials page displaying current student and alumni reviews with a review submission form.
+**Goal:** Add a "Coming Soon" Student Dashboard section to showcase future features for student login, notes/test results, and attendance tracking.
 
 **Planned changes:**
-- Add new Testimonials component with bilingual page title "What Our Students Say" and introduction text
-- Create Current Students Reviews section displaying three student testimonials (Riya Sen, Anirban Das, Priya Roy) with grid/carousel layout
-- Create Alumni Feedback section displaying three alumni testimonials (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh) with differentiated styling
-- Update existing SubmitReview component with new header "Share Your Experience!", subtitle, and confirmation message
-- Integrate Testimonials component into App.tsx between TeachersNotes and SubmitReview sections
-- Ensure all testimonials content supports bilingual switching (English/Bengali)
+- Create StudentDashboard component displaying "Coming Soon" header with bilingual support
+- Add three feature cards showing Login System, Notes & Test Results, and Attendance Record with icons and descriptions
+- Include "Coming Soon" badge to indicate feature is in development
+- Integrate StudentDashboard into App.tsx after Contact section
+- Add placeholder backend data models (Student, TestResult, AttendanceRecord) in main.mo with commented-out CRUD function signatures
 
-**User-visible outcome:** Users can view current student and alumni testimonials in a visually appealing layout, and submit their own reviews through an updated form with better guidance text.
+**User-visible outcome:** Users will see a new Student Dashboard section on the website indicating upcoming features for students to access personalized learning materials, test results, and attendance records.

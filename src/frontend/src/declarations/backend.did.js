@@ -41,6 +41,25 @@ export const Image = IDL.Record({
   'description' : IDL.Text,
   'galleryId' : IDL.Text,
 });
+export const Student = IDL.Record({
+  'id' : IDL.Text,
+  'name' : IDL.Text,
+  'enrollmentDate' : IDL.Int,
+  'className' : IDL.Text,
+});
+export const AttendanceRecord = IDL.Record({
+  'studentId' : IDL.Text,
+  'present' : IDL.Bool,
+  'date' : IDL.Int,
+  'notes' : IDL.Opt(IDL.Text),
+});
+export const TestResult = IDL.Record({
+  'studentId' : IDL.Text,
+  'maxScore' : IDL.Nat,
+  'subject' : IDL.Text,
+  'testDate' : IDL.Int,
+  'score' : IDL.Nat,
+});
 
 export const idlService = IDL.Service({
   '_caffeineStorageBlobIsLive' : IDL.Func(
@@ -74,8 +93,14 @@ export const idlService = IDL.Service({
       [IDL.Bool],
       [],
     ),
+  'addTestResult' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Int, IDL.Nat, IDL.Nat],
+      [],
+      [],
+    ),
   'approveReview' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'createGallery' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Bool], []),
+  'createStudent' : IDL.Func([IDL.Text, IDL.Text, IDL.Text, IDL.Int], [], []),
   'deleteGallery' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'deleteImage' : IDL.Func([IDL.Text], [IDL.Bool], []),
   'getAllGalleries' : IDL.Func([], [IDL.Vec(Gallery)], ['query']),
@@ -84,6 +109,22 @@ export const idlService = IDL.Service({
   'getGallery' : IDL.Func([IDL.Text], [IDL.Opt(Gallery)], ['query']),
   'getImage' : IDL.Func([IDL.Text], [IDL.Opt(Image)], ['query']),
   'getImagesByGallery' : IDL.Func([IDL.Text], [IDL.Vec(Image)], ['query']),
+  'getStudent' : IDL.Func([IDL.Text], [IDL.Opt(Student)], ['query']),
+  'getStudentAttendance' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(AttendanceRecord)],
+      ['query'],
+    ),
+  'getStudentTestResults' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(TestResult)],
+      ['query'],
+    ),
+  'recordAttendance' : IDL.Func(
+      [IDL.Text, IDL.Int, IDL.Bool, IDL.Opt(IDL.Text)],
+      [],
+      [],
+    ),
   'submitReview' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Opt(IDL.Text), IDL.Text, IDL.Opt(IDL.Nat8)],
       [],
@@ -127,6 +168,25 @@ export const idlFactory = ({ IDL }) => {
     'description' : IDL.Text,
     'galleryId' : IDL.Text,
   });
+  const Student = IDL.Record({
+    'id' : IDL.Text,
+    'name' : IDL.Text,
+    'enrollmentDate' : IDL.Int,
+    'className' : IDL.Text,
+  });
+  const AttendanceRecord = IDL.Record({
+    'studentId' : IDL.Text,
+    'present' : IDL.Bool,
+    'date' : IDL.Int,
+    'notes' : IDL.Opt(IDL.Text),
+  });
+  const TestResult = IDL.Record({
+    'studentId' : IDL.Text,
+    'maxScore' : IDL.Nat,
+    'subject' : IDL.Text,
+    'testDate' : IDL.Int,
+    'score' : IDL.Nat,
+  });
   
   return IDL.Service({
     '_caffeineStorageBlobIsLive' : IDL.Func(
@@ -160,8 +220,14 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Bool],
         [],
       ),
+    'addTestResult' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Int, IDL.Nat, IDL.Nat],
+        [],
+        [],
+      ),
     'approveReview' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'createGallery' : IDL.Func([IDL.Text, IDL.Text, IDL.Text], [IDL.Bool], []),
+    'createStudent' : IDL.Func([IDL.Text, IDL.Text, IDL.Text, IDL.Int], [], []),
     'deleteGallery' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'deleteImage' : IDL.Func([IDL.Text], [IDL.Bool], []),
     'getAllGalleries' : IDL.Func([], [IDL.Vec(Gallery)], ['query']),
@@ -170,6 +236,22 @@ export const idlFactory = ({ IDL }) => {
     'getGallery' : IDL.Func([IDL.Text], [IDL.Opt(Gallery)], ['query']),
     'getImage' : IDL.Func([IDL.Text], [IDL.Opt(Image)], ['query']),
     'getImagesByGallery' : IDL.Func([IDL.Text], [IDL.Vec(Image)], ['query']),
+    'getStudent' : IDL.Func([IDL.Text], [IDL.Opt(Student)], ['query']),
+    'getStudentAttendance' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(AttendanceRecord)],
+        ['query'],
+      ),
+    'getStudentTestResults' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(TestResult)],
+        ['query'],
+      ),
+    'recordAttendance' : IDL.Func(
+        [IDL.Text, IDL.Int, IDL.Bool, IDL.Opt(IDL.Text)],
+        [],
+        [],
+      ),
     'submitReview' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Opt(IDL.Text), IDL.Text, IDL.Opt(IDL.Nat8)],
         [],

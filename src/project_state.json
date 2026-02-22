@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 29,
+  "projectStateVersion": 35,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, testimonials section (What Our Students Say) with page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh), review submission form with name/class/subjects/review/rating fields, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -16,7 +16,6 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Student avatar photo for Riya Sen, female student in school uniform smiling (riya-sen-avatar.dim_200x200.png)\n- Student avatar photo for Anirban Das, male student in casual attire smiling (anirban-das-avatar.dim_200x200.png)\n- Student avatar photo for Priya Roy, young female student in colorful dress smiling (priya-roy-avatar.dim_200x200.png)\n- Alumni avatar photo for Arjun Mukherjee, young professional male in formal attire (arjun-mukherjee-avatar.dim_200x200.png)\n- Alumni avatar photo for Sneha Chakraborty, young professional female in traditional attire (sneha-chakraborty-avatar.dim_200x200.png)\n- Alumni avatar photo for Rohan Ghosh, young professional male in casual smart attire (rohan-ghosh-avatar.dim_200x200.png)",
   "generatedImages": [
     {
       "filename": "abhijit-da.dim_400x400.png",
@@ -525,6 +524,78 @@
         "REQ-63"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-all-hardcoded-testimonial-data-from-the-testimonials-component-including-the-current-students-reviews-riya-sen-anirban-das-priya-roy-and-alumni-feedback-arjun-mukherjee-sneha-chakraborty-rohan-ghosh",
+      "title": "Remove all hardcoded testimonial data from the Testimonials component, including the current students reviews (Riya Sen, Anirban Das, Priya Roy) and alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh)",
+      "reqIds": [
+        "REQ-64"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-testimonials-component-to-display-a-blank-state-message-indicating-that-reviews-will-appear-once-submitted-and-approved-maintaining-bilingual-support-english-no-reviews-yet-be-the-first-to-share-your-experience-bengali-equivalent",
+      "title": "Update the Testimonials component to display a blank state message indicating that reviews will appear once submitted and approved, maintaining bilingual support (English: 'No reviews yet. Be the first to share your experience!', Bengali equivalent)",
+      "reqIds": [
+        "REQ-65"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-preserve-the-page-structure-of-the-testimonials-component-including-the-page-title-subtitle-introduction-section-and-section-headers-current-students-alumni-feedback-while-removing-only-the-testimonial-card-content",
+      "title": "Preserve the page structure of the Testimonials component including the page title, subtitle, introduction section, and section headers ('Current Students', 'Alumni Feedback') while removing only the testimonial card content",
+      "reqIds": [
+        "REQ-66"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-embedded-google-maps-iframe-to-the-contact-component-displaying-the-brilliant-coaching-centre-location-at-puabagan-bankura-using-the-url-https-maps-app-goo-gl-tdrnpoej3waae3yh8",
+      "title": "Add an embedded Google Maps iframe to the Contact component displaying the Brilliant Coaching Centre location at Puabagan, Bankura using the URL https://maps.app.goo.gl/tdrNpoEJ3waae3YH8",
+      "reqIds": [
+        "REQ-67"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-style-the-google-maps-embed-with-appropriate-dimensions-e-g-full-width-on-mobile-50-60-width-on-desktop-rounded-corners-matching-the-site-s-design-theme-and-border-or-shadow-effects-consistent-with-other-cards-sections",
+      "title": "Style the Google Maps embed with appropriate dimensions (e.g., full width on mobile, 50-60% width on desktop), rounded corners matching the site's design theme, and border or shadow effects consistent with other cards/sections",
+      "reqIds": [
+        "REQ-68"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-studentdashboard-component-that-serves-as-a-future-placeholder-section-with-header-student-dashboard-coming-soon-and-subtitle-access-your-personalized-learning-portal-with-bilingual-support-english-and-bengali",
+      "title": "Create a new StudentDashboard component that serves as a future placeholder section with header 'Student Dashboard (Coming Soon!)' and subtitle 'Access your personalized learning portal' with bilingual support (English and Bengali)",
+      "reqIds": [
+        "REQ-69"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-three-feature-cards-in-the-studentdashboard-component-showing-login-system-secure-student-authentication-with-internet-identity-notes-test-results-view-downloadable-notes-and-track-test-performance-and-attendance-record-monitor-class-attendance-and-participation-with-icons-and-descriptions",
+      "title": "Display three feature cards in the StudentDashboard component showing 'Login System' (secure student authentication with Internet Identity), 'Notes & Test Results' (view downloadable notes and track test performance), and 'Attendance Record' (monitor class attendance and participation) with icons and descriptions",
+      "reqIds": [
+        "REQ-70"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coming-soon-badge-or-status-indicator-to-the-studentdashboard-section-to-clearly-communicate-that-this-feature-is-in-development-and-not-yet-available",
+      "title": "Add a 'Coming Soon' badge or status indicator to the StudentDashboard section to clearly communicate that this feature is in development and not yet available",
+      "reqIds": [
+        "REQ-71"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-studentdashboard-component-into-app-tsx-after-the-contact-section-and-before-the-footer-maintaining-component-flow-and-styling-consistency",
+      "title": "Integrate the StudentDashboard component into App.tsx after the Contact section and before the Footer, maintaining component flow and styling consistency",
+      "reqIds": [
+        "REQ-72"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -643,6 +714,34 @@
       "summary": "Update the existing SubmitReview component to match the testimonials page specification with header 'Share Your Experience!', subtitle 'We love hearing from our students. Tell us how Brilliant Coaching Centre has helped you grow and learn.', form fields (Full Name required, Class/Year required, Subject(s) Studied optional, Review textarea required, Rating 1-5 stars optional), Submit Review button, and confirmation message 'Thank you for your review! Your feedback helps us improve and inspire other students.' with bilingual support",
       "reqIds": [
         "REQ-61"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Add Google Maps embed to Contact section showing Brilliant Coaching Centre location at Puabagan, Bankura (https://maps.app.goo.gl/tdrNpoEJ3waae3YH8)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Student Dashboard (Future Option) with login system, notes & test results, and attendance record",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-35",
+      "summary": "Create backend data models in main.mo for future student dashboard functionality including Student record (id, name, class, enrollmentDate), TestResult record (studentId, subject, testDate, score, maxScore), and AttendanceRecord (studentId, date, present, notes)",
+      "reqIds": [
+        "REQ-73"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-36",
+      "summary": "Add placeholder CRUD function signatures in main.mo for student dashboard operations: createStudent, getStudent, addTestResult, getStudentTestResults, recordAttendance, and getStudentAttendance, with function bodies commented out and marked as 'Future implementation'",
+      "reqIds": [
+        "REQ-74"
       ],
       "status": "pending"
     }
