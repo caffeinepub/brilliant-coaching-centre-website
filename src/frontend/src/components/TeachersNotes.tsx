@@ -14,7 +14,7 @@ export default function TeachersNotes() {
       teacher: {
         name: t('Sonali Ma\'am', 'সোনালী ম্যাম'),
         initials: 'SM',
-        avatar: '/assets/generated/sonali-maam-photo.dim_400x400.png',
+        avatar: '/assets/generated/sonali-maam-updated.dim_400x400.png',
         classes: t('LKG – Class 3', 'এলকেজি – ক্লাস ৩'),
         subjects: t('All Subjects', 'সমস্ত বিষয়'),
         experience: t('15+ Years', '১৫+ বছর'),
@@ -44,7 +44,7 @@ export default function TeachersNotes() {
       teacher: {
         name: t('Santanu Sir', 'সন্তনু স্যার'),
         initials: 'SS',
-        avatar: '/assets/generated/santanu-sir-photo.dim_400x400.png',
+        avatar: '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg',
         classes: t('Class 4 – 12', 'ক্লাস ৪ – ১২'),
         subjects: t('English', 'ইংরেজি'),
         experience: t('35+ Years', '৩৫+ বছর'),

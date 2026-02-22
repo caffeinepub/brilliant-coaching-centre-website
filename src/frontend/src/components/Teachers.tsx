@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { GraduationCap, BookOpen, Award } from 'lucide-react';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Teachers() {
   const { t } = useLanguage();
@@ -9,6 +9,7 @@ export default function Teachers() {
     {
       name: t('Sonali Ma\'am', 'সোনালী ম্যাম'),
       initials: 'SM',
+      avatar: '/assets/generated/sonali-maam-updated.dim_400x400.png',
       classes: t('LKG – Class 3', 'এলকেজি – ক্লাস ৩'),
       subjects: t('All Subjects', 'সমস্ত বিষয়'),
       experience: t('15+ Years', '১৫+ বছর'),
@@ -31,6 +32,7 @@ export default function Teachers() {
     {
       name: t('Santanu Sir', 'সন্তনু স্যার'),
       initials: 'SS',
+      avatar: '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg',
       classes: t('Class 4 – Class 12', 'ক্লাস ৪ – ক্লাস ১২'),
       subjects: t('English', 'ইংরেজি'),
       experience: t('35+ Years', '৩৫+ বছর'),
@@ -65,6 +67,7 @@ export default function Teachers() {
             >
               <div className="relative h-64 overflow-hidden bg-gradient-to-br from-maroon/10 to-gold/10 flex items-center justify-center">
                 <Avatar className="w-40 h-40 border-4 border-gold/20 group-hover:border-gold/40 transition-all duration-300 group-hover:scale-110">
+                  {teacher.avatar && <AvatarImage src={teacher.avatar} alt={teacher.name} />}
                   <AvatarFallback className="text-5xl font-bold bg-gradient-to-br from-maroon to-maroon/80 text-gold">
                     {teacher.initials}
                   </AvatarFallback>

@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-current-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-image-brilliant-coaching-centre-copy-1-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
-      "featureTitle": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image (Brilliant Coaching Centre copy (1).jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
+      "featureId": "feature-replace-the-existing-teacher-profile-image-for-santanu-sir-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-image-2-4-jpg-showing-him-in-a-white-patterned-shirt-with-a-mustache-speaking-at-a-microphone-with-decorative-background-including-silver-streamers-and-floral-wall-decorations",
+      "featureTitle": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-4.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
       "files": [
-        "frontend/src/components/Hero.tsx"
+        "frontend/src/components/Teachers.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,7 +16,26 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-75"
+        "REQ-84"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-santanu-sir-profile-image-from-image-2-4-jpg-for-the-class-4-12-notes-card-maintaining-consistency-with-the-teachers-component",
+      "featureTitle": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-86"
       ],
       "confidence": "high"
     }

@@ -1,39 +1,56 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Hero section logo with uploaded Brilliant Coaching Centre image",
+  "title": "Replace Santanu Sir teacher profile image with uploaded photo",
   "requirements": [
     {
-      "id": "REQ-75",
-      "summary": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image showing lightbulb design with yellow student figure and gold/yellow text on dark background with maroon border",
+      "id": "REQ-84",
+      "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component with the newly uploaded photo showing him in a white patterned shirt with a mustache speaking at a microphone",
       "acceptanceCriteria": [
-        "The Hero component displays the uploaded logo image",
-        "The logo maintains proper aspect ratio and quality",
-        "The logo is visually consistent with the existing gold/yellow and maroon branding",
-        "The logo is appropriately sized for both desktop and mobile viewports"
+        "Santanu Sir's profile card displays the uploaded photo 'image (2)-4.jpg' instead of the current placeholder/image",
+        "The image is properly sized and maintains aspect ratio within the teacher profile card",
+        "The image styling is consistent with the other teacher profile images (Sonali Ma'am, Abhijit Da)",
+        "The image displays correctly on both desktop and mobile views",
+        "The image maintains the gold/yellow and maroon accent color scheme of the site"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/Teachers.tsx",
           "operation": "modify",
-          "description": "Update the Hero component to reference the uploaded Brilliant Coaching Centre logo from frontend/public/assets/generated/brilliant-logo.dim_512x512.jpg instead of the current logo. Ensure the image element uses proper responsive sizing classes and maintains aspect ratio for both desktop and mobile viewports. Add appropriate alt text describing the logo."
+          "description": "Update the image source for Santanu Sir's profile card to reference the new uploaded photo at '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg'. Ensure the image is rendered with consistent styling matching the other teacher profile cards (Sonali Ma'am, Abhijit Da) including size, aspect ratio, rounded corners, and hover effects."
         }
       ]
     },
     {
-      "id": "REQ-76",
-      "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and ensure proper asset path reference",
+      "id": "REQ-85",
+      "summary": "Store the uploaded Santanu Sir photo as a static asset in the frontend/public/assets/generated directory",
       "acceptanceCriteria": [
-        "The logo file is saved as a static asset in frontend/public/assets/generated",
-        "The Hero component references the correct asset path",
-        "The image loads correctly when the application runs",
-        "No broken image links or 404 errors occur"
+        "The image file is saved in frontend/public/assets/generated directory",
+        "The Teachers component references the correct asset path for Santanu Sir's image",
+        "The image loads successfully when the page is rendered"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/brilliant-logo.dim_512x512.jpg",
+          "path": "frontend/public/assets/generated/santanu-sir-uploaded.dim_400x400.jpg",
           "operation": "create",
-          "description": "Save the uploaded Brilliant Coaching Centre logo (Brilliant Coaching Centre copy (1).jpg) as a static asset with standardized naming convention. The file shows a circular logo with maroon border, dark background, lightbulb design containing a yellow student figure with 'BRILLIANT' text bubble, and gold/yellow text reading 'brilliant COACHING CENTRE' below."
+          "description": "Save the uploaded photo 'image (2)-4.jpg' showing Santanu Sir in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations. The image should be processed to 400x400 dimensions to match the existing teacher profile image format and naming convention."
+        }
+      ]
+    },
+    {
+      "id": "REQ-86",
+      "summary": "Update the TeachersNotes component to reference the new Santanu Sir profile image for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "acceptanceCriteria": [
+        "The TeachersNotes component displays the same Santanu Sir image as the Teachers component",
+        "The 'Class 4 – 12' notes card shows the uploaded photo consistently",
+        "Image styling matches between Teachers and TeachersNotes components",
+        "The image displays properly in the tabbed notes interface"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Update the image source for Santanu Sir's profile in the 'Class 4 – 12' notes tab to reference the new uploaded photo at '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg'. Ensure the image styling is consistent with the Teachers component and displays correctly within the tabbed interface layout."
         }
       ]
     }

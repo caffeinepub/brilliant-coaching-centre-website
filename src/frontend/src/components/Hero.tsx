@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Logo */}
         <div className="mb-8 animate-fade-in">
           <img
-            src="/assets/generated/brilliant-logo.dim_512x512.jpg"
+            src="/assets/generated/brilliant-coaching-centre-logo.dim_800x800.png"
             alt="Brilliant Coaching Centre Logo - Lightbulb with student figure and brilliant text"
             className="w-32 h-32 md:w-40 md:h-40 mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300 rounded-full object-cover"
           />

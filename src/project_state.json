@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 37,
+  "projectStateVersion": 45,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, testimonials section (What Our Students Say) with page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh), review submission form with name/class/subjects/review/rating fields, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -15,7 +15,7 @@
     "Downloadable PDF notes feature for each teacher/class combination"
   ],
   "known_issues": [],
-  "isFixRequest": false,
+  "isFixRequest": true,
   "generatedImages": [
     {
       "filename": "abhijit-da.dim_400x400.png",
@@ -604,6 +604,78 @@
         "REQ-75"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-current-logo-image-file-brilliant-coaching-centre-copy-1-jpg-from-the-frontend-public-assets-generated-directory",
+      "title": "Remove the current logo image file 'Brilliant Coaching Centre copy (1).jpg' from the frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-77"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-newly-uploaded-brilliant-coaching-centre-logo-showing-circular-design-with-lightbulb-yellow-student-figure-thought-bubble-with-brilliant-text-and-brilliant-coaching-centre-text-in-gold-yellow-gradient-on-dark-blue-gray-background-with-maroon-border-as-a-static-asset-in-the-frontend-public-assets-generated-directory",
+      "title": "Store the newly uploaded Brilliant Coaching Centre logo (showing circular design with lightbulb, yellow student figure, thought bubble with 'BRILLIANT' text, and 'brilliant COACHING CENTRE' text in gold/yellow gradient on dark blue-gray background with maroon border) as a static asset in the frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-78"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-component-frontend-src-components-hero-tsx-to-reference-the-new-logo-asset-path-replacing-the-previous-logo-image-source",
+      "title": "Update the Hero component (frontend/src/components/Hero.tsx) to reference the new logo asset path, replacing the previous logo image source",
+      "reqIds": [
+        "REQ-79"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-teacher-profile-image-for-sonali-ma-am-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-photo-from-abhijit-paul-2-jpg-showing-her-in-a-bright-pink-magenta-traditional-saree-with-gold-necklace-and-red-bindi-against-a-pink-background",
+      "title": "Replace the existing teacher profile image for Sonali Ma'am in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'Photo from Abhijit Paul-2.jpg' showing her in a bright pink/magenta traditional saree with gold necklace and red bindi against a pink background",
+      "reqIds": [
+        "REQ-80"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-sonali-ma-am-profile-image-for-the-lkg-class-3-notes-card-maintaining-consistency-with-the-teachers-component",
+      "title": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Sonali Ma'am profile image for the 'LKG – Class 3' notes card, maintaining consistency with the Teachers component",
+      "reqIds": [
+        "REQ-81"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-teacher-profile-image-for-sonali-ma-am-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-photo-from-abhijit-paul-3-jpg-showing-her-in-a-bright-pink-magenta-traditional-saree-with-gold-golden-embroidered-border-red-bindi-and-gold-necklace-against-a-pink-background",
+      "title": "Replace the existing teacher profile image for Sonali Ma'am in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'Photo from Abhijit Paul-3.jpg' showing her in a bright pink/magenta traditional saree with gold/golden embroidered border, red bindi, and gold necklace against a pink background",
+      "reqIds": [
+        "REQ-82"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-sonali-ma-am-profile-image-from-photo-from-abhijit-paul-3-jpg-for-the-lkg-class-3-notes-card-maintaining-consistency-with-the-teachers-component",
+      "title": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Sonali Ma'am profile image from 'Photo from Abhijit Paul-3.jpg' for the 'LKG – Class 3' notes card, maintaining consistency with the Teachers component",
+      "reqIds": [
+        "REQ-83"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-teacher-profile-image-for-santanu-sir-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-image-2-4-jpg-showing-him-in-a-white-patterned-shirt-with-a-mustache-speaking-at-a-microphone-with-decorative-background-including-silver-streamers-and-floral-wall-decorations",
+      "title": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-4.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
+      "reqIds": [
+        "REQ-84"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-santanu-sir-profile-image-from-image-2-4-jpg-for-the-class-4-12-notes-card-maintaining-consistency-with-the-teachers-component",
+      "title": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "reqIds": [
+        "REQ-86"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -758,6 +830,32 @@
       "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
       "reqIds": [
         "REQ-76"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-39",
+      "summary": "Remove the previous Brilliant Coaching Centre logo and replace with the newly uploaded logo image",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-40",
+      "summary": "Replace the existing teacher profile image for Sonali Ma'am with newly uploaded photo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-41",
+      "summary": "Replace the placeholder/fallback image for Santanu Sir's teacher profile with the uploaded photo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-43",
+      "summary": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-85"
       ],
       "status": "pending"
     }

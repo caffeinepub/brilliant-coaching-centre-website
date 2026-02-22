@@ -1,59 +1,71 @@
 {
   "kind": "build_request",
-  "title": "Update Hero section logo with uploaded Brilliant Coaching Centre image",
-  "projectName": "Brilliant Coaching Centre",
+  "title": "Replace Santanu Sir teacher profile image with uploaded photo",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-75",
-      "text": "Replace the current logo in the Hero component with the uploaded Brilliant Coaching Centre logo image (Brilliant Coaching Centre copy (1).jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
+      "id": "REQ-84",
+      "text": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-4.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "Add logo"
+          "Add Santanu Sir image"
         ]
       },
       "acceptanceCriteria": [
-        "The Hero component displays the uploaded logo image",
-        "The logo maintains proper aspect ratio and quality",
-        "The logo is visually consistent with the existing gold/yellow and maroon branding",
-        "The logo is appropriately sized for both desktop and mobile viewports"
+        "Santanu Sir's profile card displays the uploaded photo 'image (2)-4.jpg' instead of the current placeholder/image",
+        "The image is properly sized and maintains aspect ratio within the teacher profile card",
+        "The image styling is consistent with the other teacher profile images (Sonali Ma'am, Abhijit Da)",
+        "The image displays correctly on both desktop and mobile views",
+        "The image maintains the gold/yellow and maroon accent color scheme of the site"
       ]
     },
     {
-      "id": "REQ-76",
-      "text": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
+      "id": "REQ-85",
+      "text": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
-        ],
-        "quotes": [
-          "Add logo"
         ]
       },
       "acceptanceCriteria": [
-        "The logo file is saved as a static asset in frontend/public/assets/generated",
-        "The Hero component references the correct asset path",
-        "The image loads correctly when the application runs",
-        "No broken image links or 404 errors occur"
+        "The image file is saved in frontend/public/assets/generated directory",
+        "The Teachers component references the correct asset path for Santanu Sir's image",
+        "The image loads successfully when the page is rendered"
+      ]
+    },
+    {
+      "id": "REQ-86",
+      "text": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The TeachersNotes component displays the same Santanu Sir image as the Teachers component",
+        "The 'Class 4 – 12' notes card shows the uploaded photo consistently",
+        "Image styling matches between Teachers and TeachersNotes components",
+        "The image displays properly in the tabbed notes interface"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
-    "Maintain the existing gold/yellow text, dark background, and maroon accent color scheme",
-    "Preserve bilingual support (English and Bengali) for all text content",
-    "Keep the existing Hero component structure and functionality intact"
+    "Do not modify the Teachers component structure or layout beyond updating the image source",
+    "Maintain bilingual support for all existing text content",
+    "Preserve the existing design theme (gold/yellow text, dark background, maroon accents)",
+    "Do not change the teacher profile information (name, classes, subjects, experience, teaching focus)"
   ],
   "nonGoals": [
-    "Redesigning the Hero section layout or structure",
-    "Modifying other sections of the website",
-    "Changing the color scheme or branding",
-    "Adding new features to the Hero component beyond logo replacement"
+    "Changing other teacher profile images",
+    "Modifying the Teachers component layout or structure",
+    "Adding new teacher profiles",
+    "Changing the TeachersNotes component functionality beyond image update"
   ],
   "imageRequirements": {
     "required": [],
