@@ -1,4 +1,24 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-update-the-footer-component-social-media-links-section-to-use-the-actual-urls-facebook-link-to-https-www-facebook-com-share-14pg6fyhtk-youtube-link-to-https-youtube-com-brilliantcoachingcentre-hh6pj-si-yaroyix3xhztzabl-instagram-link-to-https-www-instagram-com-c-brilliantcoaching-igsh-yzljytk1odg3zg-and-whatsapp-channel-link-to-https-whatsapp-com-channel-0029vb32rw8jenxvzishpi1w",
+      "featureTitle": "Update the Footer component social media links section to use the actual URLs: Facebook link to https://www.facebook.com/share/14pG6fyhTk/, YouTube link to https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl, Instagram link to https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==, and WhatsApp channel link to https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W",
+      "files": [
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-48"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

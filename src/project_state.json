@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 23,
+  "projectStateVersion": 25,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -412,6 +412,14 @@
         "REQ-47"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-footer-component-social-media-links-section-to-use-the-actual-urls-facebook-link-to-https-www-facebook-com-share-14pg6fyhtk-youtube-link-to-https-youtube-com-brilliantcoachingcentre-hh6pj-si-yaroyix3xhztzabl-instagram-link-to-https-www-instagram-com-c-brilliantcoaching-igsh-yzljytk1odg3zg-and-whatsapp-channel-link-to-https-whatsapp-com-channel-0029vb32rw8jenxvzishpi1w",
+      "title": "Update the Footer component social media links section to use the actual URLs: Facebook link to https://www.facebook.com/share/14pG6fyhTk/, YouTube link to https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl, Instagram link to https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==, and WhatsApp channel link to https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W",
+      "reqIds": [
+        "REQ-48"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -496,6 +504,12 @@
     {
       "id": "AR-15",
       "summary": "Enhance Contact/Footer section with multiple phone numbers (9735857573 | 8436529117), email (info@brilliantcoaching.in), social media links (Facebook: Brilliant Coaching Centre, Instagram: @c.brilliantcoaching, YouTube: Brilliant Coaching Channel, WhatsApp: Join Our Channel), and footer CTA buttons (Enroll Now | View Notes) with bilingual support",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Update Footer social media links with actual URLs: Facebook (https://www.facebook.com/share/14pG6fyhTk/), Instagram (https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==), YouTube (https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl), WhatsApp channel (https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W)",
       "reqIds": [],
       "status": "pending"
     }

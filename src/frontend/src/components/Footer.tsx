@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { Heart } from 'lucide-react';
+import { SiFacebook, SiYoutube, SiInstagram, SiWhatsapp } from 'react-icons/si';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -7,6 +8,33 @@ export default function Footer() {
   const appIdentifier = encodeURIComponent(
     typeof window !== 'undefined' ? window.location.hostname : 'brilliant-coaching-centre'
   );
+
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      url: 'https://www.facebook.com/share/14pG6fyhTk/',
+      icon: SiFacebook,
+      label: { en: 'Facebook', bn: 'ফেসবুক' }
+    },
+    {
+      name: 'YouTube',
+      url: 'https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl',
+      icon: SiYoutube,
+      label: { en: 'YouTube', bn: 'ইউটিউব' }
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==',
+      icon: SiInstagram,
+      label: { en: 'Instagram', bn: 'ইনস্টাগ্রাম' }
+    },
+    {
+      name: 'WhatsApp',
+      url: 'https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W',
+      icon: SiWhatsapp,
+      label: { en: 'WhatsApp Channel', bn: 'হোয়াটসঅ্যাপ চ্যানেল' }
+    }
+  ];
 
   return (
     <footer className="relative bg-gradient-to-b from-background to-accent/10 border-t border-border py-12 overflow-hidden">
@@ -48,6 +76,28 @@ export default function Footer() {
           <div className="text-foreground/70 space-y-1">
             <p>{t('Puabagan, Bankura, West Bengal', 'পুয়াবাগান, বাঁকুড়া, পশ্চিমবঙ্গ')}</p>
             <p>{t('Phone & WhatsApp:', 'ফোন ও হোয়াটসঅ্যাপ:')} +91 98834 48350</p>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex items-center justify-center gap-6 pt-2">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center gap-1 transition-transform duration-300 hover:scale-110"
+                  aria-label={t(social.label.en, social.label.bn)}
+                >
+                  <Icon className="w-6 h-6 text-foreground/60 group-hover:text-gold transition-colors duration-300" />
+                  <span className="text-xs text-foreground/50 group-hover:text-gold transition-colors duration-300">
+                    {t(social.label.en, social.label.bn)}
+                  </span>
+                </a>
+              );
+            })}
           </div>
 
           {/* Divider */}

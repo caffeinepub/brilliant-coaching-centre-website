@@ -1,6 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Retry previous deployment - Brilliant Coaching Centre",
-  "requirements": []
+  "title": "Update Footer social media links with actual URLs",
+  "requirements": [
+    {
+      "id": "REQ-48",
+      "summary": "Update Footer component social media links to use actual URLs for Facebook, YouTube, Instagram, and WhatsApp channel",
+      "acceptanceCriteria": [
+        "Footer component displays four social media links with correct URLs",
+        "Facebook link opens https://www.facebook.com/share/14pG6fyhTk/ in a new tab",
+        "YouTube link opens https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl in a new tab",
+        "Instagram link opens https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg== in a new tab",
+        "WhatsApp channel link opens https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W in a new tab",
+        "All links maintain existing icon styling and bilingual label support",
+        "Links are clickable and properly formatted with target='_blank' and rel='noopener noreferrer'"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the social media links section to replace placeholder or existing URLs with the actual URLs: Facebook (https://www.facebook.com/share/14pG6fyhTk/), YouTube (https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl), Instagram (https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==), and WhatsApp channel (https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W). Ensure all links open in new tabs with target='_blank' and rel='noopener noreferrer' attributes. Preserve existing icon styling, hover effects, and bilingual label support using LanguageContext."
+        }
+      ]
+    }
+  ]
 }

@@ -1,18 +1,43 @@
 {
   "kind": "build_request",
-  "title": "Retry previous deployment",
+  "title": "Update Footer social media links with actual URLs",
   "projectName": "Brilliant Coaching Centre",
   "priority": "normal",
-  "requirements": [],
+  "requirements": [
+    {
+      "id": "REQ-48",
+      "text": "Update the Footer component social media links section to use the actual URLs: Facebook link to https://www.facebook.com/share/14pG6fyhTk/, YouTube link to https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl, Instagram link to https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==, and WhatsApp channel link to https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "Add \nFacebook:- https://www.facebook.com/share/14pG6fyhTk/\nYouTube channel:- https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl\nInstagram:- https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg==\nWhatsApp channel:- https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer component displays four social media links with correct URLs",
+        "Facebook link opens https://www.facebook.com/share/14pG6fyhTk/ in a new tab",
+        "YouTube link opens https://youtube.com/@brilliantcoachingcentre-hh6pj?si=YAroyIX3xHzTZABl in a new tab",
+        "Instagram link opens https://www.instagram.com/c.brilliantcoaching?igsh=YzljYTk1ODg3Zg== in a new tab",
+        "WhatsApp channel link opens https://whatsapp.com/channel/0029Vb32rw8JENxvzIshPI1W in a new tab",
+        "All links maintain existing icon styling and bilingual label support",
+        "Links are clickable and properly formatted with target='_blank' and rel='noopener noreferrer'"
+      ]
+    }
+  ],
   "constraints": [
-    "Do not modify existing functionality",
-    "Preserve all current features and implementations",
-    "Maintain existing design theme (gold/yellow text, dark background, maroon accents)"
+    "Preserve existing Footer component structure and styling",
+    "Maintain bilingual support for social media link labels using LanguageContext",
+    "Do not modify other Footer functionality (CTA buttons, contact info, copyright)",
+    "Keep existing icon styling and hover effects for social media links"
   ],
   "nonGoals": [
-    "Adding new features",
-    "Changing existing behavior",
-    "Modifying component structure"
+    "Adding new social media platforms beyond the four specified",
+    "Changing the visual design or layout of the Footer component",
+    "Modifying social media link behavior beyond updating URLs",
+    "Adding analytics or tracking to social media links"
   ],
   "imageRequirements": {
     "required": [],
