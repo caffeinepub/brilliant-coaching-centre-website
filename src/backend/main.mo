@@ -3,38 +3,11 @@ import Storage "blob-storage/Storage";
 import Map "mo:core/Map";
 import Text "mo:core/Text";
 import Iter "mo:core/Iter";
-import Time "mo:core/Time";
-import Nat8 "mo:core/Nat8";
+
+
 
 actor {
   include MixinStorage();
-
-  type Student = {
-    id : Text;
-    name : Text;
-    className : Text;
-    enrollmentDate : Int;
-  };
-
-  type TestResult = {
-    studentId : Text;
-    subject : Text;
-    testDate : Int;
-    score : Nat;
-    maxScore : Nat;
-  };
-
-  type AttendanceRecord = {
-    studentId : Text;
-    date : Int;
-    present : Bool;
-    notes : ?Text;
-  };
-
-  // Placeholder for future student dashboard data structures.
-  let students = Map.empty<Text, Student>();
-  let testResults = Map.empty<Text, TestResult>();
-  let attendanceRecords = Map.empty<Text, AttendanceRecord>();
 
   type Image = {
     id : Text;
@@ -50,19 +23,8 @@ actor {
     description : Text;
   };
 
-  type Review = {
-    fullName : Text;
-    classYear : Text;
-    subjects : ?Text;
-    review : Text;
-    rating : ?Nat8;
-    timestamp : Int;
-    approved : Bool;
-  };
-
   let images = Map.empty<Text, Image>();
   let galleries = Map.empty<Text, Gallery>();
-  let reviews = Map.empty<Text, Review>();
 
   // Gallery Management
   public shared ({ caller }) func createGallery(id : Text, name : Text, description : Text) : async Bool {
@@ -125,66 +87,5 @@ actor {
     } else {
       false;
     };
-  };
-
-  // Review Management.
-  public shared ({ caller }) func submitReview(fullName : Text, classYear : Text, subjects : ?Text, review : Text, rating : ?Nat8) : async () {
-    let newReview : Review = {
-      fullName;
-      classYear;
-      subjects;
-      review;
-      rating;
-      timestamp = Time.now();
-      approved = false;
-    };
-    reviews.add(fullName, newReview);
-  };
-
-  public query ({ caller }) func getAllReviews() : async [Review] {
-    reviews.values().toArray();
-  };
-
-  public shared ({ caller }) func approveReview(fullName : Text) : async Bool {
-    switch (reviews.get(fullName)) {
-      case (null) { false };
-      case (?review) {
-        let updatedReview : Review = { review with approved = true };
-        reviews.add(fullName, updatedReview);
-        true;
-      };
-    };
-  };
-
-  public query ({ caller }) func getApprovedReviews() : async [Review] {
-    reviews.values().filter(func(review) { review.approved }).toArray();
-  };
-
-  // Placeholder CRUD functions for future student dashboard functionality.
-  public shared ({ caller }) func createStudent(id : Text, name : Text, className : Text, enrollmentDate : Int) : async () {
-    /* Future implementation */
-  };
-
-  public query ({ caller }) func getStudent(id : Text) : async ?Student {
-    /* Future implementation */
-    null;
-  };
-
-  public shared ({ caller }) func addTestResult(studentId : Text, subject : Text, testDate : Int, score : Nat, maxScore : Nat) : async () {
-    /* Future implementation */
-  };
-
-  public query ({ caller }) func getStudentTestResults(studentId : Text) : async [TestResult] {
-    /* Future implementation */
-    [];
-  };
-
-  public shared ({ caller }) func recordAttendance(studentId : Text, date : Int, present : Bool, notes : ?Text) : async () {
-    /* Future implementation */
-  };
-
-  public query ({ caller }) func getStudentAttendance(studentId : Text) : async [AttendanceRecord] {
-    /* Future implementation */
-    [];
   };
 };

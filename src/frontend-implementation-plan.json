@@ -1,54 +1,38 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace Santanu Sir's teacher profile image with newly uploaded photo",
+  "title": "Remove Abhijit Da's teacher profile image",
   "requirements": [
     {
-      "id": "REQ-89",
-      "summary": "Store the uploaded Santanu Sir photo as a static asset in the frontend assets directory",
+      "id": "REQ-96",
+      "summary": "Remove Abhijit Da's teacher profile image from the Teachers component, replacing it with a placeholder avatar or initials-based fallback while preserving all text content",
       "acceptanceCriteria": [
-        "The image file is saved in frontend/public/assets/generated directory",
-        "Both Teachers and TeachersNotes components reference this asset path",
-        "The image loads correctly when the components render"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg",
-          "operation": "create",
-          "description": "Save the uploaded image 'image (2)-5.jpg' showing Santanu Sir in a white patterned shirt with mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations as a static asset with standardized naming convention matching other teacher profile images"
-        }
-      ]
-    },
-    {
-      "id": "REQ-87",
-      "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component with the newly uploaded photo",
-      "acceptanceCriteria": [
-        "The Teachers component displays the new Santanu Sir photo from 'image (2)-5.jpg'",
-        "The image replaces the previous Santanu Sir profile photo",
-        "The image is properly sized and styled to match other teacher profile images",
-        "All other teacher profile content (name, classes, subjects, experience) remains unchanged"
+        "Abhijit Da's profile card in the Teachers component displays a placeholder avatar or initials fallback instead of an image",
+        "All text content for Abhijit Da remains visible: name, classes, subject, experience, and teaching focus",
+        "The card layout and styling remain consistent with other teacher profiles"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Teachers.tsx",
           "operation": "modify",
-          "description": "Update the image source for Santanu Sir's profile to reference frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg instead of the current placeholder. Maintain all existing styling, dimensions, and teacher information (name, classes taught, subjects, experience, focus areas). Ensure the Avatar component continues to use the same size and styling as other teacher profiles."
+          "description": "Replace Abhijit Da's image source (currently using frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png or similar) with a placeholder avatar implementation. Implement an initials-based fallback (showing 'AD' for Abhijit Da) or use a generic avatar icon while preserving all existing text content including name, classes taught (Class 4 – Class 10), subject (Mathematics), experience (5 Years), and teaching focus. Maintain the same card structure, styling, and layout consistency with other teacher profiles (Sonali Ma'am and Santanu Sir)."
         }
       ]
     },
     {
-      "id": "REQ-88",
-      "summary": "Update the TeachersNotes component to reference the new Santanu Sir profile image for consistency",
+      "id": "REQ-97",
+      "summary": "Remove Abhijit Da's teacher profile image from the TeachersNotes component for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback",
       "acceptanceCriteria": [
-        "The TeachersNotes component displays the same new Santanu Sir photo in the Class 4-12 notes card",
-        "The image matches the one used in the Teachers component",
-        "All other notes card content remains unchanged"
+        "The 'Class 4 – 10' notes card in the TeachersNotes component displays a placeholder avatar or initials fallback instead of an image",
+        "All teacher information remains visible: Abhijit (Abhi) Da, Mathematics, 5 Years experience",
+        "All notes features and download functionality remain intact",
+        "The card maintains visual consistency with other notes cards"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/TeachersNotes.tsx",
           "operation": "modify",
-          "description": "Update the image source for Santanu Sir in the 'Class 4 – 12' tab section to reference frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg, ensuring consistency with the Teachers component. Maintain all existing tab functionality, teacher information display, and bilingual support without modifying the component structure or other teacher profiles."
+          "description": "Replace Abhijit Da's image source in the 'Class 4 – 10' notes card (currently using frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png or similar) with a placeholder avatar implementation. Implement an initials-based fallback (showing 'AD' for Abhijit Da) or use a generic avatar icon while preserving all teacher information including Abhijit (Abhi) Da, Mathematics, 5 Years experience. Ensure all notes features, tabs, and download functionality remain intact. Maintain visual consistency with other notes cards in the component."
         }
       ]
     }

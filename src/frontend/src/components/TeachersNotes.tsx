@@ -29,7 +29,7 @@ export default function TeachersNotes() {
       teacher: {
         name: t('Abhijit (Abhi) Da', 'অভিজিৎ (অভি) দা'),
         initials: 'AD',
-        avatar: '/assets/generated/abhijit-da-photo.dim_400x400.png',
+        avatar: undefined,
         classes: t('Class 4 – 10', 'ক্লাস ৪ – ১০'),
         subjects: t('Mathematics', 'গণিত'),
         experience: t('5 Years', '৫ বছর'),
@@ -109,7 +109,7 @@ export default function TeachersNotes() {
                       {/* Teacher Avatar */}
                       <div className="flex-shrink-0 mx-auto md:mx-0">
                         <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-gold/20 group-hover:border-gold/40 transition-all duration-300 group-hover:scale-105">
-                          <AvatarImage src={data.teacher.avatar} alt={data.teacher.name} />
+                          {data.teacher.avatar && <AvatarImage src={data.teacher.avatar} alt={data.teacher.name} />}
                           <AvatarFallback className="text-4xl md:text-5xl font-bold bg-gradient-to-br from-maroon to-maroon/80 text-gold">
                             {data.teacher.initials}
                           </AvatarFallback>

@@ -10,12 +10,6 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
-export interface AttendanceRecord {
-  'studentId' : string,
-  'present' : boolean,
-  'date' : bigint,
-  'notes' : [] | [string],
-}
 export type ExternalBlob = Uint8Array;
 export interface Gallery {
   'id' : string,
@@ -28,28 +22,6 @@ export interface Image {
   'blob' : ExternalBlob,
   'description' : string,
   'galleryId' : string,
-}
-export interface Review {
-  'review' : string,
-  'subjects' : [] | [string],
-  'fullName' : string,
-  'approved' : boolean,
-  'timestamp' : bigint,
-  'rating' : [] | [number],
-  'classYear' : string,
-}
-export interface Student {
-  'id' : string,
-  'name' : string,
-  'enrollmentDate' : bigint,
-  'className' : string,
-}
-export interface TestResult {
-  'studentId' : string,
-  'maxScore' : bigint,
-  'subject' : string,
-  'testDate' : bigint,
-  'score' : bigint,
 }
 export interface _CaffeineStorageCreateCertificateResult {
   'method' : string,
@@ -82,32 +54,13 @@ export interface _SERVICE {
     [string, ExternalBlob, string, string, string],
     boolean
   >,
-  'addTestResult' : ActorMethod<
-    [string, string, bigint, bigint, bigint],
-    undefined
-  >,
-  'approveReview' : ActorMethod<[string], boolean>,
   'createGallery' : ActorMethod<[string, string, string], boolean>,
-  'createStudent' : ActorMethod<[string, string, string, bigint], undefined>,
   'deleteGallery' : ActorMethod<[string], boolean>,
   'deleteImage' : ActorMethod<[string], boolean>,
   'getAllGalleries' : ActorMethod<[], Array<Gallery>>,
-  'getAllReviews' : ActorMethod<[], Array<Review>>,
-  'getApprovedReviews' : ActorMethod<[], Array<Review>>,
   'getGallery' : ActorMethod<[string], [] | [Gallery]>,
   'getImage' : ActorMethod<[string], [] | [Image]>,
   'getImagesByGallery' : ActorMethod<[string], Array<Image>>,
-  'getStudent' : ActorMethod<[string], [] | [Student]>,
-  'getStudentAttendance' : ActorMethod<[string], Array<AttendanceRecord>>,
-  'getStudentTestResults' : ActorMethod<[string], Array<TestResult>>,
-  'recordAttendance' : ActorMethod<
-    [string, bigint, boolean, [] | [string]],
-    undefined
-  >,
-  'submitReview' : ActorMethod<
-    [string, string, [] | [string], string, [] | [number]],
-    undefined
-  >,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];

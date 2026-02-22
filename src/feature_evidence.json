@@ -2,27 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-existing-teacher-profile-image-for-santanu-sir-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-image-2-5-jpg-showing-him-in-a-white-patterned-shirt-with-a-mustache-speaking-at-a-microphone-with-decorative-background-including-silver-streamers-and-floral-wall-decorations",
-      "featureTitle": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-5.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
-      "files": [
-        "frontend/src/components/Teachers.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-87"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-santanu-sir-profile-image-from-image-2-5-jpg-for-the-class-4-12-notes-card-maintaining-consistency-with-the-teachers-component",
-      "featureTitle": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-5.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "featureId": "feature-remove-abhijit-da-s-teacher-profile-image-from-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-for-the-class-4-10-notes-card-replacing-it-with-a-placeholder-avatar-or-initials-based-fallback-while-preserving-all-teacher-information-and-notes-features",
+      "featureTitle": "Remove Abhijit Da's teacher profile image from the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback while preserving all teacher information and notes features",
       "files": [
         "frontend/src/components/TeachersNotes.tsx"
       ],
@@ -35,24 +16,7 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-88"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-store-the-uploaded-santanu-sir-photo-image-2-5-jpg-as-a-static-asset-in-the-frontend-public-assets-generated-directory",
-      "featureTitle": "Store the uploaded Santanu Sir photo 'image (2)-5.jpg' as a static asset in the frontend/public/assets/generated directory",
-      "files": [],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-89"
+        "REQ-97"
       ],
       "confidence": "high"
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 47,
+  "projectStateVersion": 51,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, testimonials section (What Our Students Say) with page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh), review submission form with name/class/subjects/review/rating fields, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -700,6 +700,46 @@
         "REQ-89"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-studentdashboard-component-from-app-tsx-and-delete-the-frontend-src-components-studentdashboard-tsx-file",
+      "title": "Remove the StudentDashboard component from App.tsx and delete the frontend/src/components/StudentDashboard.tsx file",
+      "reqIds": [
+        "REQ-90"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-submitreview-component-from-app-tsx-and-delete-the-frontend-src-components-submitreview-tsx-file",
+      "title": "Remove the SubmitReview component from App.tsx and delete the frontend/src/components/SubmitReview.tsx file",
+      "reqIds": [
+        "REQ-91"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-admissionform-component-from-app-tsx-and-delete-the-frontend-src-components-admissionform-tsx-file",
+      "title": "Remove the AdmissionForm component from App.tsx and delete the frontend/src/components/AdmissionForm.tsx file",
+      "reqIds": [
+        "REQ-92"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-delete-the-frontend-src-hooks-usequeries-ts-file-and-remove-any-imports-referencing-it-from-other-components",
+      "title": "Delete the frontend/src/hooks/useQueries.ts file and remove any imports referencing it from other components",
+      "reqIds": [
+        "REQ-95"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-abhijit-da-s-teacher-profile-image-from-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-for-the-class-4-10-notes-card-replacing-it-with-a-placeholder-avatar-or-initials-based-fallback-while-preserving-all-teacher-information-and-notes-features",
+      "title": "Remove Abhijit Da's teacher profile image from the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback while preserving all teacher information and notes features",
+      "reqIds": [
+        "REQ-97"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -880,6 +920,36 @@
       "summary": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
       "reqIds": [
         "REQ-85"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-47",
+      "summary": "Remove all review management functionality from backend/main.mo including submitReview, approveReview, getAllReviews, and getApprovedReviews functions, and delete the Review type definition",
+      "reqIds": [
+        "REQ-93"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-48",
+      "summary": "Remove all placeholder student dashboard CRUD functions from backend/main.mo including createStudent, getStudent, addTestResult, getStudentTestResults, recordAttendance, getStudentAttendance, and their associated type definitions (Student, TestResult, AttendanceRecord)",
+      "reqIds": [
+        "REQ-94"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-49",
+      "summary": "Remove Abhijit Da's teacher profile image from the Teachers component and TeachersNotes component, replacing with placeholder avatar or initials-based fallback",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-50",
+      "summary": "Remove Abhijit Da's teacher profile image from the Teachers component (frontend/src/components/Teachers.tsx), replacing it with a placeholder avatar or initials-based fallback while preserving all text content including name, classes taught (Class 4 – Class 10), subject (Mathematics), experience (5 Years), and teaching focus",
+      "reqIds": [
+        "REQ-96"
       ],
       "status": "pending"
     }
