@@ -4,6 +4,7 @@ import About from './components/About';
 import Courses from './components/Courses';
 import WhyChooseUs from './components/WhyChooseUs';
 import Teachers from './components/Teachers';
+import TeachersNotes from './components/TeachersNotes';
 import Gallery from './components/Gallery';
 import AdmissionForm from './components/AdmissionForm';
 import Contact from './components/Contact';
@@ -20,6 +21,7 @@ function App() {
         <Courses />
         <WhyChooseUs />
         <Teachers />
+        <TeachersNotes />
         <Gallery />
         <AdmissionForm />
         <Contact />

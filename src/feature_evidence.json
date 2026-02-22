@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-current-placeholder-logo-in-the-hero-component-with-the-uploaded-brilliant-coaching-centre-logo-brilliant-coaching-centre-copy-jpg-showing-a-lightbulb-design-with-yellow-student-figure-and-the-text-brilliant-coaching-centre-in-gold-yellow-on-dark-background-with-maroon-border",
-      "featureTitle": "Replace the current placeholder logo in the Hero component with the uploaded Brilliant Coaching Centre logo (Brilliant Coaching Centre copy.jpg) showing a lightbulb design with yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on dark background with maroon border",
+      "featureId": "feature-create-a-new-teachersnotes-component-that-displays-a-section-titled-teachers-class-notes-with-subtitle-access-class-wise-notes-prepared-by-our-expert-teachers-to-strengthen-learning-and-excel-in-exams-with-bilingual-support-english-and-bengali",
+      "featureTitle": "Create a new TeachersNotes component that displays a section titled 'Teachers & Class Notes' with subtitle 'Access class-wise notes prepared by our expert teachers to strengthen learning and excel in exams' with bilingual support (English and Bengali)",
       "files": [
-        "frontend/src/components/Hero.tsx"
+        "frontend/src/components/TeachersNotes.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -16,15 +16,15 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-27"
+        "REQ-30"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-store-the-uploaded-brilliant-coaching-centre-logo-as-a-static-asset-in-the-frontend-public-assets-generated-directory-and-update-the-hero-component-to-reference-this-asset-path",
-      "featureTitle": "Store the uploaded Brilliant Coaching Centre logo as a static asset in the frontend/public/assets/generated directory and update the Hero component to reference this asset path",
+      "featureId": "feature-implement-tabbed-navigation-with-three-tabs-lkg-class-3-class-4-10-and-class-4-12-with-lkg-class-3-as-the-default-active-tab",
+      "featureTitle": "Implement tabbed navigation with three tabs: 'LKG – Class 3', 'Class 4 – 10', and 'Class 4 – 12' with 'LKG – Class 3' as the default active tab",
       "files": [
-        "frontend/src/components/Hero.tsx"
+        "frontend/src/components/TeachersNotes.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -35,7 +35,159 @@
         "blob-storage@4.0.0"
       ],
       "testIds": [
-        "REQ-28"
+        "REQ-31"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-notes-card-for-lkg-class-3-showing-sonali-ma-am-all-subjects-15-years-experience-with-features-fun-colorful-and-easy-to-understand-notes-for-early-learners-focus-on-basic-concepts-confidence-and-concept-clarity-downloadable-pdfs-and-printable-worksheets-and-a-download-notes-button",
+      "featureTitle": "Display notes card for 'LKG – Class 3' showing Sonali Ma'am (All Subjects, 15+ Years experience) with features: fun, colorful, and easy-to-understand notes for early learners; focus on basic concepts, confidence, and concept clarity; downloadable PDFs and printable worksheets; and a Download Notes button",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-32"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-notes-card-for-class-4-10-showing-abhijit-abhi-da-mathematics-5-years-experience-with-features-step-by-step-explanations-and-examples-practice-questions-with-shortcuts-and-tips-exam-oriented-notes-to-improve-problem-solving-and-accuracy-and-a-download-notes-button",
+      "featureTitle": "Display notes card for 'Class 4 – 10' showing Abhijit (Abhi) Da (Mathematics, 5 Years experience) with features: step-by-step explanations and examples; practice questions with shortcuts and tips; exam-oriented notes to improve problem-solving and accuracy; and a Download Notes button",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-33"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-display-notes-card-for-class-4-12-showing-santanu-sir-english-35-years-experience-with-features-grammar-comprehension-writing-and-communication-skills-literature-and-vocabulary-notes-tips-for-exam-preparation-and-effective-learning-and-a-download-notes-button",
+      "featureTitle": "Display notes card for 'Class 4 – 12' showing Santanu Sir (English, 35+ Years experience) with features: grammar, comprehension, writing, and communication skills; literature and vocabulary notes; tips for exam preparation and effective learning; and a Download Notes button",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-34"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-style-notes-cards-using-grid-layout-with-teacher-placeholder-avatar-name-class-range-subject-experience-notes-features-list-and-download-button-with-hover-effects-that-lift-the-card-slightly-with-shadow",
+      "featureTitle": "Style notes cards using grid layout with teacher placeholder avatar, name, class range, subject, experience, notes features list, and download button with hover effects that lift the card slightly with shadow",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-35"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-icons-to-notes-cards-for-subject-for-class-and-for-experience-fields",
+      "featureTitle": "Add icons to notes cards: 📚 for Subject, 🏫 for Class, and 🎓 for Experience fields",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-36"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-responsive-mobile-design-where-grid-cards-resize-and-stack-on-smaller-screens-and-tabs-become-horizontally-scrollable-or-stack-vertically-on-mobile-devices",
+      "featureTitle": "Implement responsive mobile design where grid cards resize and stack on smaller screens, and tabs become horizontally scrollable or stack vertically on mobile devices",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-37"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-the-teachersnotes-component-into-app-tsx-after-the-existing-teachers-section-and-before-the-gallery-section-maintaining-component-flow-and-styling-consistency-with-the-existing-design-theme-gold-yellow-text-dark-background-maroon-accents",
+      "featureTitle": "Integrate the TeachersNotes component into App.tsx after the existing Teachers section and before the Gallery section, maintaining component flow and styling consistency with the existing design theme (gold/yellow text, dark background, maroon accents)",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-38"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-all-text-content-in-the-teachersnotes-component-supports-bilingual-switching-between-english-and-bengali-using-the-existing-languagecontext",
+      "featureTitle": "Ensure all text content in the TeachersNotes component supports bilingual switching between English and Bengali using the existing LanguageContext",
+      "files": [
+        "frontend/src/components/TeachersNotes.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-39"
       ],
       "confidence": "high"
     }

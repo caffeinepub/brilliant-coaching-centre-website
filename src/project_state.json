@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 19,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), why choose us highlights, photo gallery with lightbox, admission enquiry form with WhatsApp integration, contact section, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -10,7 +10,9 @@
     "Smooth animations and hover effects throughout",
     "Click-to-zoom lightbox functionality for photo gallery",
     "Fast-loading optimization required",
-    "Ready for future upgrades: Google Sheet integration, admin dashboard, email alerts, full coaching ERP"
+    "Ready for future upgrades: Google Sheet integration, admin dashboard, email alerts, full coaching ERP",
+    "Tabbed navigation system for class-wise notes with default active tab (LKG-3)",
+    "Downloadable PDF notes feature for each teacher/class combination"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -258,6 +260,94 @@
         "REQ-28"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-all-three-teacher-profile-images-abhijit-da-dim-400x400-png-santanu-sir-dim-400x400-png-sonali-maam-dim-400x400-png-from-the-teachers-component-replacing-them-with-placeholder-avatars-or-initials-based-fallbacks-while-preserving-all-text-content-name-classes-subjects-experience-and-teaching-focus",
+      "title": "Remove all three teacher profile images (abhijit-da.dim_400x400.png, santanu-sir.dim_400x400.png, sonali-maam.dim_400x400.png) from the Teachers component, replacing them with placeholder avatars or initials-based fallbacks while preserving all text content (name, classes, subjects, experience, and teaching focus)",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-teachersnotes-component-that-displays-a-section-titled-teachers-class-notes-with-subtitle-access-class-wise-notes-prepared-by-our-expert-teachers-to-strengthen-learning-and-excel-in-exams-with-bilingual-support-english-and-bengali",
+      "title": "Create a new TeachersNotes component that displays a section titled 'Teachers & Class Notes' with subtitle 'Access class-wise notes prepared by our expert teachers to strengthen learning and excel in exams' with bilingual support (English and Bengali)",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-tabbed-navigation-with-three-tabs-lkg-class-3-class-4-10-and-class-4-12-with-lkg-class-3-as-the-default-active-tab",
+      "title": "Implement tabbed navigation with three tabs: 'LKG – Class 3', 'Class 4 – 10', and 'Class 4 – 12' with 'LKG – Class 3' as the default active tab",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-notes-card-for-lkg-class-3-showing-sonali-ma-am-all-subjects-15-years-experience-with-features-fun-colorful-and-easy-to-understand-notes-for-early-learners-focus-on-basic-concepts-confidence-and-concept-clarity-downloadable-pdfs-and-printable-worksheets-and-a-download-notes-button",
+      "title": "Display notes card for 'LKG – Class 3' showing Sonali Ma'am (All Subjects, 15+ Years experience) with features: fun, colorful, and easy-to-understand notes for early learners; focus on basic concepts, confidence, and concept clarity; downloadable PDFs and printable worksheets; and a Download Notes button",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-notes-card-for-class-4-10-showing-abhijit-abhi-da-mathematics-5-years-experience-with-features-step-by-step-explanations-and-examples-practice-questions-with-shortcuts-and-tips-exam-oriented-notes-to-improve-problem-solving-and-accuracy-and-a-download-notes-button",
+      "title": "Display notes card for 'Class 4 – 10' showing Abhijit (Abhi) Da (Mathematics, 5 Years experience) with features: step-by-step explanations and examples; practice questions with shortcuts and tips; exam-oriented notes to improve problem-solving and accuracy; and a Download Notes button",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-notes-card-for-class-4-12-showing-santanu-sir-english-35-years-experience-with-features-grammar-comprehension-writing-and-communication-skills-literature-and-vocabulary-notes-tips-for-exam-preparation-and-effective-learning-and-a-download-notes-button",
+      "title": "Display notes card for 'Class 4 – 12' showing Santanu Sir (English, 35+ Years experience) with features: grammar, comprehension, writing, and communication skills; literature and vocabulary notes; tips for exam preparation and effective learning; and a Download Notes button",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-style-notes-cards-using-grid-layout-with-teacher-placeholder-avatar-name-class-range-subject-experience-notes-features-list-and-download-button-with-hover-effects-that-lift-the-card-slightly-with-shadow",
+      "title": "Style notes cards using grid layout with teacher placeholder avatar, name, class range, subject, experience, notes features list, and download button with hover effects that lift the card slightly with shadow",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-icons-to-notes-cards-for-subject-for-class-and-for-experience-fields",
+      "title": "Add icons to notes cards: 📚 for Subject, 🏫 for Class, and 🎓 for Experience fields",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-responsive-mobile-design-where-grid-cards-resize-and-stack-on-smaller-screens-and-tabs-become-horizontally-scrollable-or-stack-vertically-on-mobile-devices",
+      "title": "Implement responsive mobile design where grid cards resize and stack on smaller screens, and tabs become horizontally scrollable or stack vertically on mobile devices",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-teachersnotes-component-into-app-tsx-after-the-existing-teachers-section-and-before-the-gallery-section-maintaining-component-flow-and-styling-consistency-with-the-existing-design-theme-gold-yellow-text-dark-background-maroon-accents",
+      "title": "Integrate the TeachersNotes component into App.tsx after the existing Teachers section and before the Gallery section, maintaining component flow and styling consistency with the existing design theme (gold/yellow text, dark background, maroon accents)",
+      "reqIds": [
+        "REQ-38"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-all-text-content-in-the-teachersnotes-component-supports-bilingual-switching-between-english-and-bengali-using-the-existing-languagecontext",
+      "title": "Ensure all text content in the TeachersNotes component supports bilingual switching between English and Bengali using the existing LanguageContext",
+      "reqIds": [
+        "REQ-39"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -322,14 +412,14 @@
       "status": "pending"
     },
     {
-      "id": "AR-11",
-      "summary": "Our Teachers section displaying three teacher profiles: Sonali Ma'am (LKG-Class 3, All Subjects, 15+ years), Abhijit Da (Class 4-10, Mathematics, 5 years), and Santanu Sir (Class 4-12, English, 35+ years) with images, classes taught, subjects, experience, and teaching focus",
+      "id": "AR-12",
+      "summary": "Add Brilliant Coaching Centre logo to the hero section",
       "reqIds": [],
       "status": "pending"
     },
     {
-      "id": "AR-12",
-      "summary": "Add Brilliant Coaching Centre logo to the hero section",
+      "id": "AR-13",
+      "summary": "Teachers & Class Notes section with tabbed navigation (LKG-Class 3, Class 4-10, Class 4-12) displaying teacher profiles and downloadable notes with bilingual support",
       "reqIds": [],
       "status": "pending"
     }

@@ -1,5 +1,5 @@
 {
-  "frontend/src/App.tsx": "Main application component that wraps all sections with LanguageProvider and renders Hero, About, Courses, WhyChooseUs, Teachers, Gallery, AdmissionForm, Contact, Footer, LanguageToggle, and FloatingWhatsApp components in a single-page layout.",
+  "frontend/src/App.tsx": "Main application component that wraps all sections with LanguageProvider and renders Hero, About, Courses, WhyChooseUs, Teachers, TeachersNotes, Gallery, AdmissionForm, Contact, Footer, LanguageToggle, and FloatingWhatsApp components in a single-page layout.",
   "frontend/src/contexts/LanguageContext.tsx": "Language context provider that manages bilingual state (English/Bengali) with session storage persistence and provides translation helper function for all components.",
   "frontend/src/components/Hero.tsx": "Hero section component featuring the Brilliant Coaching Centre logo (from uploaded asset), institute name, tagline \"Education | Discipline | Success\", and WhatsApp CTA button with animated background gradients and decorative elements.",
   "frontend/src/components/About.tsx": "About Us section showcasing four key features (Concept Clarity, Personal Care, Discipline, Exam Preparation) with icons in a responsive grid layout with bilingual content support.",
@@ -13,5 +13,6 @@
   "frontend/src/components/FloatingWhatsApp.tsx": "Floating WhatsApp button positioned at bottom-right with green WhatsApp branding that opens chat with pre-filled enquiry message to +91 98834 48350.",
   "frontend/src/index.css": "Global styles with OKLCH color system implementing Brilliant Coaching Centre branding (gold/yellow text, dark background, maroon accents) with custom animations and utility classes.",
   "frontend/tailwind.config.js": "Tailwind configuration extended with custom gold and maroon colors, Poppins and Inter font families, and custom design tokens matching the coaching centre branding.",
-  "frontend/src/components/Teachers.tsx": "Teachers section component displaying three teacher profiles (Sonali Ma'am, Abhijit Da, Santanu Sir) with their actual uploaded photos including the newly updated photo for Santanu Sir (santanu-sir-updated.dim_400x400.png), classes taught, subjects, experience, and teaching focus points with bilingual support."
+  "frontend/src/components/Teachers.tsx": "Teachers section component displaying three teacher profiles (Sonali Ma'am, Abhijit Da, Santanu Sir) with avatar placeholders showing initials instead of photos, along with their classes taught, subjects, experience, and teaching focus points with bilingual support.",
+  "frontend/src/components/TeachersNotes.tsx": "Teachers & Class Notes section with tabbed navigation (LKG-3, 4-10, 4-12) displaying teacher profiles with avatars, class info, subjects, experience, notes features, and download buttons with bilingual support and responsive design with hover effects."
 }

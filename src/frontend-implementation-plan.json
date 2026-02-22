@@ -1,43 +1,181 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Brilliant Coaching Centre logo to Hero section",
+  "title": "Add Teachers & Class Notes Section with Tabbed Navigation",
   "requirements": [
     {
-      "id": "REQ-27",
-      "summary": "Replace the current placeholder logo in the Hero component with the uploaded Brilliant Coaching Centre logo",
+      "id": "REQ-30",
+      "summary": "Create TeachersNotes component with bilingual section title and subtitle",
       "acceptanceCriteria": [
-        "The Hero component displays the uploaded Brilliant Coaching Centre logo",
-        "Logo maintains proper aspect ratio and visual quality",
-        "Logo is prominently displayed in the hero section",
-        "Logo styling is consistent with the existing gold/yellow and maroon brand colors"
+        "Section has a clear title 'Teachers & Class Notes'",
+        "Subtitle text is displayed below the title",
+        "Both title and subtitle support bilingual content switching"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Hero.tsx",
-          "operation": "modify",
-          "description": "Update the Hero component to replace the current logo image source with the uploaded Brilliant Coaching Centre logo. Change the img element's src attribute to reference the new logo asset at frontend/public/assets/Brilliant Coaching Centre copy.jpg. Ensure the logo maintains proper aspect ratio, visual quality, and styling consistent with the brand's gold/yellow and maroon colors. Verify the alt text accurately describes the new logo."
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "create",
+          "description": "Create the TeachersNotes component with section title 'Teachers & Class Notes' and subtitle 'Access class-wise notes prepared by our expert teachers to strengthen learning and excel in exams'. Use the LanguageContext for bilingual support with English and Bengali translations. Structure the component to include the title, subtitle, and a container for tabbed content that will be implemented in subsequent requirements."
         }
       ]
     },
     {
-      "id": "REQ-28",
-      "summary": "Store the uploaded Brilliant Coaching Centre logo as a static asset and update Hero component to reference it",
+      "id": "REQ-31",
+      "summary": "Implement three-tab navigation system with default active tab",
       "acceptanceCriteria": [
-        "Logo file is saved in frontend/public/assets/generated directory",
-        "Hero component src attribute points to the correct asset path",
-        "Logo loads correctly on page render"
+        "Three tabs are displayed horizontally",
+        "LKG – Class 3 tab is active by default on page load",
+        "Clicking a tab switches the displayed content to show only notes for that class range",
+        "Active tab has visual distinction from inactive tabs"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/Brilliant Coaching Centre copy.jpg",
-          "operation": "create",
-          "description": "Copy the uploaded Brilliant Coaching Centre logo file (Brilliant Coaching Centre copy.jpg) to the frontend/public/assets directory. This logo features a lightbulb design with a yellow student figure and the text 'brilliant COACHING CENTRE' in gold/yellow on a dark background with maroon border."
-        },
-        {
-          "path": "frontend/src/components/Hero.tsx",
+          "path": "frontend/src/components/TeachersNotes.tsx",
           "operation": "modify",
-          "description": "Update the Hero component's logo img element to reference the correct asset path /assets/Brilliant Coaching Centre copy.jpg. Ensure the src attribute uses the public asset path format that will resolve correctly at runtime. Verify the image loads properly and displays with appropriate dimensions in the hero section."
+          "description": "Add tabbed navigation with three tabs: 'LKG – Class 3', 'Class 4 – 10', and 'Class 4 – 12'. Implement state management using React useState to track the active tab, with 'LKG – Class 3' as the default. Add click handlers to switch between tabs. Style active tabs with distinct visual appearance (e.g., gold/yellow accent color matching the site theme) and inactive tabs with muted styling. Ensure tab labels support bilingual content through LanguageContext."
+        }
+      ]
+    },
+    {
+      "id": "REQ-32",
+      "summary": "Display Sonali Ma'am notes card for LKG – Class 3 with features and download button",
+      "acceptanceCriteria": [
+        "Card displays teacher name: Sonali Ma'am",
+        "Shows subjects: All Subjects",
+        "Displays experience: 15+ Years",
+        "Lists all three notes features",
+        "Includes a Download Notes button",
+        "Uses placeholder avatar for teacher photo"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Add the notes card for Sonali Ma'am within the 'LKG – Class 3' tab content. Display teacher name 'Sonali Ma'am', subjects 'All Subjects', and experience '15+ Years'. Include three features: 'Fun, colorful, and easy-to-understand notes for early learners', 'Focus on basic concepts, confidence, and concept clarity', and 'Downloadable PDFs and printable worksheets'. Add a Download Notes button. Use the placeholder avatar image from frontend/public/assets/generated/sonali-maam-photo.dim_400x400.png. Ensure all text content supports bilingual switching via LanguageContext."
+        }
+      ]
+    },
+    {
+      "id": "REQ-33",
+      "summary": "Display Abhijit (Abhi) Da notes card for Class 4 – 10 with features and download button",
+      "acceptanceCriteria": [
+        "Card displays teacher name: Abhijit (Abhi) Da",
+        "Shows subject: Mathematics",
+        "Displays experience: 5 Years",
+        "Lists all three notes features",
+        "Includes a Download Notes button",
+        "Uses placeholder avatar for teacher photo"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Add the notes card for Abhijit (Abhi) Da within the 'Class 4 – 10' tab content. Display teacher name 'Abhijit (Abhi) Da', subject 'Mathematics', and experience '5 Years'. Include three features: 'Step-by-step explanations and examples', 'Practice questions with shortcuts and tips', and 'Exam-oriented notes to improve problem-solving and accuracy'. Add a Download Notes button. Use the placeholder avatar image from frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png. Ensure all text content supports bilingual switching via LanguageContext."
+        }
+      ]
+    },
+    {
+      "id": "REQ-34",
+      "summary": "Display Santanu Sir notes card for Class 4 – 12 with features and download button",
+      "acceptanceCriteria": [
+        "Card displays teacher name: Santanu Sir",
+        "Shows subject: English",
+        "Displays experience: 35+ Years",
+        "Lists all three notes features",
+        "Includes a Download Notes button",
+        "Uses placeholder avatar for teacher photo"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Add the notes card for Santanu Sir within the 'Class 4 – 12' tab content. Display teacher name 'Santanu Sir', subject 'English', and experience '35+ Years'. Include three features: 'Grammar, comprehension, writing, and communication skills', 'Literature and vocabulary notes', and 'Tips for exam preparation and effective learning'. Add a Download Notes button. Use the placeholder avatar image from frontend/public/assets/generated/santanu-sir-photo.dim_400x400.png. Ensure all text content supports bilingual switching via LanguageContext."
+        }
+      ]
+    },
+    {
+      "id": "REQ-35",
+      "summary": "Style notes cards with grid layout and hover effects",
+      "acceptanceCriteria": [
+        "Cards are displayed in a responsive grid layout",
+        "Each card includes all specified elements: avatar, name, class, subject, experience, features, button",
+        "Hover effect lifts card with shadow animation",
+        "Grid adapts to different screen sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Apply grid layout styling to the notes cards using Tailwind CSS classes (e.g., grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3). Structure each card to include teacher avatar image, name, class range, subject, experience, features list, and download button. Implement hover effects using Tailwind (hover:scale-105, hover:shadow-xl, transition-transform) to lift cards slightly with shadow animation. Ensure the grid is responsive and adapts to mobile, tablet, and desktop viewports. Match the existing site theme with gold/yellow accents and dark background with maroon accents."
+        }
+      ]
+    },
+    {
+      "id": "REQ-36",
+      "summary": "Add emoji icons to Subject, Class, and Experience fields",
+      "acceptanceCriteria": [
+        "Subject field displays with 📚 icon",
+        "Class field displays with 🏫 icon",
+        "Experience field displays with 🎓 icon",
+        "Icons are properly aligned with their corresponding text"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Add emoji icons to the notes cards: 📚 for the Subject field, 🏫 for the Class field, and 🎓 for the Experience field. Ensure proper alignment using flexbox or inline layout (e.g., flex, items-center, gap-2). Place icons before their corresponding text labels for consistent visual hierarchy."
+        }
+      ]
+    },
+    {
+      "id": "REQ-37",
+      "summary": "Implement responsive mobile design for cards and tabs",
+      "acceptanceCriteria": [
+        "Cards stack vertically on mobile viewports",
+        "Tabs remain accessible on mobile through scrolling or stacking",
+        "All content is readable and interactive on small screens",
+        "Touch targets are appropriately sized for mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Enhance responsive design for mobile devices. Ensure cards stack vertically on small screens using Tailwind responsive classes (grid-cols-1 on mobile, md:grid-cols-2 on tablet, lg:grid-cols-3 on desktop). Make tabs horizontally scrollable on mobile using overflow-x-auto and whitespace-nowrap, or implement vertical stacking if preferred. Ensure touch targets for tabs and buttons are at least 44x44px for accessibility. Test that all text is readable and interactive elements are easily tappable on mobile viewports."
+        }
+      ]
+    },
+    {
+      "id": "REQ-38",
+      "summary": "Integrate TeachersNotes component into App.tsx after Teachers section",
+      "acceptanceCriteria": [
+        "TeachersNotes component is rendered in the correct position in App.tsx",
+        "Section styling matches existing brand colors and theme",
+        "Component integrates seamlessly with surrounding sections",
+        "Maintains consistent spacing and layout with other sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the TeachersNotes component in App.tsx. Position it after the existing Teachers section and before the Gallery section. Ensure the component follows the same section pattern as other components (e.g., proper padding, margin, and container classes). Maintain consistent styling with the existing design theme including gold/yellow text, dark background, and maroon accents. Verify the component flow is seamless with proper spacing between sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-39",
+      "summary": "Enable bilingual support for all TeachersNotes text content",
+      "acceptanceCriteria": [
+        "Section title translates to Bengali",
+        "All teacher names, subjects, and descriptions have Bengali translations",
+        "Tab labels translate to Bengali",
+        "Notes features descriptions translate to Bengali",
+        "Language switching is instant and consistent with other sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "modify",
+          "description": "Ensure all text content in the TeachersNotes component uses the LanguageContext for bilingual support. Add Bengali translations for: section title 'Teachers & Class Notes', subtitle, all three tab labels ('LKG – Class 3', 'Class 4 – 10', 'Class 4 – 12'), teacher names (Sonali Ma'am, Abhijit (Abhi) Da, Santanu Sir), subjects, experience labels, all notes features descriptions, and button text. Use the translate helper function from LanguageContext to provide both English and Bengali versions. Ensure language switching is instant and consistent with other sections like Teachers, Courses, and About."
         }
       ]
     }

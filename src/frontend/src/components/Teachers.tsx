@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { GraduationCap, BookOpen, Award } from 'lucide-react';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 export default function Teachers() {
   const { t } = useLanguage();
@@ -7,7 +8,7 @@ export default function Teachers() {
   const teachers = [
     {
       name: t('Sonali Ma\'am', 'সোনালী ম্যাম'),
-      image: '/assets/generated/sonali-maam-photo.dim_400x400.png',
+      initials: 'SM',
       classes: t('LKG – Class 3', 'এলকেজি – ক্লাস ৩'),
       subjects: t('All Subjects', 'সমস্ত বিষয়'),
       experience: t('15+ Years', '১৫+ বছর'),
@@ -18,7 +19,7 @@ export default function Teachers() {
     },
     {
       name: t('Abhijit (Abhi) Da', 'অভিজিৎ (অভি) দা'),
-      image: '/assets/generated/abhijit-da-photo.dim_400x400.png',
+      initials: 'AD',
       classes: t('Class 4 – Class 10', 'ক্লাস ৪ – ক্লাস ১০'),
       subjects: t('Mathematics', 'গণিত'),
       experience: t('5 Years', '৫ বছর'),
@@ -29,7 +30,7 @@ export default function Teachers() {
     },
     {
       name: t('Santanu Sir', 'সন্তনু স্যার'),
-      image: '/assets/generated/santanu-sir-updated.dim_400x400.png',
+      initials: 'SS',
       classes: t('Class 4 – Class 12', 'ক্লাস ৪ – ক্লাস ১২'),
       subjects: t('English', 'ইংরেজি'),
       experience: t('35+ Years', '৩৫+ বছর'),
@@ -62,12 +63,12 @@ export default function Teachers() {
               key={index}
               className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-maroon/50 transition-all duration-300 hover:shadow-xl hover:shadow-maroon/10 hover:scale-105"
             >
-              <div className="relative h-64 overflow-hidden bg-gradient-to-br from-maroon/10 to-gold/10">
-                <img
-                  src={teacher.image}
-                  alt={teacher.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="relative h-64 overflow-hidden bg-gradient-to-br from-maroon/10 to-gold/10 flex items-center justify-center">
+                <Avatar className="w-40 h-40 border-4 border-gold/20 group-hover:border-gold/40 transition-all duration-300 group-hover:scale-110">
+                  <AvatarFallback className="text-5xl font-bold bg-gradient-to-br from-maroon to-maroon/80 text-gold">
+                    {teacher.initials}
+                  </AvatarFallback>
+                </Avatar>
                 <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
               </div>
 
