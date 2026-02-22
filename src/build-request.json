@@ -1,31 +1,48 @@
 {
   "kind": "build_request",
-  "title": "Replace Santanu Sir teacher profile image with uploaded photo",
+  "title": "Replace Santanu Sir's teacher profile image with newly uploaded photo",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-84",
-      "text": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-4.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
+      "id": "REQ-87",
+      "text": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-5.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
       "target": "frontend",
       "source": {
         "messageIds": [
           "msg-latest"
         ],
         "quotes": [
-          "Add Santanu Sir image"
+          "Add Santanu Sir's this image"
         ]
       },
       "acceptanceCriteria": [
-        "Santanu Sir's profile card displays the uploaded photo 'image (2)-4.jpg' instead of the current placeholder/image",
-        "The image is properly sized and maintains aspect ratio within the teacher profile card",
-        "The image styling is consistent with the other teacher profile images (Sonali Ma'am, Abhijit Da)",
-        "The image displays correctly on both desktop and mobile views",
-        "The image maintains the gold/yellow and maroon accent color scheme of the site"
+        "The Teachers component displays the new Santanu Sir photo from 'image (2)-5.jpg'",
+        "The image replaces the previous Santanu Sir profile photo",
+        "The image is properly sized and styled to match other teacher profile images",
+        "All other teacher profile content (name, classes, subjects, experience) remains unchanged"
       ]
     },
     {
-      "id": "REQ-85",
-      "text": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
+      "id": "REQ-88",
+      "text": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-5.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add Santanu Sir's this image"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The TeachersNotes component displays the same new Santanu Sir photo in the Class 4-12 notes card",
+        "The image matches the one used in the Teachers component",
+        "All other notes card content remains unchanged"
+      ]
+    },
+    {
+      "id": "REQ-89",
+      "text": "Store the uploaded Santanu Sir photo 'image (2)-5.jpg' as a static asset in the frontend/public/assets/generated directory",
       "target": "frontend",
       "source": {
         "messageIds": [
@@ -34,38 +51,20 @@
       },
       "acceptanceCriteria": [
         "The image file is saved in frontend/public/assets/generated directory",
-        "The Teachers component references the correct asset path for Santanu Sir's image",
-        "The image loads successfully when the page is rendered"
-      ]
-    },
-    {
-      "id": "REQ-86",
-      "text": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-latest"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The TeachersNotes component displays the same Santanu Sir image as the Teachers component",
-        "The 'Class 4 – 12' notes card shows the uploaded photo consistently",
-        "Image styling matches between Teachers and TeachersNotes components",
-        "The image displays properly in the tabbed notes interface"
+        "Both Teachers and TeachersNotes components reference this asset path",
+        "The image loads correctly when the components render"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the Teachers component structure or layout beyond updating the image source",
-    "Maintain bilingual support for all existing text content",
-    "Preserve the existing design theme (gold/yellow text, dark background, maroon accents)",
-    "Do not change the teacher profile information (name, classes, subjects, experience, teaching focus)"
+    "Do not modify any other teacher profile images or content",
+    "Maintain the existing image dimensions and styling for teacher profiles",
+    "Do not change the component structure or bilingual support functionality"
   ],
   "nonGoals": [
-    "Changing other teacher profile images",
-    "Modifying the Teachers component layout or structure",
-    "Adding new teacher profiles",
-    "Changing the TeachersNotes component functionality beyond image update"
+    "Modifying Abhijit Da's or Sonali Ma'am's profile images",
+    "Changing the Teachers or TeachersNotes component layout",
+    "Adding new teacher profiles or sections"
   ],
   "imageRequirements": {
     "required": [],

@@ -44,7 +44,7 @@ export default function TeachersNotes() {
       teacher: {
         name: t('Santanu Sir', 'সন্তনু স্যার'),
         initials: 'SS',
-        avatar: '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg',
+        avatar: '/assets/generated/santanu-sir-new.dim_400x400.jpg',
         classes: t('Class 4 – 12', 'ক্লাস ৪ – ১২'),
         subjects: t('English', 'ইংরেজি'),
         experience: t('35+ Years', '৩৫+ বছর'),

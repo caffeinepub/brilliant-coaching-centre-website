@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 45,
+  "projectStateVersion": 47,
   "summary": "Modern, professional, bilingual (English + Bengali) coaching centre website for Brilliant Coaching Centre in Puabagan, Bankura, West Bengal. Features hero section with logo and WhatsApp CTA, about us section, courses offered (LKG-Class XII), expanded why choose us section with 12 detailed strengths (personalized attention, structured curriculum, assessments, doubt-clearing, exam preparation, interactive learning, motivation, safe environment, study materials, parent involvement, technology integration, achievements), our teachers section with profiles, teachers & class notes section with downloadable PDFs, photo gallery with lightbox, testimonials section (What Our Students Say) with page title, introduction, current students reviews (Riya Sen, Anirban Das, Priya Roy), alumni feedback (Arjun Mukherjee, Sneha Chakraborty, Rohan Ghosh), review submission form with name/class/subjects/review/rating fields, admission enquiry form with WhatsApp integration, enhanced contact/footer section with multiple phone numbers, email, social media links (Facebook, Instagram, YouTube, WhatsApp Channel), footer CTA buttons, and floating language switcher. Design matches official branding (gold/yellow text, dark background, maroon accent) with smooth animations and mobile-first approach.",
   "architectural_notes": [
     "Mobile-first responsive design approach",
@@ -674,6 +674,30 @@
       "title": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
       "reqIds": [
         "REQ-86"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-teacher-profile-image-for-santanu-sir-in-the-teachers-component-frontend-src-components-teachers-tsx-with-the-newly-uploaded-photo-image-2-5-jpg-showing-him-in-a-white-patterned-shirt-with-a-mustache-speaking-at-a-microphone-with-decorative-background-including-silver-streamers-and-floral-wall-decorations",
+      "title": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-5.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
+      "reqIds": [
+        "REQ-87"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-to-reference-the-new-santanu-sir-profile-image-from-image-2-5-jpg-for-the-class-4-12-notes-card-maintaining-consistency-with-the-teachers-component",
+      "title": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-5.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+      "reqIds": [
+        "REQ-88"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-the-uploaded-santanu-sir-photo-image-2-5-jpg-as-a-static-asset-in-the-frontend-public-assets-generated-directory",
+      "title": "Store the uploaded Santanu Sir photo 'image (2)-5.jpg' as a static asset in the frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-89"
       ],
       "version": 1
     }

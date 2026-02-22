@@ -1,56 +1,54 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace Santanu Sir teacher profile image with uploaded photo",
+  "title": "Replace Santanu Sir's teacher profile image with newly uploaded photo",
   "requirements": [
     {
-      "id": "REQ-84",
-      "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component with the newly uploaded photo showing him in a white patterned shirt with a mustache speaking at a microphone",
+      "id": "REQ-89",
+      "summary": "Store the uploaded Santanu Sir photo as a static asset in the frontend assets directory",
       "acceptanceCriteria": [
-        "Santanu Sir's profile card displays the uploaded photo 'image (2)-4.jpg' instead of the current placeholder/image",
-        "The image is properly sized and maintains aspect ratio within the teacher profile card",
-        "The image styling is consistent with the other teacher profile images (Sonali Ma'am, Abhijit Da)",
-        "The image displays correctly on both desktop and mobile views",
-        "The image maintains the gold/yellow and maroon accent color scheme of the site"
+        "The image file is saved in frontend/public/assets/generated directory",
+        "Both Teachers and TeachersNotes components reference this asset path",
+        "The image loads correctly when the components render"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg",
+          "operation": "create",
+          "description": "Save the uploaded image 'image (2)-5.jpg' showing Santanu Sir in a white patterned shirt with mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations as a static asset with standardized naming convention matching other teacher profile images"
+        }
+      ]
+    },
+    {
+      "id": "REQ-87",
+      "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component with the newly uploaded photo",
+      "acceptanceCriteria": [
+        "The Teachers component displays the new Santanu Sir photo from 'image (2)-5.jpg'",
+        "The image replaces the previous Santanu Sir profile photo",
+        "The image is properly sized and styled to match other teacher profile images",
+        "All other teacher profile content (name, classes, subjects, experience) remains unchanged"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/Teachers.tsx",
           "operation": "modify",
-          "description": "Update the image source for Santanu Sir's profile card to reference the new uploaded photo at '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg'. Ensure the image is rendered with consistent styling matching the other teacher profile cards (Sonali Ma'am, Abhijit Da) including size, aspect ratio, rounded corners, and hover effects."
+          "description": "Update the image source for Santanu Sir's profile to reference frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg instead of the current placeholder. Maintain all existing styling, dimensions, and teacher information (name, classes taught, subjects, experience, focus areas). Ensure the Avatar component continues to use the same size and styling as other teacher profiles."
         }
       ]
     },
     {
-      "id": "REQ-85",
-      "summary": "Store the uploaded Santanu Sir photo as a static asset in the frontend/public/assets/generated directory",
+      "id": "REQ-88",
+      "summary": "Update the TeachersNotes component to reference the new Santanu Sir profile image for consistency",
       "acceptanceCriteria": [
-        "The image file is saved in frontend/public/assets/generated directory",
-        "The Teachers component references the correct asset path for Santanu Sir's image",
-        "The image loads successfully when the page is rendered"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/assets/generated/santanu-sir-uploaded.dim_400x400.jpg",
-          "operation": "create",
-          "description": "Save the uploaded photo 'image (2)-4.jpg' showing Santanu Sir in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations. The image should be processed to 400x400 dimensions to match the existing teacher profile image format and naming convention."
-        }
-      ]
-    },
-    {
-      "id": "REQ-86",
-      "summary": "Update the TeachersNotes component to reference the new Santanu Sir profile image for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
-      "acceptanceCriteria": [
-        "The TeachersNotes component displays the same Santanu Sir image as the Teachers component",
-        "The 'Class 4 – 12' notes card shows the uploaded photo consistently",
-        "Image styling matches between Teachers and TeachersNotes components",
-        "The image displays properly in the tabbed notes interface"
+        "The TeachersNotes component displays the same new Santanu Sir photo in the Class 4-12 notes card",
+        "The image matches the one used in the Teachers component",
+        "All other notes card content remains unchanged"
       ],
       "file_operations": [
         {
           "path": "frontend/src/components/TeachersNotes.tsx",
           "operation": "modify",
-          "description": "Update the image source for Santanu Sir's profile in the 'Class 4 – 12' notes tab to reference the new uploaded photo at '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg'. Ensure the image styling is consistent with the Teachers component and displays correctly within the tabbed interface layout."
+          "description": "Update the image source for Santanu Sir in the 'Class 4 – 12' tab section to reference frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg, ensuring consistency with the Teachers component. Maintain all existing tab functionality, teacher information display, and bilingual support without modifying the component structure or other teacher profiles."
         }
       ]
     }

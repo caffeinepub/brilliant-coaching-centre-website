@@ -1,20 +1,28 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T11:19:39.225Z",
-  "summary": "The diff shows that all three requirements have been implemented. The Teachers.tsx component now references 'santanu-sir-uploaded.dim_400x400.jpg' for Santanu Sir's avatar. The TeachersNotes.tsx component also references the same image path for the '4-12' tab corresponding to Santanu Sir. The file summaries confirm both components display the newly uploaded photo. However, the actual image file addition is not visible in the diff (only text files shown), so REQ-85 cannot be fully verified from the provided diff.",
+  "generatedAt": "2026-02-22T11:33:09.541Z",
+  "summary": "The diff shows that REQ-87 and REQ-88 were successfully implemented by updating both Teachers.tsx and TeachersNotes.tsx to reference the new Santanu Sir photo at '/assets/generated/santanu-sir-new.dim_400x400.jpg'. However, REQ-89 is missing - there is no evidence that the image file 'image (2)-5.jpg' was actually added to the frontend/public/assets/generated directory. The diff shows no added files, and the components reference a renamed version ('santanu-sir-new.dim_400x400.jpg') rather than the original filename.",
   "missing_requirements": [
     {
-      "id": "REQ-85",
-      "requirement": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
-      "reason": "The diff only shows LLM-readable text files (TypeScript, JSON). Binary image files are excluded from the diff summary. While the code references '/assets/generated/santanu-sir-uploaded.dim_400x400.jpg', there is no evidence showing the actual image file was added to the directory. The diff explicitly states 'Added: 0' files.",
+      "id": "REQ-89",
+      "requirement": "Store the uploaded Santanu Sir photo 'image (2)-5.jpg' as a static asset in the frontend/public/assets/generated directory",
+      "reason": "The diff shows 0 added files. There is no evidence that the image file was added to the frontend/public/assets/generated directory. The components reference '/assets/generated/santanu-sir-new.dim_400x400.jpg', but the actual file addition is not visible in the diff.",
       "evidence": [
-        "Diff summary header: 'Added: 0, Modified: 4, Removed: 0'",
-        "Diff note: 'LLM-readable files only'"
+        "Diff header shows 'Added: 0, Modified: 4, Removed: 0'"
       ]
     }
   ],
-  "hallucinated_features": [],
+  "hallucinated_features": [
+    {
+      "description": "The image filename was changed from 'image (2)-5.jpg' to 'santanu-sir-new.dim_400x400.jpg' with dimension suffix",
+      "reason": "The BuildRequest specifically mentions storing and using 'image (2)-5.jpg', but the implementation uses 'santanu-sir-new.dim_400x400.jpg'. While this may be a reasonable technical decision for asset processing, it was not requested and represents a deviation from the specified filename.",
+      "evidence": [
+        "frontend/src/components/Teachers.tsx",
+        "frontend/src/components/TeachersNotes.tsx"
+      ]
+    }
+  ],
   "confidence": 0.85,
   "changed_files": [
     "frontend-file-summaries.txt",

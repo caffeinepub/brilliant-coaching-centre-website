@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T11:19:39.229Z",
+  "generatedAt": "2026-02-22T11:33:09.546Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 3,
-    "implemented": 2,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-84",
-        "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-4.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
+        "id": "REQ-87",
+        "summary": "Replace the existing teacher profile image for Santanu Sir in the Teachers component (frontend/src/components/Teachers.tsx) with the newly uploaded photo 'image (2)-5.jpg' showing him in a white patterned shirt with a mustache speaking at a microphone with decorative background including silver streamers and floral wall decorations",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/Teachers.tsx"
@@ -22,23 +22,25 @@
         ]
       },
       {
-        "id": "REQ-85",
-        "summary": "Store the uploaded Santanu Sir photo 'image (2)-4.jpg' as a static asset in the frontend/public/assets/generated directory",
-        "status": "missing",
-        "plannedFiles": [
-          "frontend/public/assets/generated/santanu-sir-uploaded.dim_400x400.jpg"
-        ],
-        "matchedFiles": []
-      },
-      {
-        "id": "REQ-86",
-        "summary": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-4.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
+        "id": "REQ-88",
+        "summary": "Update the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) to reference the new Santanu Sir profile image from 'image (2)-5.jpg' for the 'Class 4 – 12' notes card, maintaining consistency with the Teachers component",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/components/TeachersNotes.tsx"
         ],
         "matchedFiles": [
           "frontend/src/components/TeachersNotes.tsx"
+        ]
+      },
+      {
+        "id": "REQ-89",
+        "summary": "Store the uploaded Santanu Sir photo 'image (2)-5.jpg' as a static asset in the frontend/public/assets/generated directory",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg"
+        ],
+        "matchedFiles": [
+          "frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg"
         ]
       }
     ]
@@ -48,6 +50,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/santanu-sir-new.dim_400x400.jpg",
     "frontend/src/components/Teachers.tsx",
     "frontend/src/components/TeachersNotes.tsx",
     "project_state.json",
