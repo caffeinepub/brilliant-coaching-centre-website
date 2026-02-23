@@ -1,40 +1,6 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove Abhijit Da's teacher profile image",
-  "requirements": [
-    {
-      "id": "REQ-96",
-      "summary": "Remove Abhijit Da's teacher profile image from the Teachers component, replacing it with a placeholder avatar or initials-based fallback while preserving all text content",
-      "acceptanceCriteria": [
-        "Abhijit Da's profile card in the Teachers component displays a placeholder avatar or initials fallback instead of an image",
-        "All text content for Abhijit Da remains visible: name, classes, subject, experience, and teaching focus",
-        "The card layout and styling remain consistent with other teacher profiles"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/Teachers.tsx",
-          "operation": "modify",
-          "description": "Replace Abhijit Da's image source (currently using frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png or similar) with a placeholder avatar implementation. Implement an initials-based fallback (showing 'AD' for Abhijit Da) or use a generic avatar icon while preserving all existing text content including name, classes taught (Class 4 – Class 10), subject (Mathematics), experience (5 Years), and teaching focus. Maintain the same card structure, styling, and layout consistency with other teacher profiles (Sonali Ma'am and Santanu Sir)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-97",
-      "summary": "Remove Abhijit Da's teacher profile image from the TeachersNotes component for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback",
-      "acceptanceCriteria": [
-        "The 'Class 4 – 10' notes card in the TeachersNotes component displays a placeholder avatar or initials fallback instead of an image",
-        "All teacher information remains visible: Abhijit (Abhi) Da, Mathematics, 5 Years experience",
-        "All notes features and download functionality remain intact",
-        "The card maintains visual consistency with other notes cards"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/TeachersNotes.tsx",
-          "operation": "modify",
-          "description": "Replace Abhijit Da's image source in the 'Class 4 – 10' notes card (currently using frontend/public/assets/generated/abhijit-da-photo.dim_400x400.png or similar) with a placeholder avatar implementation. Implement an initials-based fallback (showing 'AD' for Abhijit Da) or use a generic avatar icon while preserving all teacher information including Abhijit (Abhi) Da, Mathematics, 5 Years experience. Ensure all notes features, tabs, and download functionality remain intact. Maintain visual consistency with other notes cards in the component."
-        }
-      ]
-    }
-  ]
+  "title": "Increase storage capacity for uploads",
+  "requirements": []
 }

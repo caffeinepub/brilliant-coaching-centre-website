@@ -1,55 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Remove Abhijit Da's teacher profile image",
-  "priority": "normal",
+  "title": "Increase storage capacity for uploads",
+  "projectName": "Brilliant Coaching Centre",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-96",
-      "text": "Remove Abhijit Da's teacher profile image from the Teachers component (frontend/src/components/Teachers.tsx), replacing it with a placeholder avatar or initials-based fallback while preserving all text content including name, classes taught (Class 4 – Class 10), subject (Mathematics), experience (5 Years), and teaching focus",
-      "target": "frontend",
+      "id": "REQ-1",
+      "text": "Increase stable_memory_reserve_mb in backend canister settings from 0 to 512 MB to support teacher profile images, student data records, review submissions with photos, and general file uploads (PDFs, documents)",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-current"
+          "msg-20"
         ],
         "quotes": [
-          "Remove Abhijit Da's image"
+          "Yes"
         ]
       },
       "acceptanceCriteria": [
-        "Abhijit Da's profile card in the Teachers component displays a placeholder avatar or initials fallback instead of an image",
-        "All text content for Abhijit Da remains visible: name, classes, subject, experience, and teaching focus",
-        "The card layout and styling remain consistent with other teacher profiles"
-      ]
-    },
-    {
-      "id": "REQ-97",
-      "text": "Remove Abhijit Da's teacher profile image from the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback while preserving all teacher information and notes features",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-current"
-        ],
-        "quotes": [
-          "Remove Abhijit Da's image"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The 'Class 4 – 10' notes card in the TeachersNotes component displays a placeholder avatar or initials fallback instead of an image",
-        "All teacher information remains visible: Abhijit (Abhi) Da, Mathematics, 5 Years experience",
-        "All notes features and download functionality remain intact",
-        "The card maintains visual consistency with other notes cards"
+        "Backend canister configured with stable_memory_reserve_mb set to 512",
+        "Image uploads for teacher profiles work without errors",
+        "File upload operations complete successfully",
+        "Storage allocation supports multiple concurrent uploads"
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files in frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui",
-    "Preserve all text content, layout structure, and styling consistency in both Teachers and TeachersNotes components",
-    "Maintain bilingual support for all existing content"
+    "Maintain existing single-actor architecture",
+    "Preserve all existing gallery and image management functionality",
+    "Do not modify frontend upload interfaces"
   ],
   "nonGoals": [
-    "Do not remove Abhijit Da's profile data or text content",
-    "Do not modify other teacher profiles (Sonali Ma'am, Santanu Sir)",
-    "Do not change the component structure or layout grid"
+    "Changing the image upload UI",
+    "Modifying existing gallery display logic",
+    "Adding new file types beyond what's already supported"
   ],
   "imageRequirements": {
     "required": [],

@@ -1,24 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-remove-abhijit-da-s-teacher-profile-image-from-the-teachersnotes-component-frontend-src-components-teachersnotes-tsx-for-the-class-4-10-notes-card-replacing-it-with-a-placeholder-avatar-or-initials-based-fallback-while-preserving-all-teacher-information-and-notes-features",
-      "featureTitle": "Remove Abhijit Da's teacher profile image from the TeachersNotes component (frontend/src/components/TeachersNotes.tsx) for the 'Class 4 – 10' notes card, replacing it with a placeholder avatar or initials-based fallback while preserving all teacher information and notes features",
-      "files": [
-        "frontend/src/components/TeachersNotes.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "blob-storage@4.0.0"
-      ],
-      "testIds": [
-        "REQ-97"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }
