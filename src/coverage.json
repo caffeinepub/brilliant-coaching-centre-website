@@ -1,33 +1,35 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-23T01:46:51.797Z",
+  "generatedAt": "2026-02-23T18:44:04.047Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
     "total": 1,
-    "implemented": 0,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Increase stable_memory_reserve_mb in backend canister settings from 0 to 512 MB to support teacher profile images, student data records, review submissions with photos, and general file uploads (PDFs, documents)",
-        "status": "unknown",
-        "plannedFiles": [],
-        "matchedFiles": []
+        "id": "REQ-2",
+        "summary": "Add the uploaded image 'image (2)-6.jpg' as Santanu Sir's profile photo in the Teachers section, replacing the current placeholder avatar",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/assets/santanu-sir-profile.jpg",
+          "frontend/src/components/Teachers.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Teachers.tsx"
+        ]
       }
     ]
   },
   "changedFiles": [
-    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
+    "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/backend.d.ts",
-    "frontend/src/backend.ts",
-    "frontend/src/declarations/backend.did.d.ts",
-    "frontend/src/declarations/backend.did.js",
+    "frontend/src/components/Teachers.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

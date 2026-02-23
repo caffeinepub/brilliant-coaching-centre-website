@@ -1,38 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Increase storage capacity for uploads",
+  "title": "Add Santanu Sir profile image",
   "projectName": "Brilliant Coaching Centre",
-  "priority": "high",
+  "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Increase stable_memory_reserve_mb in backend canister settings from 0 to 512 MB to support teacher profile images, student data records, review submissions with photos, and general file uploads (PDFs, documents)",
-      "target": "backend",
+      "id": "REQ-2",
+      "text": "Add the uploaded image 'image (2)-6.jpg' as Santanu Sir's profile photo in the Teachers section, replacing the current placeholder avatar",
+      "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-20"
+          "msg-latest"
         ],
         "quotes": [
-          "Yes"
+          "Add Santanu Sir image"
         ]
       },
       "acceptanceCriteria": [
-        "Backend canister configured with stable_memory_reserve_mb set to 512",
-        "Image uploads for teacher profiles work without errors",
-        "File upload operations complete successfully",
-        "Storage allocation supports multiple concurrent uploads"
+        "The uploaded image is saved as a static asset in frontend/public/assets/",
+        "Santanu Sir's profile card in the Teachers component displays the new image instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the teacher card design",
+        "The image loads correctly on both desktop and mobile viewports"
       ]
     }
   ],
   "constraints": [
-    "Maintain existing single-actor architecture",
-    "Preserve all existing gallery and image management functionality",
-    "Do not modify frontend upload interfaces"
+    "Use the exact uploaded image file without modifications",
+    "Maintain the existing Teachers component structure and styling",
+    "Do not modify other teacher profiles (Sonali Ma'am, Abhijit Da)"
   ],
   "nonGoals": [
-    "Changing the image upload UI",
-    "Modifying existing gallery display logic",
-    "Adding new file types beyond what's already supported"
+    "Creating a dynamic image upload system for teacher profiles",
+    "Modifying the backend or adding image storage endpoints",
+    "Changing the layout or design of the Teachers section"
   ],
   "imageRequirements": {
     "required": [],

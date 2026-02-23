@@ -1,15 +1,22 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Tutoring platform with teacher profiles, review system, and expanded storage for images, student data, reviews, and documents",
   "architectural_notes": [
     "Storage expansion needed for: teacher photos, student records, review submissions, and general file uploads"
   ],
-  "known_issues": [
-    "Image uploads currently failing due to insufficient stable_memory_reserve_mb allocation"
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-add-the-uploaded-image-image-2-6-jpg-as-santanu-sir-s-profile-photo-in-the-teachers-section-replacing-the-current-placeholder-avatar",
+      "title": "Add the uploaded image 'image (2)-6.jpg' as Santanu Sir's profile photo in the Teachers section, replacing the current placeholder avatar",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    }
   ],
-  "isFixRequest": true,
-  "existing_features": [],
   "new_feature_requests": [
     {
       "id": "AR-1",
@@ -23,6 +30,12 @@
       "reqIds": [
         "REQ-1"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add profile image for Santanu Sir teacher",
+      "reqIds": [],
       "status": "pending"
     }
   ],

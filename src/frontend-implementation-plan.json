@@ -1,6 +1,29 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Increase storage capacity for uploads",
-  "requirements": []
+  "title": "Add Santanu Sir profile image",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Add the uploaded image 'image (2)-6.jpg' as Santanu Sir's profile photo in the Teachers section, replacing the current placeholder avatar",
+      "acceptanceCriteria": [
+        "The uploaded image is saved as a static asset in frontend/public/assets/",
+        "Santanu Sir's profile card in the Teachers component displays the new image instead of the placeholder",
+        "The image maintains proper aspect ratio and fits within the teacher card design",
+        "The image loads correctly on both desktop and mobile viewports"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/santanu-sir-profile.jpg",
+          "operation": "create",
+          "description": "Copy the uploaded image 'image (2)-6.jpg' to frontend/public/assets/ as 'santanu-sir-profile.jpg' to serve as Santanu Sir's profile photo"
+        },
+        {
+          "path": "frontend/src/components/Teachers.tsx",
+          "operation": "modify",
+          "description": "Update Santanu Sir's teacher card to reference the new profile image at '/assets/santanu-sir-profile.jpg' instead of the current placeholder avatar, ensuring the image is properly displayed within the existing card design and maintains aspect ratio"
+        }
+      ]
+    }
+  ]
 }
