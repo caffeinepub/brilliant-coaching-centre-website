@@ -1,0 +1,39 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Redeploy Brilliant Coaching Centre to Production",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Deploy the current version of the application to production on the Internet Computer without introducing new features or changes",
+      "acceptanceCriteria": [
+        "The application is successfully deployed and accessible at its production canister URL.",
+        "All existing features (Hero, About, Courses, Gallery, Teachers, WhyChooseUs, Contact, Footer, etc.) are functional in the live environment.",
+        "The TeachersNotes component remains removed from the live build.",
+        "No deployment errors are reported."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/TeachersNotes.tsx",
+          "operation": "delete",
+          "description": "Remove the empty TeachersNotes component file to ensure it is not included in the production build and confirm it remains absent from the deployed application."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Verify that TeachersNotes is not imported or rendered anywhere in the root App component, ensuring the production build excludes this component entirely."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the HTML shell is production-ready with correct meta tags and title for deployment to the live Internet Computer environment."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Verify the app entry point is correctly configured for production deployment with QueryClientProvider and InternetIdentityProvider properly wired for the live canister environment."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "build_request",
+  "title": "Redeploy app to production",
+  "projectName": "Brilliant Coaching Centre",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Deploy the current version of the application to production (live environment) on the Internet Computer.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "To upload live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The application is successfully deployed and accessible at its production canister URL.",
+        "All existing features (Hero, About, Courses, Gallery, Teachers, WhyChooseUs, Contact, Footer, etc.) are functional in the live environment.",
+        "The TeachersNotes component remains removed from the live build.",
+        "No deployment errors are reported."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not introduce new features or UI changes — this is a redeploy of the current codebase only.",
+    "TeachersNotes component must remain absent from the deployed build."
+  ],
+  "nonGoals": [
+    "Adding new features or pages.",
+    "Changing any existing UI design or content.",
+    "Modifying backend data models or logic."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

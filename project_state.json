@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-deploy-the-current-version-of-the-application-to-production-live-environment-on-the-internet-computer",
+      "title": "Deploy the current version of the application to production (live environment) on the Internet Computer.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Brilliant Coaching Centre",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
