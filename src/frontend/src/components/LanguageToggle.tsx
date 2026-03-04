@@ -1,6 +1,6 @@
-import { useLanguage } from '../contexts/LanguageContext';
-import { Button } from '@/components/ui/button';
-import { Languages } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Languages } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function LanguageToggle() {
   const { language, toggleLanguage } = useLanguage();
@@ -12,7 +12,9 @@ export default function LanguageToggle() {
       size="lg"
     >
       <Languages className="mr-2 h-5 w-5" />
-      <span className="font-semibold">{language === 'en' ? 'বাংলা' : 'English'}</span>
+      <span className="font-semibold">
+        {language === "en" ? "বাংলা" : "English"}
+      </span>
     </Button>
   );
 }
